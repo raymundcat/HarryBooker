@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC09055125BB9360000BF255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09055025BB9360000BF255 /* AppDelegate.swift */; };
+		EC09055325BB9360000BF255 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09055225BB9360000BF255 /* SceneDelegate.swift */; };
+		EC09055525BB9360000BF255 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09055425BB9360000BF255 /* ViewController.swift */; };
+		EC09055825BB9360000BF255 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC09055625BB9360000BF255 /* Main.storyboard */; };
+		EC09055A25BB9361000BF255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC09055925BB9361000BF255 /* Assets.xcassets */; };
+		EC09055D25BB9361000BF255 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC09055B25BB9361000BF255 /* LaunchScreen.storyboard */; };
+		EC09056825BB9361000BF255 /* HarryBookerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09056725BB9361000BF255 /* HarryBookerTests.swift */; };
+		EC09057325BB9361000BF255 /* HarryBookerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09057225BB9361000BF255 /* HarryBookerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC09056425BB9361000BF255 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC09054525BB9360000BF255 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC09054C25BB9360000BF255;
+			remoteInfo = HarryBooker;
+		};
+		EC09056F25BB9361000BF255 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC09054525BB9360000BF255 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC09054C25BB9360000BF255;
+			remoteInfo = HarryBooker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EC09054D25BB9360000BF255 /* HarryBooker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarryBooker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC09055025BB9360000BF255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC09055225BB9360000BF255 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EC09055425BB9360000BF255 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC09055725BB9360000BF255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC09055925BB9361000BF255 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC09055C25BB9361000BF255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC09055E25BB9361000BF255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC09056325BB9361000BF255 /* HarryBookerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarryBookerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC09056725BB9361000BF255 /* HarryBookerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryBookerTests.swift; sourceTree = "<group>"; };
+		EC09056925BB9361000BF255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC09056E25BB9361000BF255 /* HarryBookerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarryBookerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC09057225BB9361000BF255 /* HarryBookerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryBookerUITests.swift; sourceTree = "<group>"; };
+		EC09057425BB9361000BF255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC09054A25BB9360000BF255 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC09056025BB9361000BF255 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC09056B25BB9361000BF255 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC09054425BB9360000BF255 = {
+			isa = PBXGroup;
+			children = (
+				EC09054F25BB9360000BF255 /* HarryBooker */,
+				EC09056625BB9361000BF255 /* HarryBookerTests */,
+				EC09057125BB9361000BF255 /* HarryBookerUITests */,
+				EC09054E25BB9360000BF255 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC09054E25BB9360000BF255 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC09054D25BB9360000BF255 /* HarryBooker.app */,
+				EC09056325BB9361000BF255 /* HarryBookerTests.xctest */,
+				EC09056E25BB9361000BF255 /* HarryBookerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC09054F25BB9360000BF255 /* HarryBooker */ = {
+			isa = PBXGroup;
+			children = (
+				EC09055025BB9360000BF255 /* AppDelegate.swift */,
+				EC09055225BB9360000BF255 /* SceneDelegate.swift */,
+				EC09055425BB9360000BF255 /* ViewController.swift */,
+				EC09055625BB9360000BF255 /* Main.storyboard */,
+				EC09055925BB9361000BF255 /* Assets.xcassets */,
+				EC09055B25BB9361000BF255 /* LaunchScreen.storyboard */,
+				EC09055E25BB9361000BF255 /* Info.plist */,
+			);
+			path = HarryBooker;
+			sourceTree = "<group>";
+		};
+		EC09056625BB9361000BF255 /* HarryBookerTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC09056725BB9361000BF255 /* HarryBookerTests.swift */,
+				EC09056925BB9361000BF255 /* Info.plist */,
+			);
+			path = HarryBookerTests;
+			sourceTree = "<group>";
+		};
+		EC09057125BB9361000BF255 /* HarryBookerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EC09057225BB9361000BF255 /* HarryBookerUITests.swift */,
+				EC09057425BB9361000BF255 /* Info.plist */,
+			);
+			path = HarryBookerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC09054C25BB9360000BF255 /* HarryBooker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC09057725BB9361000BF255 /* Build configuration list for PBXNativeTarget "HarryBooker" */;
+			buildPhases = (
+				EC09054925BB9360000BF255 /* Sources */,
+				EC09054A25BB9360000BF255 /* Frameworks */,
+				EC09054B25BB9360000BF255 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HarryBooker;
+			productName = HarryBooker;
+			productReference = EC09054D25BB9360000BF255 /* HarryBooker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC09056225BB9361000BF255 /* HarryBookerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC09057A25BB9361000BF255 /* Build configuration list for PBXNativeTarget "HarryBookerTests" */;
+			buildPhases = (
+				EC09055F25BB9361000BF255 /* Sources */,
+				EC09056025BB9361000BF255 /* Frameworks */,
+				EC09056125BB9361000BF255 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC09056525BB9361000BF255 /* PBXTargetDependency */,
+			);
+			name = HarryBookerTests;
+			productName = HarryBookerTests;
+			productReference = EC09056325BB9361000BF255 /* HarryBookerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EC09056D25BB9361000BF255 /* HarryBookerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC09057D25BB9361000BF255 /* Build configuration list for PBXNativeTarget "HarryBookerUITests" */;
+			buildPhases = (
+				EC09056A25BB9361000BF255 /* Sources */,
+				EC09056B25BB9361000BF255 /* Frameworks */,
+				EC09056C25BB9361000BF255 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC09057025BB9361000BF255 /* PBXTargetDependency */,
+			);
+			name = HarryBookerUITests;
+			productName = HarryBookerUITests;
+			productReference = EC09056E25BB9361000BF255 /* HarryBookerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC09054525BB9360000BF255 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					EC09054C25BB9360000BF255 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					EC09056225BB9361000BF255 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = EC09054C25BB9360000BF255;
+					};
+					EC09056D25BB9361000BF255 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = EC09054C25BB9360000BF255;
+					};
+				};
+			};
+			buildConfigurationList = EC09054825BB9360000BF255 /* Build configuration list for PBXProject "HarryBooker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC09054425BB9360000BF255;
+			productRefGroup = EC09054E25BB9360000BF255 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC09054C25BB9360000BF255 /* HarryBooker */,
+				EC09056225BB9361000BF255 /* HarryBookerTests */,
+				EC09056D25BB9361000BF255 /* HarryBookerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC09054B25BB9360000BF255 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC09055D25BB9361000BF255 /* LaunchScreen.storyboard in Resources */,
+				EC09055A25BB9361000BF255 /* Assets.xcassets in Resources */,
+				EC09055825BB9360000BF255 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC09056125BB9361000BF255 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC09056C25BB9361000BF255 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC09054925BB9360000BF255 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC09055525BB9360000BF255 /* ViewController.swift in Sources */,
+				EC09055125BB9360000BF255 /* AppDelegate.swift in Sources */,
+				EC09055325BB9360000BF255 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC09055F25BB9361000BF255 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC09056825BB9361000BF255 /* HarryBookerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC09056A25BB9361000BF255 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC09057325BB9361000BF255 /* HarryBookerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC09056525BB9361000BF255 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC09054C25BB9360000BF255 /* HarryBooker */;
+			targetProxy = EC09056425BB9361000BF255 /* PBXContainerItemProxy */;
+		};
+		EC09057025BB9361000BF255 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC09054C25BB9360000BF255 /* HarryBooker */;
+			targetProxy = EC09056F25BB9361000BF255 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EC09055625BB9360000BF255 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC09055725BB9360000BF255 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EC09055B25BB9361000BF255 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC09055C25BB9361000BF255 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC09057525BB9361000BF255 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC09057625BB9361000BF255 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC09057825BB9361000BF255 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3XNDNC2DEH;
+				INFOPLIST_FILE = HarryBooker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = raymund.cat.HarryBooker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC09057925BB9361000BF255 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3XNDNC2DEH;
+				INFOPLIST_FILE = HarryBooker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = raymund.cat.HarryBooker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EC09057B25BB9361000BF255 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3XNDNC2DEH;
+				INFOPLIST_FILE = HarryBookerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = raymund.cat.HarryBookerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HarryBooker.app/HarryBooker";
+			};
+			name = Debug;
+		};
+		EC09057C25BB9361000BF255 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3XNDNC2DEH;
+				INFOPLIST_FILE = HarryBookerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = raymund.cat.HarryBookerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HarryBooker.app/HarryBooker";
+			};
+			name = Release;
+		};
+		EC09057E25BB9361000BF255 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3XNDNC2DEH;
+				INFOPLIST_FILE = HarryBookerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = raymund.cat.HarryBookerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HarryBooker;
+			};
+			name = Debug;
+		};
+		EC09057F25BB9361000BF255 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3XNDNC2DEH;
+				INFOPLIST_FILE = HarryBookerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = raymund.cat.HarryBookerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HarryBooker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC09054825BB9360000BF255 /* Build configuration list for PBXProject "HarryBooker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC09057525BB9361000BF255 /* Debug */,
+				EC09057625BB9361000BF255 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC09057725BB9361000BF255 /* Build configuration list for PBXNativeTarget "HarryBooker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC09057825BB9361000BF255 /* Debug */,
+				EC09057925BB9361000BF255 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC09057A25BB9361000BF255 /* Build configuration list for PBXNativeTarget "HarryBookerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC09057B25BB9361000BF255 /* Debug */,
+				EC09057C25BB9361000BF255 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC09057D25BB9361000BF255 /* Build configuration list for PBXNativeTarget "HarryBookerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC09057E25BB9361000BF255 /* Debug */,
+				EC09057F25BB9361000BF255 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC09054525BB9360000BF255 /* Project object */;
+}
