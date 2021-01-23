@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Eventful",
+        "repositoryURL": "https://github.com/raymundcat/Eventful",
+        "state": {
+          "branch": "master",
+          "revision": "67ee02ccac0f0ccc4a699e74030779ebbd55537d",
+          "version": null
+        }
+      },
+      {
+        "package": "MulticastDelegate",
+        "repositoryURL": "https://github.com/jonasman/MulticastDelegate",
+        "state": {
+          "branch": "master",
+          "revision": "4418ae5c74f13250ab7cd10993f3f29ece92e3dd",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

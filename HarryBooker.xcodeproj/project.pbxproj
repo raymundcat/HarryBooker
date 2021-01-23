@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC04FD8925BBAA410006B6EC /* Eventful in Frameworks */ = {isa = PBXBuildFile; productRef = EC04FD8825BBAA410006B6EC /* Eventful */; };
 		EC09055125BB9360000BF255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09055025BB9360000BF255 /* AppDelegate.swift */; };
 		EC09055325BB9360000BF255 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09055225BB9360000BF255 /* SceneDelegate.swift */; };
 		EC09055525BB9360000BF255 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09055425BB9360000BF255 /* ViewController.swift */; };
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC04FD8925BBAA410006B6EC /* Eventful in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +78,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC04FD8D25BBAA710006B6EC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC09055025BB9360000BF255 /* AppDelegate.swift */,
+				EC09055225BB9360000BF255 /* SceneDelegate.swift */,
+				EC09055425BB9360000BF255 /* ViewController.swift */,
+				EC09055625BB9360000BF255 /* Main.storyboard */,
+				EC09055925BB9361000BF255 /* Assets.xcassets */,
+				EC09055B25BB9361000BF255 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		EC09054425BB9360000BF255 = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +114,7 @@
 		EC09054F25BB9360000BF255 /* HarryBooker */ = {
 			isa = PBXGroup;
 			children = (
-				EC09055025BB9360000BF255 /* AppDelegate.swift */,
-				EC09055225BB9360000BF255 /* SceneDelegate.swift */,
-				EC09055425BB9360000BF255 /* ViewController.swift */,
-				EC09055625BB9360000BF255 /* Main.storyboard */,
-				EC09055925BB9361000BF255 /* Assets.xcassets */,
-				EC09055B25BB9361000BF255 /* LaunchScreen.storyboard */,
+				EC04FD8D25BBAA710006B6EC /* Supporting Files */,
 				EC09055E25BB9361000BF255 /* Info.plist */,
 			);
 			path = HarryBooker;
@@ -144,6 +154,9 @@
 			dependencies = (
 			);
 			name = HarryBooker;
+			packageProductDependencies = (
+				EC04FD8825BBAA410006B6EC /* Eventful */,
+			);
 			productName = HarryBooker;
 			productReference = EC09054D25BB9360000BF255 /* HarryBooker.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +228,9 @@
 				Base,
 			);
 			mainGroup = EC09054425BB9360000BF255;
+			packageReferences = (
+				EC04FD8725BBAA410006B6EC /* XCRemoteSwiftPackageReference "Eventful" */,
+			);
 			productRefGroup = EC09054E25BB9360000BF255 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -593,6 +609,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC04FD8725BBAA410006B6EC /* XCRemoteSwiftPackageReference "Eventful" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raymundcat/Eventful";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC04FD8825BBAA410006B6EC /* Eventful */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC04FD8725BBAA410006B6EC /* XCRemoteSwiftPackageReference "Eventful" */;
+			productName = Eventful;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EC09054525BB9360000BF255 /* Project object */;
 }
