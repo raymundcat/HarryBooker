@@ -14,6 +14,7 @@
 		EC475B5725BC78B400CC58C1 /* BaseEventPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC475B5425BC78B400CC58C1 /* BaseEventPresenter.swift */; };
 		EC475B5825BC78B400CC58C1 /* BaseEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC475B5525BC78B400CC58C1 /* BaseEventViewController.swift */; };
 		EC475B5925BC78B400CC58C1 /* BaseEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC475B5625BC78B400CC58C1 /* BaseEventView.swift */; };
+		ECD46E6A25BC8CD000568282 /* Anchorage in Frameworks */ = {isa = PBXBuildFile; productRef = ECD46E6925BC8CD000568282 /* Anchorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC475B4D25BC783C00CC58C1 /* Eventful in Frameworks */,
+				ECD46E6A25BC8CD000568282 /* Anchorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,7 @@
 			name = Architecture;
 			packageProductDependencies = (
 				EC475B4C25BC783C00CC58C1 /* Eventful */,
+				ECD46E6925BC8CD000568282 /* Anchorage */,
 			);
 			productName = Architecture;
 			productReference = EC475B2A25BC77EE00CC58C1 /* Architecture.framework */;
@@ -194,6 +197,7 @@
 			mainGroup = EC475B2025BC77EE00CC58C1;
 			packageReferences = (
 				EC475B4B25BC783C00CC58C1 /* XCRemoteSwiftPackageReference "Eventful" */,
+				ECD46E6825BC8CD000568282 /* XCRemoteSwiftPackageReference "Anchorage" */,
 			);
 			productRefGroup = EC475B2B25BC77EE00CC58C1 /* Products */;
 			projectDirPath = "";
@@ -501,6 +505,14 @@
 				minimumVersion = 0.0.3;
 			};
 		};
+		ECD46E6825BC8CD000568282 /* XCRemoteSwiftPackageReference "Anchorage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Rightpoint/Anchorage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -508,6 +520,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EC475B4B25BC783C00CC58C1 /* XCRemoteSwiftPackageReference "Eventful" */;
 			productName = Eventful;
+		};
+		ECD46E6925BC8CD000568282 /* Anchorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECD46E6825BC8CD000568282 /* XCRemoteSwiftPackageReference "Anchorage" */;
+			productName = Anchorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
