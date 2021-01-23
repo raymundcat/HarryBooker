@@ -2,12 +2,21 @@
   "object": {
     "pins": [
       {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire",
+        "state": {
+          "branch": null,
+          "revision": "eaf6e622dd41b07b251d8f01752eab31bc811493",
+          "version": "5.4.1"
+        }
+      },
+      {
         "package": "Eventful",
         "repositoryURL": "https://github.com/raymundcat/Eventful",
         "state": {
           "branch": null,
-          "revision": "facfa336d380ec75b55a5c79ccc37f4a819e7beb",
-          "version": "0.0.2"
+          "revision": "5abf078556658b3722c5596d7002439909047c72",
+          "version": "0.0.3"
         }
       },
       {
