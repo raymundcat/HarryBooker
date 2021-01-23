@@ -14,6 +14,8 @@ public enum QueryTableViewEvent: ViewEvent { }
 
 public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTablePresentableEvent> {
     
+    private var books: [BookDetail] = []
+    
     //MARK: Subviews
     
     lazy var tableView: UITableView = {
@@ -35,5 +37,17 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
     
     public override func presenter(didSend event: QueryTablePresentableEvent) {
         
+    }
+}
+
+extension QueryTableView: UITableViewDelegate, UITableViewDataSource {
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return books.count
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: BookDetailCell = tableView.dequeueReusableCell(for: indexPath)
+        return cell
     }
 }

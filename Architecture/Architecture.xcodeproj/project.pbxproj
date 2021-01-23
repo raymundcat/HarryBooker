@@ -15,6 +15,7 @@
 		EC475B5825BC78B400CC58C1 /* BaseEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC475B5525BC78B400CC58C1 /* BaseEventViewController.swift */; };
 		EC475B5925BC78B400CC58C1 /* BaseEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC475B5625BC78B400CC58C1 /* BaseEventView.swift */; };
 		ECD46E6A25BC8CD000568282 /* Anchorage in Frameworks */ = {isa = PBXBuildFile; productRef = ECD46E6925BC8CD000568282 /* Anchorage */; };
+		ECD46E7025BC941900568282 /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD46E6F25BC941900568282 /* UITableView+Dequeueing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		EC475B5425BC78B400CC58C1 /* BaseEventPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEventPresenter.swift; sourceTree = "<group>"; };
 		EC475B5525BC78B400CC58C1 /* BaseEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEventViewController.swift; sourceTree = "<group>"; };
 		EC475B5625BC78B400CC58C1 /* BaseEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEventView.swift; sourceTree = "<group>"; };
+		ECD46E6F25BC941900568282 /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		EC475B2C25BC77EE00CC58C1 /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				ECD46E6D25BC93A500568282 /* Commons */,
 				EC475B5325BC787200CC58C1 /* Base */,
 				EC475B5225BC784300CC58C1 /* Supporting Files */,
 				EC475B2E25BC77EE00CC58C1 /* Info.plist */,
@@ -113,6 +116,14 @@
 				EC475B5625BC78B400CC58C1 /* BaseEventView.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		ECD46E6D25BC93A500568282 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				ECD46E6F25BC941900568282 /* UITableView+Dequeueing.swift */,
+			);
+			path = Commons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +245,7 @@
 				EC475B5825BC78B400CC58C1 /* BaseEventViewController.swift in Sources */,
 				EC475B5925BC78B400CC58C1 /* BaseEventView.swift in Sources */,
 				EC475B5725BC78B400CC58C1 /* BaseEventPresenter.swift in Sources */,
+				ECD46E7025BC941900568282 /* UITableView+Dequeueing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

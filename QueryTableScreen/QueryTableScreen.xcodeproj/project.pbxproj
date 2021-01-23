@@ -19,6 +19,8 @@
 		EC475B8025BC79EC00CC58C1 /* Design.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC475B7E25BC79EC00CC58C1 /* Design.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EC475BAB25BC7D3300CC58C1 /* API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC475BAA25BC7D3300CC58C1 /* API.framework */; };
 		EC475BAC25BC7D3300CC58C1 /* API.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC475BAA25BC7D3300CC58C1 /* API.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ECD46E7525BC948A00568282 /* BookDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD46E7425BC948A00568282 /* BookDetailCell.swift */; };
+		ECD46E7A25BC94D300568282 /* BookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD46E7925BC94D300568282 /* BookDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		EC475B7925BC79E600CC58C1 /* Architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC475B7E25BC79EC00CC58C1 /* Design.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Design.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC475BAA25BC7D3300CC58C1 /* API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECD46E7425BC948A00568282 /* BookDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailCell.swift; sourceTree = "<group>"; };
+		ECD46E7925BC94D300568282 /* BookDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +110,9 @@
 		EC475AE125BC729E00CC58C1 /* QueryTableScreen */ = {
 			isa = PBXGroup;
 			children = (
-				EC475B1F25BC77BA00CC58C1 /* Sources */,
+				ECD46E7825BC94C200568282 /* Models */,
+				EC475B1F25BC77BA00CC58C1 /* Screen */,
+				ECD46E7325BC943700568282 /* Cells */,
 				EC475B1E25BC77A100CC58C1 /* Supporting Fiules */,
 				EC475AE325BC729E00CC58C1 /* Info.plist */,
 			);
@@ -130,14 +136,14 @@
 			path = "Supporting Fiules";
 			sourceTree = "<group>";
 		};
-		EC475B1F25BC77BA00CC58C1 /* Sources */ = {
+		EC475B1F25BC77BA00CC58C1 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
 				EC475B7125BC79C800CC58C1 /* QueryTableViewController.swift */,
 				EC475B7025BC79C800CC58C1 /* QueryTablePresenter.swift */,
 				EC475B7225BC79C800CC58C1 /* QueryTableView.swift */,
 			);
-			path = Sources;
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		EC475B7825BC79E600CC58C1 /* Frameworks */ = {
@@ -148,6 +154,22 @@
 				EC475B7925BC79E600CC58C1 /* Architecture.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ECD46E7325BC943700568282 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				ECD46E7425BC948A00568282 /* BookDetailCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		ECD46E7825BC94C200568282 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ECD46E7925BC94D300568282 /* BookDetail.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,8 +286,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC475B7425BC79C800CC58C1 /* QueryTableViewController.swift in Sources */,
+				ECD46E7525BC948A00568282 /* BookDetailCell.swift in Sources */,
 				EC475B7525BC79C800CC58C1 /* QueryTableView.swift in Sources */,
 				EC475B7325BC79C800CC58C1 /* QueryTablePresenter.swift in Sources */,
+				ECD46E7A25BC94D300568282 /* BookDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
