@@ -73,6 +73,20 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
     
     //MARK: LifeCycle
     
+    public override func setup() {
+        /// Self setup
+        backgroundColor = .white
+        
+        /// Children
+        addSubview(tableView)
+        tableView.topAnchor == safeAreaLayoutGuide.topAnchor
+        tableView.bottomAnchor == safeAreaLayoutGuide.bottomAnchor
+        tableView.leadingAnchor == leadingAnchor
+        tableView.trailingAnchor == trailingAnchor
+    }
+    
+    //MARK: Actions
+    
     func updateItems(animated: Bool = true) {
         var snapshot = Snapshot()
         snapshot.appendSections(QueryTableSection.allCases)
@@ -98,17 +112,19 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
         }
     }
     
-    public override func setup() {
-        /// Self setup
-        backgroundColor = .white
-        
-        /// Children
-        addSubview(tableView)
-        tableView.topAnchor == safeAreaLayoutGuide.topAnchor
-        tableView.bottomAnchor == safeAreaLayoutGuide.bottomAnchor
-        tableView.leadingAnchor == leadingAnchor
-        tableView.trailingAnchor == trailingAnchor
+    var pullUpDelayTimer: Timer?
+    func requestPullUp() {
+        pullUpDelayTimer?.invalidate()
+        pullUpDelayTimer = Timer(
+            timeInterval: 1,
+            repeats: false,
+            block: { (timer) in
+            self.send(event: .userDidPullUp)
+        })
+        pullUpDelayTimer?.fire()
     }
+    
+    //MARK: Events
     
     public override func viewController(didSend event: BaseEventViewControllerEvent) {
         switch event {
@@ -142,7 +158,7 @@ extension QueryTableView: UITableViewDelegate, UIScrollViewDelegate {
         let offset = scrollView.contentOffset.y + scrollView.bounds.height
         let contentHeight = scrollView.contentSize.height
         if offset > contentHeight + 100 {
-            send(event: .userDidPullUp)
+            requestPullUp()
         }
     }
 }
