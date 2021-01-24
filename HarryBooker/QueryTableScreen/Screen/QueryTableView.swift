@@ -11,12 +11,10 @@ import Anchorage
 
 enum QueryTableSection: CaseIterable {
     case books
-    case bottomIndicator
 }
 
 enum QueryTableRow: Hashable {
     case book(BookSummary)
-    case loadingIndicator
 }
 
 typealias DataSource = UITableViewDiffableDataSource<QueryTableSection, QueryTableRow>
@@ -40,16 +38,18 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
         return tableView
     }()
     
+    var loadingIndicatorBottomConstraint: NSLayoutConstraint?
+    lazy var loadingIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(style: .medium)
+        return indicator
+    }()
+    
     lazy var dataSource: DataSource = {
         let dataSource = DataSource(tableView: tableView) { (tableView, indexPath, row) -> UITableViewCell? in
             switch row {
             case .book(let book):
                 let cell: BookDetailCell = tableView.dequeueReusableCell(for: indexPath)
                 cell.set(book: book)
-                return cell
-            case .loadingIndicator:
-                let cell: BottomIndicatorCell = tableView.dequeueReusableCell(for: indexPath)
-                cell.loadingIndicator.startAnimating()
                 return cell
             }
         }
@@ -64,9 +64,13 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
         }
     }
     
-    private var isIndicatorShown: Bool = false {
+    private var isLoadingIndicatorShown: Bool = false {
         didSet {
-//            updateItems()
+            if isLoadingIndicatorShown {
+                loadingIndicator.startAnimating()
+            } else {
+                loadingIndicator.stopAnimating()
+            }
         }
     }
     
@@ -78,10 +82,15 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
         
         /// Children
         addSubview(tableView)
+        addSubview(loadingIndicator)
+        
         tableView.topAnchor == safeAreaLayoutGuide.topAnchor
         tableView.bottomAnchor == safeAreaLayoutGuide.bottomAnchor
         tableView.leadingAnchor == leadingAnchor
         tableView.trailingAnchor == trailingAnchor
+        
+        loadingIndicatorBottomConstraint = loadingIndicator.bottomAnchor == bottomAnchor
+        loadingIndicator.centerXAnchor ==  centerXAnchor
     }
     
     //MARK: Actions
@@ -96,18 +105,13 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
                 snapshot.appendItems(
                     bookRows.filter({ !snapshot.itemIdentifiers.contains($0) }),
                     toSection: section)
-            case .bottomIndicator:
-                snapshot.appendItems(
-                    [.loadingIndicator],
-                    toSection: .bottomIndicator)
             }
         }
         dataSource.apply(snapshot, animatingDifferences: animated)
     }
     
-    
     func requestPullUp() {
-        if !isIndicatorShown {
+        if !isLoadingIndicatorShown {
             send(event: .userDidPullUp)
         }
     }
@@ -133,7 +137,7 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
     public override func presenter(didSend event: BaseEventCorePresentableEvent) {
         switch event {
         case .shouldShowLoading(let shoudShow):
-            isIndicatorShown = shoudShow
+            isLoadingIndicatorShown = shoudShow
         default:
             break
         }
@@ -145,6 +149,13 @@ extension QueryTableView: UITableViewDelegate, UIScrollViewDelegate {
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offset = scrollView.contentOffset.y + scrollView.bounds.height
         let contentHeight = scrollView.contentSize.height
+        
+        /// Adjusting the activity indicator with the scrollview
+        if offset > contentHeight {
+            loadingIndicatorBottomConstraint?.constant = -(offset - contentHeight) + Margin.regular.rawValue
+        }
+        
+        /// The trigger for a  reload
         if offset > contentHeight + 100 {
             requestPullUp()
         }

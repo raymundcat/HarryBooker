@@ -25,20 +25,13 @@ public class QueryTablePresenter: BaseEventPresenter<QueryTableViewEvent, QueryT
     
     private var queryTask: URLSessionTask?
     private func fetchBooks() {
-        switch queryTask?.state {
-        case .running,
-             .canceling:
-            return
-        default:
-            break
-        }
+        guard queryTask == nil else { return }
         let endPoint = QueryEndPoint(
             path: .query(
                 query: Self.query,
                 page: currentPage))
         send(event: .shouldShowLoading(true))
         queryTask = endPoint.request { (result: EndPointResult<Query>) in
-            self.send(event: .shouldShowLoading(false))
             switch result {
             case .success(let summary):
                 self.currentPage = summary.nextPageToken
@@ -46,6 +39,9 @@ public class QueryTablePresenter: BaseEventPresenter<QueryTableViewEvent, QueryT
             case .failure:
                 break
             }
+            self.queryTask?.cancel()
+            self.queryTask = nil
+            self.send(event: .shouldShowLoading(false))
         }
     }
     

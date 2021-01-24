@@ -22,7 +22,6 @@
 		EC4BCC7A25BE3058003B23F7 /* Margin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCC6825BE3057003B23F7 /* Margin.swift */; };
 		EC4BCC7B25BE3058003B23F7 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCC6A25BE3057003B23F7 /* Fonts.swift */; };
 		EC4BCCC025BE317B003B23F7 /* BookDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCCB825BE317B003B23F7 /* BookDetailCell.swift */; };
-		EC4BCCC125BE317B003B23F7 /* BottomIndicatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCCB925BE317B003B23F7 /* BottomIndicatorCell.swift */; };
 		EC4BCCC225BE317B003B23F7 /* BookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCCBB25BE317B003B23F7 /* BookDetail.swift */; };
 		EC4BCCC325BE317B003B23F7 /* QueryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCCBD25BE317B003B23F7 /* QueryTableView.swift */; };
 		EC4BCCC425BE317B003B23F7 /* QueryTablePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCCBE25BE317B003B23F7 /* QueryTablePresenter.swift */; };
@@ -73,7 +72,6 @@
 		EC4BCC6825BE3057003B23F7 /* Margin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Margin.swift; sourceTree = "<group>"; };
 		EC4BCC6A25BE3057003B23F7 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		EC4BCCB825BE317B003B23F7 /* BookDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailCell.swift; sourceTree = "<group>"; };
-		EC4BCCB925BE317B003B23F7 /* BottomIndicatorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomIndicatorCell.swift; sourceTree = "<group>"; };
 		EC4BCCBB25BE317B003B23F7 /* BookDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetail.swift; sourceTree = "<group>"; };
 		EC4BCCBD25BE317B003B23F7 /* QueryTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryTableView.swift; sourceTree = "<group>"; };
 		EC4BCCBE25BE317B003B23F7 /* QueryTablePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryTablePresenter.swift; sourceTree = "<group>"; };
@@ -257,7 +255,6 @@
 			isa = PBXGroup;
 			children = (
 				EC4BCCB825BE317B003B23F7 /* BookDetailCell.swift */,
-				EC4BCCB925BE317B003B23F7 /* BottomIndicatorCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -438,7 +435,6 @@
 				EC4BCC5425BE2FFC003B23F7 /* BaseEventViewController.swift in Sources */,
 				EC4BCCC525BE317B003B23F7 /* QueryTableViewController.swift in Sources */,
 				EC09055325BB9360000BF255 /* SceneDelegate.swift in Sources */,
-				EC4BCCC125BE317B003B23F7 /* BottomIndicatorCell.swift in Sources */,
 				EC4BCCC225BE317B003B23F7 /* BookDetail.swift in Sources */,
 				EC4BCC7B25BE3058003B23F7 /* Fonts.swift in Sources */,
 				EC4BCC5025BE2FFC003B23F7 /* UITableView+Dequeueing.swift in Sources */,
