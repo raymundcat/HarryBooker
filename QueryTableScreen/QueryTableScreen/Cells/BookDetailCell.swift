@@ -49,6 +49,12 @@ class BookDetailCell: UITableViewCell {
         return label
     }()
     
+    lazy var separatorView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .lightGray
+        return view
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setUp()
@@ -66,6 +72,7 @@ class BookDetailCell: UITableViewCell {
         addSubview(titleLabel)
         addSubview(authorLabel)
         addSubview(narratorLabel)
+        addSubview(separatorView)
         
         coverView.topAnchor == topAnchor + .regular
         coverView.leadingAnchor == leadingAnchor + .large
@@ -84,6 +91,11 @@ class BookDetailCell: UITableViewCell {
         narratorLabel.bottomAnchor == bottomAnchor - .regular
         narratorLabel.leadingAnchor == coverView.trailingAnchor + .large
         narratorLabel.trailingAnchor == trailingAnchor - .large
+        
+        separatorView.bottomAnchor == bottomAnchor
+        separatorView.leadingAnchor == leadingAnchor
+        separatorView.trailingAnchor == trailingAnchor
+        separatorView.heightAnchor == 0.5
     }
     
     func set(book: BookSummary) {

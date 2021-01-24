@@ -32,7 +32,9 @@ public class QueryTablePresenter: BaseEventPresenter<QueryTableViewEvent, QueryT
             path: .query(
                 query: Self.query,
                 page: currentPage))
+        send(event: .shouldShowLoading(true))
         queryTask = endPoint.request { (result: EndPointResult<Query>) in
+            self.send(event: .shouldShowLoading(false))
             switch result {
             case .success(let summary):
                 self.currentPage = summary.nextPageToken
@@ -54,5 +56,10 @@ public class QueryTablePresenter: BaseEventPresenter<QueryTableViewEvent, QueryT
         }
     }
     
-    public override func view(didSend event: QueryTableViewEvent) { }
+    public override func view(didSend event: QueryTableViewEvent) {
+        switch event {
+        case .userDidPullUp:
+            fetchBooks()
+        }
+    }
 }

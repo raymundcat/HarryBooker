@@ -8,19 +8,25 @@
 import UIKit
 import Eventful
 import Architecture
+import Design
 import Anchorage
 
 enum QueryTableSection: CaseIterable {
-    case query
     case books
+    case bottomIndicator
 }
 
-typealias DataSource = UITableViewDiffableDataSource<QueryTableSection, BookSummary>
+enum QueryTableRow: Hashable {
+    case book(BookSummary)
+    case loadingIndicator
+}
 
-typealias Snapshot = NSDiffableDataSourceSnapshot<QueryTableSection, BookSummary>
+typealias DataSource = UITableViewDiffableDataSource<QueryTableSection, QueryTableRow>
+
+typealias Snapshot = NSDiffableDataSourceSnapshot<QueryTableSection, QueryTableRow>
 
 public enum QueryTableViewEvent: ViewEvent {
-    case userDidReachBottom
+    case userDidPullUp
 }
 
 public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTablePresentableEvent> {
@@ -29,32 +35,67 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
+        tableView.separatorStyle = .none
+        tableView.delegate = self
+        tableView.rowHeight = UITableView.automaticDimension
         return tableView
     }()
     
     lazy var dataSource: DataSource = {
-        let dataSource = DataSource(tableView: tableView) { (tableView, indexPath, book) -> UITableViewCell? in
-            let cell: BookDetailCell = tableView.dequeueReusableCell(for: indexPath)
-            cell.set(book: book)
-            return cell
+        let dataSource = DataSource(tableView: tableView) { (tableView, indexPath, row) -> UITableViewCell? in
+            switch row {
+            case .book(let book):
+                let cell: BookDetailCell = tableView.dequeueReusableCell(for: indexPath)
+                cell.set(book: book)
+                return cell
+            case .loadingIndicator:
+                let cell: BottomIndicatorCell = tableView.dequeueReusableCell(for: indexPath)
+                cell.loadingIndicator.startAnimating()
+                return cell
+            }
         }
         return dataSource
     }()
     
+    //MARK: States
+    
+    private var books: [BookSummary] = [] {
+        didSet {
+            updateItems()
+        }
+    }
+    
+    private var isIndicatorShown: Bool = false {
+        didSet {
+            updateItems()
+        }
+    }
+    
     //MARK: LifeCycle
     
-    func updateItems(books: [BookSummary], animated: Bool = true) {
+    func updateItems(animated: Bool = true) {
         var snapshot = Snapshot()
         snapshot.appendSections(QueryTableSection.allCases)
         for section in snapshot.sectionIdentifiers {
             switch section {
-            case .query:
-                break
             case .books:
-                snapshot.appendItems(books, toSection: section)
+                let bookRows = books.map({ QueryTableRow.book($0) })
+                snapshot.appendItems(
+                    bookRows,
+                    toSection: section)
+            case .bottomIndicator:
+                if isIndicatorShown {
+                    snapshot.appendItems(
+                        [.loadingIndicator],
+                        toSection: .bottomIndicator)
+                } else {
+                    snapshot.deleteItems([.loadingIndicator])
+                }
             }
         }
-        dataSource.apply(snapshot, animatingDifferences: animated)
+        DispatchQueue.main.async {
+            self.dataSource.apply(snapshot, animatingDifferences: animated)
+        }
     }
     
     public override func setup() {
@@ -72,7 +113,7 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
     public override func viewController(didSend event: BaseEventViewControllerEvent) {
         switch event {
         case .viewDidLoad:
-            updateItems(books: [], animated: false)
+            updateItems(animated: false)
         default:
             break
         }
@@ -81,7 +122,27 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
     public override func presenter(didSend event: QueryTablePresentableEvent) {
         switch event {
         case .didLoad(let books):
-            updateItems(books: books)
+            self.books.append(contentsOf: books)
+        }
+    }
+    
+    public override func presenter(didSend event: BaseEventCorePresentableEvent) {
+        switch event {
+        case .shouldShowLoading(let shoudShow):
+            isIndicatorShown = shoudShow
+        default:
+            break
+        }
+    }
+}
+
+extension QueryTableView: UITableViewDelegate, UIScrollViewDelegate {
+    
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offset = scrollView.contentOffset.y + scrollView.bounds.height
+        let contentHeight = scrollView.contentSize.height
+        if offset > contentHeight + 100 {
+            send(event: .userDidPullUp)
         }
     }
 }

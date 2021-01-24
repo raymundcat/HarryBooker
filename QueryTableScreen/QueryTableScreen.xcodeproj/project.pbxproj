@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EC03B11A25BDFE620091A191 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = EC03B11925BDFE620091A191 /* SDWebImage */; };
+		EC03B13B25BE0CB30091A191 /* BottomIndicatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC03B13A25BE0CB30091A191 /* BottomIndicatorCell.swift */; };
 		EC475AE925BC729E00CC58C1 /* QueryTableScreen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC475ADF25BC729E00CC58C1 /* QueryTableScreen.framework */; };
 		EC475AEE25BC729E00CC58C1 /* QueryTableScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC475AED25BC729E00CC58C1 /* QueryTableScreenTests.swift */; };
 		EC475AF025BC729E00CC58C1 /* QueryTableScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = EC475AE225BC729E00CC58C1 /* QueryTableScreen.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -51,6 +52,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EC03B13A25BE0CB30091A191 /* BottomIndicatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomIndicatorCell.swift; sourceTree = "<group>"; };
 		EC475ADF25BC729E00CC58C1 /* QueryTableScreen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QueryTableScreen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC475AE225BC729E00CC58C1 /* QueryTableScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QueryTableScreen.h; sourceTree = "<group>"; };
 		EC475AE325BC729E00CC58C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				ECD46E7425BC948A00568282 /* BookDetailCell.swift */,
+				EC03B13A25BE0CB30091A191 /* BottomIndicatorCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC03B13B25BE0CB30091A191 /* BottomIndicatorCell.swift in Sources */,
 				EC475B7425BC79C800CC58C1 /* QueryTableViewController.swift in Sources */,
 				ECD46E7525BC948A00568282 /* BookDetailCell.swift in Sources */,
 				EC475B7525BC79C800CC58C1 /* QueryTableView.swift in Sources */,
