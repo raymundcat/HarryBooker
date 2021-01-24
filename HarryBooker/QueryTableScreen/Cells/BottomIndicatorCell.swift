@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Design
 import Anchorage
 
 class BottomIndicatorCell: UITableViewCell {

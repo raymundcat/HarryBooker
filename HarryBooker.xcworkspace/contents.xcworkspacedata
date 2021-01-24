@@ -4,16 +4,4 @@
    <FileRef
       location = "group:HarryBooker.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:Design/../QueryTableScreen/QueryTableScreen.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Architecture/Architecture.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:API/API.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Design/Design.xcodeproj">
-   </FileRef>
 </Workspace>

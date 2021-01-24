@@ -7,7 +7,6 @@
 
 import Foundation
 import Eventful
-import Architecture
 
 public enum QueryTableEvent: Event { }
 

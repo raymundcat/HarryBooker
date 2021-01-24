@@ -7,9 +7,7 @@
 
 import Foundation
 import Eventful
-import Architecture
 import Services
-import API
 
 public enum QueryTablePresenterEvent: PresenterEvent { }
 

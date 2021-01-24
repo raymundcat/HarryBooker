@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import QueryTableScreen
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 

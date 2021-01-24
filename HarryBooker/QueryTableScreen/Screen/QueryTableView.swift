@@ -7,8 +7,6 @@
 
 import UIKit
 import Eventful
-import Architecture
-import Design
 import Anchorage
 
 enum QueryTableSection: CaseIterable {

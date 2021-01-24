@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,8 +13,24 @@
 		EC09055D25BB9361000BF255 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC09055B25BB9361000BF255 /* LaunchScreen.storyboard */; };
 		EC09056825BB9361000BF255 /* HarryBookerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09056725BB9361000BF255 /* HarryBookerTests.swift */; };
 		EC09057325BB9361000BF255 /* HarryBookerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09057225BB9361000BF255 /* HarryBookerUITests.swift */; };
-		EC4BCC2225BE27F6003B23F7 /* QueryTableScreen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC475B0825BC732D00CC58C1 /* QueryTableScreen.framework */; };
-		EC4BCC2325BE27F6003B23F7 /* QueryTableScreen.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC475B0825BC732D00CC58C1 /* QueryTableScreen.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EC4BCC4025BE2FD9003B23F7 /* QueryEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCC3E25BE2FD9003B23F7 /* QueryEndPoint.swift */; };
+		EC4BCC5025BE2FFC003B23F7 /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCC4825BE2FFC003B23F7 /* UITableView+Dequeueing.swift */; };
+		EC4BCC5225BE2FFC003B23F7 /* BaseEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCC4D25BE2FFC003B23F7 /* BaseEventView.swift */; };
+		EC4BCC5325BE2FFC003B23F7 /* BaseEventPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCC4E25BE2FFC003B23F7 /* BaseEventPresenter.swift */; };
+		EC4BCC5425BE2FFC003B23F7 /* BaseEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCC4F25BE2FFC003B23F7 /* BaseEventViewController.swift */; };
+		EC4BCC7925BE3058003B23F7 /* Margin+Anchorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCC6725BE3057003B23F7 /* Margin+Anchorage.swift */; };
+		EC4BCC7A25BE3058003B23F7 /* Margin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCC6825BE3057003B23F7 /* Margin.swift */; };
+		EC4BCC7B25BE3058003B23F7 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCC6A25BE3057003B23F7 /* Fonts.swift */; };
+		EC4BCCC025BE317B003B23F7 /* BookDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCCB825BE317B003B23F7 /* BookDetailCell.swift */; };
+		EC4BCCC125BE317B003B23F7 /* BottomIndicatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCCB925BE317B003B23F7 /* BottomIndicatorCell.swift */; };
+		EC4BCCC225BE317B003B23F7 /* BookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCCBB25BE317B003B23F7 /* BookDetail.swift */; };
+		EC4BCCC325BE317B003B23F7 /* QueryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCCBD25BE317B003B23F7 /* QueryTableView.swift */; };
+		EC4BCCC425BE317B003B23F7 /* QueryTablePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCCBE25BE317B003B23F7 /* QueryTablePresenter.swift */; };
+		EC4BCCC525BE317B003B23F7 /* QueryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCCBF25BE317B003B23F7 /* QueryTableViewController.swift */; };
+		EC4BCCCB25BE31A0003B23F7 /* Anchorage in Frameworks */ = {isa = PBXBuildFile; productRef = EC4BCCCA25BE31A0003B23F7 /* Anchorage */; };
+		EC4BCCCE25BE31B7003B23F7 /* Eventful in Frameworks */ = {isa = PBXBuildFile; productRef = EC4BCCCD25BE31B7003B23F7 /* Eventful */; };
+		EC4BCCD125BE31C7003B23F7 /* Services in Frameworks */ = {isa = PBXBuildFile; productRef = EC4BCCD025BE31C7003B23F7 /* Services */; };
+		EC4BCCDE25BE3226003B23F7 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = EC4BCCDD25BE3226003B23F7 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,35 +48,7 @@
 			remoteGlobalIDString = EC09054C25BB9360000BF255;
 			remoteInfo = HarryBooker;
 		};
-		EC475B0725BC732D00CC58C1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EC475B0225BC732D00CC58C1 /* QueryTableScreen.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EC475ADF25BC729E00CC58C1;
-			remoteInfo = QueryTableScreen;
-		};
-		EC475B0925BC732D00CC58C1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EC475B0225BC732D00CC58C1 /* QueryTableScreen.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EC475AE825BC729E00CC58C1;
-			remoteInfo = QueryTableScreenTests;
-		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		EC4BCC2425BE27F6003B23F7 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				EC4BCC2325BE27F6003B23F7 /* QueryTableScreen.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EC09054D25BB9360000BF255 /* HarryBooker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarryBooker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,11 +63,20 @@
 		EC09056E25BB9361000BF255 /* HarryBookerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarryBookerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC09057225BB9361000BF255 /* HarryBookerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryBookerUITests.swift; sourceTree = "<group>"; };
 		EC09057425BB9361000BF255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC475AFD25BC732D00CC58C1 /* QueryTableScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryTableScreen.h; sourceTree = "<group>"; };
-		EC475AFE25BC732D00CC58C1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC475B0025BC732D00CC58C1 /* QueryTableScreenTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryTableScreenTests.swift; sourceTree = "<group>"; };
-		EC475B0125BC732D00CC58C1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC475B0225BC732D00CC58C1 /* QueryTableScreen.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = QueryTableScreen.xcodeproj; sourceTree = "<group>"; };
+		EC4BCC3E25BE2FD9003B23F7 /* QueryEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryEndPoint.swift; sourceTree = "<group>"; };
+		EC4BCC4825BE2FFC003B23F7 /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
+		EC4BCC4D25BE2FFC003B23F7 /* BaseEventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseEventView.swift; sourceTree = "<group>"; };
+		EC4BCC4E25BE2FFC003B23F7 /* BaseEventPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseEventPresenter.swift; sourceTree = "<group>"; };
+		EC4BCC4F25BE2FFC003B23F7 /* BaseEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseEventViewController.swift; sourceTree = "<group>"; };
+		EC4BCC6725BE3057003B23F7 /* Margin+Anchorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Margin+Anchorage.swift"; sourceTree = "<group>"; };
+		EC4BCC6825BE3057003B23F7 /* Margin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Margin.swift; sourceTree = "<group>"; };
+		EC4BCC6A25BE3057003B23F7 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		EC4BCCB825BE317B003B23F7 /* BookDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailCell.swift; sourceTree = "<group>"; };
+		EC4BCCB925BE317B003B23F7 /* BottomIndicatorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomIndicatorCell.swift; sourceTree = "<group>"; };
+		EC4BCCBB25BE317B003B23F7 /* BookDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetail.swift; sourceTree = "<group>"; };
+		EC4BCCBD25BE317B003B23F7 /* QueryTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryTableView.swift; sourceTree = "<group>"; };
+		EC4BCCBE25BE317B003B23F7 /* QueryTablePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryTablePresenter.swift; sourceTree = "<group>"; };
+		EC4BCCBF25BE317B003B23F7 /* QueryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +84,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC4BCC2225BE27F6003B23F7 /* QueryTableScreen.framework in Frameworks */,
+				EC4BCCD125BE31C7003B23F7 /* Services in Frameworks */,
+				EC4BCCCB25BE31A0003B23F7 /* Anchorage in Frameworks */,
+				EC4BCCDE25BE3226003B23F7 /* SDWebImage in Frameworks */,
+				EC4BCCCE25BE31B7003B23F7 /* Eventful in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +126,6 @@
 				EC09056625BB9361000BF255 /* HarryBookerTests */,
 				EC09057125BB9361000BF255 /* HarryBookerUITests */,
 				EC09054E25BB9360000BF255 /* Products */,
-				EC475AFB25BC732D00CC58C1 /* QueryTableScreen */,
 				EC475BB025BC7E0700CC58C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -144,6 +143,10 @@
 		EC09054F25BB9360000BF255 /* HarryBooker */ = {
 			isa = PBXGroup;
 			children = (
+				EC4BCCB625BE317B003B23F7 /* QueryTableScreen */,
+				EC4BCC4625BE2FFC003B23F7 /* Architecture */,
+				EC4BCC6525BE3057003B23F7 /* Design */,
+				EC4BCC3D25BE2FD9003B23F7 /* EndPoints */,
 				EC04FD8D25BBAA710006B6EC /* Supporting Files */,
 				EC09055E25BB9361000BF255 /* Info.plist */,
 			);
@@ -168,48 +171,110 @@
 			path = HarryBookerUITests;
 			sourceTree = "<group>";
 		};
-		EC475AFB25BC732D00CC58C1 /* QueryTableScreen */ = {
-			isa = PBXGroup;
-			children = (
-				EC475AFC25BC732D00CC58C1 /* QueryTableScreen */,
-				EC475AFF25BC732D00CC58C1 /* QueryTableScreenTests */,
-				EC475B0225BC732D00CC58C1 /* QueryTableScreen.xcodeproj */,
-			);
-			path = QueryTableScreen;
-			sourceTree = "<group>";
-		};
-		EC475AFC25BC732D00CC58C1 /* QueryTableScreen */ = {
-			isa = PBXGroup;
-			children = (
-				EC475AFD25BC732D00CC58C1 /* QueryTableScreen.h */,
-				EC475AFE25BC732D00CC58C1 /* Info.plist */,
-			);
-			path = QueryTableScreen;
-			sourceTree = "<group>";
-		};
-		EC475AFF25BC732D00CC58C1 /* QueryTableScreenTests */ = {
-			isa = PBXGroup;
-			children = (
-				EC475B0025BC732D00CC58C1 /* QueryTableScreenTests.swift */,
-				EC475B0125BC732D00CC58C1 /* Info.plist */,
-			);
-			path = QueryTableScreenTests;
-			sourceTree = "<group>";
-		};
-		EC475B0325BC732D00CC58C1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EC475B0825BC732D00CC58C1 /* QueryTableScreen.framework */,
-				EC475B0A25BC732D00CC58C1 /* QueryTableScreenTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		EC475BB025BC7E0700CC58C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC4BCC3D25BE2FD9003B23F7 /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				EC4BCC3E25BE2FD9003B23F7 /* QueryEndPoint.swift */,
+			);
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		EC4BCC4625BE2FFC003B23F7 /* Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				EC4BCC4725BE2FFC003B23F7 /* Commons */,
+				EC4BCC4C25BE2FFC003B23F7 /* Base */,
+			);
+			name = Architecture;
+			path = HarryBooker/Architecture;
+			sourceTree = SOURCE_ROOT;
+		};
+		EC4BCC4725BE2FFC003B23F7 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				EC4BCC4825BE2FFC003B23F7 /* UITableView+Dequeueing.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		EC4BCC4C25BE2FFC003B23F7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EC4BCC4D25BE2FFC003B23F7 /* BaseEventView.swift */,
+				EC4BCC4E25BE2FFC003B23F7 /* BaseEventPresenter.swift */,
+				EC4BCC4F25BE2FFC003B23F7 /* BaseEventViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EC4BCC6525BE3057003B23F7 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				EC4BCC6625BE3057003B23F7 /* Margins */,
+				EC4BCC6925BE3057003B23F7 /* Fonts */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		EC4BCC6625BE3057003B23F7 /* Margins */ = {
+			isa = PBXGroup;
+			children = (
+				EC4BCC6725BE3057003B23F7 /* Margin+Anchorage.swift */,
+				EC4BCC6825BE3057003B23F7 /* Margin.swift */,
+			);
+			path = Margins;
+			sourceTree = "<group>";
+		};
+		EC4BCC6925BE3057003B23F7 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EC4BCC6A25BE3057003B23F7 /* Fonts.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EC4BCCB625BE317B003B23F7 /* QueryTableScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EC4BCCB725BE317B003B23F7 /* Cells */,
+				EC4BCCBA25BE317B003B23F7 /* Models */,
+				EC4BCCBC25BE317B003B23F7 /* Screen */,
+			);
+			path = QueryTableScreen;
+			sourceTree = "<group>";
+		};
+		EC4BCCB725BE317B003B23F7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EC4BCCB825BE317B003B23F7 /* BookDetailCell.swift */,
+				EC4BCCB925BE317B003B23F7 /* BottomIndicatorCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		EC4BCCBA25BE317B003B23F7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EC4BCCBB25BE317B003B23F7 /* BookDetail.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EC4BCCBC25BE317B003B23F7 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				EC4BCCBD25BE317B003B23F7 /* QueryTableView.swift */,
+				EC4BCCBE25BE317B003B23F7 /* QueryTablePresenter.swift */,
+				EC4BCCBF25BE317B003B23F7 /* QueryTableViewController.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,7 +287,6 @@
 				EC09054925BB9360000BF255 /* Sources */,
 				EC09054A25BB9360000BF255 /* Frameworks */,
 				EC09054B25BB9360000BF255 /* Resources */,
-				EC4BCC2425BE27F6003B23F7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -230,6 +294,10 @@
 			);
 			name = HarryBooker;
 			packageProductDependencies = (
+				EC4BCCCA25BE31A0003B23F7 /* Anchorage */,
+				EC4BCCCD25BE31B7003B23F7 /* Eventful */,
+				EC4BCCD025BE31C7003B23F7 /* Services */,
+				EC4BCCDD25BE3226003B23F7 /* SDWebImage */,
 			);
 			productName = HarryBooker;
 			productReference = EC09054D25BB9360000BF255 /* HarryBooker.app */;
@@ -303,15 +371,13 @@
 			);
 			mainGroup = EC09054425BB9360000BF255;
 			packageReferences = (
+				EC4BCCC925BE31A0003B23F7 /* XCRemoteSwiftPackageReference "Anchorage" */,
+				EC4BCCCC25BE31B7003B23F7 /* XCRemoteSwiftPackageReference "Eventful" */,
+				EC4BCCCF25BE31C7003B23F7 /* XCRemoteSwiftPackageReference "Services" */,
+				EC4BCCDC25BE3226003B23F7 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = EC09054E25BB9360000BF255 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = EC475B0325BC732D00CC58C1 /* Products */;
-					ProjectRef = EC475B0225BC732D00CC58C1 /* QueryTableScreen.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				EC09054C25BB9360000BF255 /* HarryBooker */,
@@ -320,23 +386,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		EC475B0825BC732D00CC58C1 /* QueryTableScreen.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = QueryTableScreen.framework;
-			remoteRef = EC475B0725BC732D00CC58C1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		EC475B0A25BC732D00CC58C1 /* QueryTableScreenTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = QueryTableScreenTests.xctest;
-			remoteRef = EC475B0925BC732D00CC58C1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EC09054B25BB9360000BF255 /* Resources */ = {
@@ -370,7 +419,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC09055125BB9360000BF255 /* AppDelegate.swift in Sources */,
+				EC4BCCC425BE317B003B23F7 /* QueryTablePresenter.swift in Sources */,
+				EC4BCC4025BE2FD9003B23F7 /* QueryEndPoint.swift in Sources */,
+				EC4BCC7A25BE3058003B23F7 /* Margin.swift in Sources */,
+				EC4BCC7925BE3058003B23F7 /* Margin+Anchorage.swift in Sources */,
+				EC4BCC5425BE2FFC003B23F7 /* BaseEventViewController.swift in Sources */,
+				EC4BCCC525BE317B003B23F7 /* QueryTableViewController.swift in Sources */,
 				EC09055325BB9360000BF255 /* SceneDelegate.swift in Sources */,
+				EC4BCCC125BE317B003B23F7 /* BottomIndicatorCell.swift in Sources */,
+				EC4BCCC225BE317B003B23F7 /* BookDetail.swift in Sources */,
+				EC4BCC7B25BE3058003B23F7 /* Fonts.swift in Sources */,
+				EC4BCC5025BE2FFC003B23F7 /* UITableView+Dequeueing.swift in Sources */,
+				EC4BCCC325BE317B003B23F7 /* QueryTableView.swift in Sources */,
+				EC4BCCC025BE317B003B23F7 /* BookDetailCell.swift in Sources */,
+				EC4BCC5325BE2FFC003B23F7 /* BaseEventPresenter.swift in Sources */,
+				EC4BCC5225BE2FFC003B23F7 /* BaseEventView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,6 +760,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC4BCCC925BE31A0003B23F7 /* XCRemoteSwiftPackageReference "Anchorage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Rightpoint/Anchorage";
+			requirement = {
+				kind = exactVersion;
+				version = 4.5.0;
+			};
+		};
+		EC4BCCCC25BE31B7003B23F7 /* XCRemoteSwiftPackageReference "Eventful" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raymundcat/Eventful";
+			requirement = {
+				kind = exactVersion;
+				version = 0.0.3;
+			};
+		};
+		EC4BCCCF25BE31C7003B23F7 /* XCRemoteSwiftPackageReference "Services" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raymundcat/Services";
+			requirement = {
+				kind = exactVersion;
+				version = 0.0.9;
+			};
+		};
+		EC4BCCDC25BE3226003B23F7 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = exactVersion;
+				version = 5.10.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC4BCCCA25BE31A0003B23F7 /* Anchorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC4BCCC925BE31A0003B23F7 /* XCRemoteSwiftPackageReference "Anchorage" */;
+			productName = Anchorage;
+		};
+		EC4BCCCD25BE31B7003B23F7 /* Eventful */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC4BCCCC25BE31B7003B23F7 /* XCRemoteSwiftPackageReference "Eventful" */;
+			productName = Eventful;
+		};
+		EC4BCCD025BE31C7003B23F7 /* Services */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC4BCCCF25BE31C7003B23F7 /* XCRemoteSwiftPackageReference "Services" */;
+			productName = Services;
+		};
+		EC4BCCDD25BE3226003B23F7 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC4BCCDC25BE3226003B23F7 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EC09054525BB9360000BF255 /* Project object */;
 }
