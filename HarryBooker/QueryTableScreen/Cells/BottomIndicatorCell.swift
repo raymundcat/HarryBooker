@@ -31,7 +31,7 @@ class BottomIndicatorCell: UITableViewCell {
     
     private func setUp() {
         selectionStyle = .none
-        backgroundColor = .white
+        backgroundColor = .background
         
         addSubview(anchorView)
         addSubview(loadingIndicator)

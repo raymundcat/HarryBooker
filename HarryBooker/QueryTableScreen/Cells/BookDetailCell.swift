@@ -21,36 +21,36 @@ class BookDetailCell: UITableViewCell {
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Book"
         label.numberOfLines = 1
         label.lineBreakMode = .byTruncatingTail
         label.font = .title
+        label.textColor = .text
         return label
     }()
     
     private lazy var authorLabel: UILabel = {
         let label = UILabel()
-        label.text = "Book"
         label.numberOfLines = 1
         label.lineBreakMode = .byTruncatingTail
         label.textColor = .darkGray
         label.font = .description
+        label.textColor = .subText
         return label
     }()
     
     private lazy var narratorLabel: UILabel = {
         let label = UILabel()
-        label.text = "Book"
         label.numberOfLines = 1
         label.lineBreakMode = .byTruncatingTail
         label.textColor = .darkGray
         label.font = .description
+        label.textColor = .subText
         return label
     }()
     
     lazy var separatorView: UIView = {
         let view = UIView()
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .subText
         return view
     }()
     
@@ -65,7 +65,7 @@ class BookDetailCell: UITableViewCell {
     
     private func setUp() {
         selectionStyle = .none
-        backgroundColor = .white
+        backgroundColor = .background
         
         addSubview(coverView)
         addSubview(titleLabel)

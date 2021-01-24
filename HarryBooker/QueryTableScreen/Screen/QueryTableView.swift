@@ -36,6 +36,7 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
         tableView.separatorStyle = .none
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.backgroundColor = .background
         return tableView
     }()
     
@@ -73,7 +74,7 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
     
     public override func setup() {
         /// Self setup
-        backgroundColor = .white
+        backgroundColor = .background
         
         /// Children
         addSubview(tableView)

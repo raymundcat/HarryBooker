@@ -31,6 +31,7 @@
 		EC4BCCCE25BE31B7003B23F7 /* Eventful in Frameworks */ = {isa = PBXBuildFile; productRef = EC4BCCCD25BE31B7003B23F7 /* Eventful */; };
 		EC4BCCD125BE31C7003B23F7 /* Services in Frameworks */ = {isa = PBXBuildFile; productRef = EC4BCCD025BE31C7003B23F7 /* Services */; };
 		EC4BCCDE25BE3226003B23F7 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = EC4BCCDD25BE3226003B23F7 /* SDWebImage */; };
+		EC9F20CD25BE353C0093DAA3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9F20CC25BE353C0093DAA3 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		EC4BCCBD25BE317B003B23F7 /* QueryTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryTableView.swift; sourceTree = "<group>"; };
 		EC4BCCBE25BE317B003B23F7 /* QueryTablePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryTablePresenter.swift; sourceTree = "<group>"; };
 		EC4BCCBF25BE317B003B23F7 /* QueryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryTableViewController.swift; sourceTree = "<group>"; };
+		EC9F20CC25BE353C0093DAA3 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 		EC4BCC6525BE3057003B23F7 /* Design */ = {
 			isa = PBXGroup;
 			children = (
+				EC9F20CB25BE352B0093DAA3 /* Colors */,
 				EC4BCC6625BE3057003B23F7 /* Margins */,
 				EC4BCC6925BE3057003B23F7 /* Fonts */,
 			);
@@ -243,9 +246,9 @@
 		EC4BCCB625BE317B003B23F7 /* QueryTableScreen */ = {
 			isa = PBXGroup;
 			children = (
-				EC4BCCB725BE317B003B23F7 /* Cells */,
 				EC4BCCBA25BE317B003B23F7 /* Models */,
 				EC4BCCBC25BE317B003B23F7 /* Screen */,
+				EC4BCCB725BE317B003B23F7 /* Cells */,
 			);
 			path = QueryTableScreen;
 			sourceTree = "<group>";
@@ -275,6 +278,14 @@
 				EC4BCCBF25BE317B003B23F7 /* QueryTableViewController.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		EC9F20CB25BE352B0093DAA3 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				EC9F20CC25BE353C0093DAA3 /* Colors.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,6 +432,7 @@
 				EC09055125BB9360000BF255 /* AppDelegate.swift in Sources */,
 				EC4BCCC425BE317B003B23F7 /* QueryTablePresenter.swift in Sources */,
 				EC4BCC4025BE2FD9003B23F7 /* QueryEndPoint.swift in Sources */,
+				EC9F20CD25BE353C0093DAA3 /* Colors.swift in Sources */,
 				EC4BCC7A25BE3058003B23F7 /* Margin.swift in Sources */,
 				EC4BCC7925BE3058003B23F7 /* Margin+Anchorage.swift in Sources */,
 				EC4BCC5425BE2FFC003B23F7 /* BaseEventViewController.swift in Sources */,
