@@ -10,7 +10,8 @@
 		EC475B9625BC7D0500CC58C1 /* API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC475B8C25BC7D0500CC58C1 /* API.framework */; };
 		EC475B9B25BC7D0500CC58C1 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC475B9A25BC7D0500CC58C1 /* APITests.swift */; };
 		EC475B9D25BC7D0500CC58C1 /* API.h in Headers */ = {isa = PBXBuildFile; fileRef = EC475B8F25BC7D0500CC58C1 /* API.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ECD46E5C25BC875E00568282 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = ECD46E5B25BC875E00568282 /* Alamofire */; };
+		EC6048A125BDB1A9002C069C /* Services in Frameworks */ = {isa = PBXBuildFile; productRef = EC6048A025BDB1A9002C069C /* Services */; };
+		ECAE698625BC96BE0011B94B /* QueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAE698525BC96BE0011B94B /* QueryService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +31,7 @@
 		EC475B9525BC7D0500CC58C1 /* APITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC475B9A25BC7D0500CC58C1 /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 		EC475B9C25BC7D0500CC58C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECAE698525BC96BE0011B94B /* QueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECD46E5C25BC875E00568282 /* Alamofire in Frameworks */,
+				EC6048A125BDB1A9002C069C /* Services in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,7 +75,8 @@
 		EC475B8E25BC7D0500CC58C1 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				EC475B8F25BC7D0500CC58C1 /* API.h */,
+				ECAE698225BC96640011B94B /* Sources */,
+				ECAE698325BC96710011B94B /* Supporting Files */,
 				EC475B9025BC7D0500CC58C1 /* Info.plist */,
 			);
 			path = API;
@@ -86,6 +89,38 @@
 				EC475B9C25BC7D0500CC58C1 /* Info.plist */,
 			);
 			path = APITests;
+			sourceTree = "<group>";
+		};
+		ECAE698225BC96640011B94B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				ECAE698B25BC96C70011B94B /* Environment */,
+				ECAE698425BC96980011B94B /* Services */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		ECAE698325BC96710011B94B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC475B8F25BC7D0500CC58C1 /* API.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ECAE698425BC96980011B94B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ECAE698525BC96BE0011B94B /* QueryService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		ECAE698B25BC96C70011B94B /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Environment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,7 +152,7 @@
 			);
 			name = API;
 			packageProductDependencies = (
-				ECD46E5B25BC875E00568282 /* Alamofire */,
+				EC6048A025BDB1A9002C069C /* Services */,
 			);
 			productName = API;
 			productReference = EC475B8C25BC7D0500CC58C1 /* API.framework */;
@@ -152,6 +187,7 @@
 				TargetAttributes = {
 					EC475B8B25BC7D0500CC58C1 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 					EC475B9425BC7D0500CC58C1 = {
 						CreatedOnToolsVersion = 12.3;
@@ -168,7 +204,7 @@
 			);
 			mainGroup = EC475B8225BC7D0500CC58C1;
 			packageReferences = (
-				ECD46E5A25BC875E00568282 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				EC60489F25BDB1A9002C069C /* XCRemoteSwiftPackageReference "Services" */,
 			);
 			productRefGroup = EC475B8D25BC7D0500CC58C1 /* Products */;
 			projectDirPath = "";
@@ -202,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECAE698625BC96BE0011B94B /* QueryService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +386,7 @@
 		EC475BA125BC7D0500CC58C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3XNDNC2DEH;
@@ -365,6 +403,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = raymund.cat.API;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -373,6 +412,7 @@
 		EC475BA225BC7D0500CC58C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3XNDNC2DEH;
@@ -397,6 +437,7 @@
 		EC475BA425BC7D0500CC58C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3XNDNC2DEH;
 				INFOPLIST_FILE = APITests/Info.plist;
@@ -415,6 +456,7 @@
 		EC475BA525BC7D0500CC58C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3XNDNC2DEH;
 				INFOPLIST_FILE = APITests/Info.plist;
@@ -463,21 +505,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		ECD46E5A25BC875E00568282 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		EC60489F25BDB1A9002C069C /* XCRemoteSwiftPackageReference "Services" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			repositoryURL = "https://github.com/raymundcat/Services";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.4.1;
+				kind = exactVersion;
+				version = 0.0.9;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		ECD46E5B25BC875E00568282 /* Alamofire */ = {
+		EC6048A025BDB1A9002C069C /* Services */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = ECD46E5A25BC875E00568282 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
+			package = EC60489F25BDB1A9002C069C /* XCRemoteSwiftPackageReference "Services" */;
+			productName = Services;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

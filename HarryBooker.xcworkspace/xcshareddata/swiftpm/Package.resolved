@@ -2,15 +2,6 @@
   "object": {
     "pins": [
       {
-        "package": "Alamofire",
-        "repositoryURL": "https://github.com/Alamofire/Alamofire",
-        "state": {
-          "branch": null,
-          "revision": "eaf6e622dd41b07b251d8f01752eab31bc811493",
-          "version": "5.4.1"
-        }
-      },
-      {
         "package": "Anchorage",
         "repositoryURL": "https://github.com/Rightpoint/Anchorage",
         "state": {
@@ -35,6 +26,15 @@
           "branch": null,
           "revision": "8826c0979f950acbee92738848de5e8defd59d17",
           "version": "2.1.5"
+        }
+      },
+      {
+        "package": "Services",
+        "repositoryURL": "https://github.com/raymundcat/Services",
+        "state": {
+          "branch": null,
+          "revision": "369a7fcf7ab38e705c563dcb649aebea7097c9d0",
+          "version": "0.0.9"
         }
       }
     ]

@@ -14,7 +14,7 @@ public enum QueryTableViewEvent: ViewEvent { }
 
 public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTablePresentableEvent> {
     
-    private var books: [BookDetail] = []
+    private var books: [BookSummary] = []
     
     //MARK: Subviews
     
