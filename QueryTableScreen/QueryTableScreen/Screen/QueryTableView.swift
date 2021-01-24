@@ -67,7 +67,7 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
     
     private var isIndicatorShown: Bool = false {
         didSet {
-            updateItems()
+//            updateItems()
         }
     }
     
@@ -87,7 +87,6 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
     
     //MARK: Actions
     
-    var updateDelayTimer: Timer?
     func updateItems(animated: Bool = true) {
         var snapshot = Snapshot()
         snapshot.appendSections(QueryTableSection.allCases)
@@ -96,31 +95,22 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
             case .books:
                 let bookRows = books.map({ QueryTableRow.book($0) })
                 snapshot.appendItems(
-                    bookRows,
+                    bookRows.filter({ !snapshot.itemIdentifiers.contains($0) }),
                     toSection: section)
             case .bottomIndicator:
-                if isIndicatorShown {
-                    snapshot.appendItems(
-                        [.loadingIndicator],
-                        toSection: .bottomIndicator)
-                } else {
-                    snapshot.deleteItems([.loadingIndicator])
-                }
+                snapshot.appendItems(
+                    [.loadingIndicator],
+                    toSection: .bottomIndicator)
             }
         }
         dataSource.apply(snapshot, animatingDifferences: animated)
     }
     
-    var pullUpDelayTimer: Timer?
+    
     func requestPullUp() {
-        pullUpDelayTimer?.invalidate()
-        pullUpDelayTimer = Timer(
-            timeInterval: 1,
-            repeats: false,
-            block: { (timer) in
-            self.send(event: .userDidPullUp)
-        })
-        pullUpDelayTimer?.fire()
+        if !isIndicatorShown {
+            send(event: .userDidPullUp)
+        }
     }
     
     //MARK: Events

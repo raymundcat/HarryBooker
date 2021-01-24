@@ -27,7 +27,13 @@ public class QueryTablePresenter: BaseEventPresenter<QueryTableViewEvent, QueryT
     
     private var queryTask: URLSessionTask?
     private func fetchBooks() {
-        queryTask?.cancel()
+        switch queryTask?.state {
+        case .running,
+             .canceling:
+            return
+        default:
+            break
+        }
         let endPoint = QueryEndPoint(
             path: .query(
                 query: Self.query,

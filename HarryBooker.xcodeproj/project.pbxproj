@@ -13,7 +13,8 @@
 		EC09055D25BB9361000BF255 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC09055B25BB9361000BF255 /* LaunchScreen.storyboard */; };
 		EC09056825BB9361000BF255 /* HarryBookerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09056725BB9361000BF255 /* HarryBookerTests.swift */; };
 		EC09057325BB9361000BF255 /* HarryBookerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09057225BB9361000BF255 /* HarryBookerUITests.swift */; };
-		ECD46E5625BC84A400568282 /* QueryTableScreen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC475B0825BC732D00CC58C1 /* QueryTableScreen.framework */; };
+		EC4BCC2225BE27F6003B23F7 /* QueryTableScreen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC475B0825BC732D00CC58C1 /* QueryTableScreen.framework */; };
+		EC4BCC2325BE27F6003B23F7 /* QueryTableScreen.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC475B0825BC732D00CC58C1 /* QueryTableScreen.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		EC4BCC2425BE27F6003B23F7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EC4BCC2325BE27F6003B23F7 /* QueryTableScreen.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		EC09054D25BB9360000BF255 /* HarryBooker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HarryBooker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC09055025BB9360000BF255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECD46E5625BC84A400568282 /* QueryTableScreen.framework in Frameworks */,
+				EC4BCC2225BE27F6003B23F7 /* QueryTableScreen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +222,7 @@
 				EC09054925BB9360000BF255 /* Sources */,
 				EC09054A25BB9360000BF255 /* Frameworks */,
 				EC09054B25BB9360000BF255 /* Resources */,
+				EC4BCC2425BE27F6003B23F7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
