@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC03B11A25BDFE620091A191 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = EC03B11925BDFE620091A191 /* SDWebImage */; };
 		EC475AE925BC729E00CC58C1 /* QueryTableScreen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC475ADF25BC729E00CC58C1 /* QueryTableScreen.framework */; };
 		EC475AEE25BC729E00CC58C1 /* QueryTableScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC475AED25BC729E00CC58C1 /* QueryTableScreenTests.swift */; };
 		EC475AF025BC729E00CC58C1 /* QueryTableScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = EC475AE225BC729E00CC58C1 /* QueryTableScreen.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -73,6 +74,7 @@
 			files = (
 				EC475B7F25BC79EC00CC58C1 /* Design.framework in Frameworks */,
 				EC475BAB25BC7D3300CC58C1 /* API.framework in Frameworks */,
+				EC03B11A25BDFE620091A191 /* SDWebImage in Frameworks */,
 				EC475B7A25BC79E600CC58C1 /* Architecture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,6 +204,7 @@
 			);
 			name = QueryTableScreen;
 			packageProductDependencies = (
+				EC03B11925BDFE620091A191 /* SDWebImage */,
 			);
 			productName = QueryTableScreen;
 			productReference = EC475ADF25BC729E00CC58C1 /* QueryTableScreen.framework */;
@@ -252,6 +255,7 @@
 			);
 			mainGroup = EC475AD525BC729E00CC58C1;
 			packageReferences = (
+				EC03B11825BDFE620091A191 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = EC475AE025BC729E00CC58C1 /* Products */;
 			projectDirPath = "";
@@ -553,6 +557,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC03B11825BDFE620091A191 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = exactVersion;
+				version = 5.10.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC03B11925BDFE620091A191 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC03B11825BDFE620091A191 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EC475AD625BC729E00CC58C1 /* Project object */;
 }

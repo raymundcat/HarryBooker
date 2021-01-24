@@ -7,6 +7,7 @@
 
 import UIKit
 import Anchorage
+import SDWebImage
 
 class BookDetailCell: UITableViewCell {
     
@@ -82,5 +83,6 @@ class BookDetailCell: UITableViewCell {
         titleLabel.text = book.title
         authorLabel.text = "By " + book.authors.map({ return $0.name }).joined(separator: ", ")
         narratorLabel.text = "with Narrator " + book.narrators.map({ return $0.name }).joined(separator: ", ")
+        coverView.sd_setImage(with: URL(string: book.cover.url))
     }
 }
