@@ -28,14 +28,17 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
     //MARK: Subviews
     
     lazy var tableView: UITableView = {
-        return UITableView()
+        let tableView = UITableView()
+        return tableView
     }()
     
     lazy var dataSource: DataSource = {
-        return DataSource(tableView: tableView) { (tableView, indexPath, book) -> UITableViewCell? in
+        let dataSource = DataSource(tableView: tableView) { (tableView, indexPath, book) -> UITableViewCell? in
             let cell: BookDetailCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.set(book: book)
             return cell
         }
+        return dataSource
     }()
     
     //MARK: LifeCycle
