@@ -11,7 +11,7 @@
 		EC475B9B25BC7D0500CC58C1 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC475B9A25BC7D0500CC58C1 /* APITests.swift */; };
 		EC475B9D25BC7D0500CC58C1 /* API.h in Headers */ = {isa = PBXBuildFile; fileRef = EC475B8F25BC7D0500CC58C1 /* API.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC6048A125BDB1A9002C069C /* Services in Frameworks */ = {isa = PBXBuildFile; productRef = EC6048A025BDB1A9002C069C /* Services */; };
-		ECAE698625BC96BE0011B94B /* QueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAE698525BC96BE0011B94B /* QueryService.swift */; };
+		ECAE698625BC96BE0011B94B /* QueryEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAE698525BC96BE0011B94B /* QueryEndPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +31,7 @@
 		EC475B9525BC7D0500CC58C1 /* APITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC475B9A25BC7D0500CC58C1 /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 		EC475B9C25BC7D0500CC58C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ECAE698525BC96BE0011B94B /* QueryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryService.swift; sourceTree = "<group>"; };
+		ECAE698525BC96BE0011B94B /* QueryEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryEndPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +94,7 @@
 		ECAE698225BC96640011B94B /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				ECAE698B25BC96C70011B94B /* Environment */,
-				ECAE698425BC96980011B94B /* Services */,
+				ECAE698425BC96980011B94B /* EndPoints */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -108,19 +107,12 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		ECAE698425BC96980011B94B /* Services */ = {
+		ECAE698425BC96980011B94B /* EndPoints */ = {
 			isa = PBXGroup;
 			children = (
-				ECAE698525BC96BE0011B94B /* QueryService.swift */,
+				ECAE698525BC96BE0011B94B /* QueryEndPoint.swift */,
 			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		ECAE698B25BC96C70011B94B /* Environment */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Environment;
+			path = EndPoints;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,7 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECAE698625BC96BE0011B94B /* QueryService.swift in Sources */,
+				ECAE698625BC96BE0011B94B /* QueryEndPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
