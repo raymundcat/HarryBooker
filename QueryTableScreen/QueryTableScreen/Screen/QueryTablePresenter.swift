@@ -19,13 +19,23 @@ public enum QueryTablePresentableEvent: PresentableEvent {
 
 public class QueryTablePresenter: BaseEventPresenter<QueryTableViewEvent, QueryTablePresenterEvent, QueryTablePresentableEvent> {
     
+    private static let query: String = "harry"
+    
     //MARK: Actions
     
+    private var currentPage: String?
+    
+    private var queryTask: URLSessionTask?
     private func fetchBooks() {
-        let endPoint = QueryEndPoint(path: .query("harry"))
-        endPoint.request { (result: EndPointResult<Query>) in
+        queryTask?.cancel()
+        let endPoint = QueryEndPoint(
+            path: .query(
+                query: Self.query,
+                page: currentPage))
+        queryTask = endPoint.request { (result: EndPointResult<Query>) in
             switch result {
             case .success(let summary):
+                self.currentPage = summary.nextPageToken
                 self.send(event: .didLoad(books: summary.items))
             case .failure:
                 break
@@ -38,7 +48,7 @@ public class QueryTablePresenter: BaseEventPresenter<QueryTableViewEvent, QueryT
     public override func viewController(didSend event: BaseEventViewControllerEvent) {
         switch event {
         case .viewDidLoad:
-            self.fetchBooks()
+            fetchBooks()
         default:
             break
         }

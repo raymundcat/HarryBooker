@@ -53,6 +53,7 @@ class BookDetailCell: UITableViewCell {
     }
     
     private func setUp() {
+        selectionStyle = .none
         backgroundColor = .white
         
         addSubview(coverView)

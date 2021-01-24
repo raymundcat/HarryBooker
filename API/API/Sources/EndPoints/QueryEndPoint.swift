@@ -9,7 +9,7 @@ import Foundation
 import Services
 
 public enum QueryPath: Path {
-    case query(String)
+    case query(query: String, page: String?)
 }
 
 public class QueryEndPoint: EndPoint<QueryPath> {
@@ -25,8 +25,13 @@ public class QueryEndPoint: EndPoint<QueryPath> {
     
     public override var urlParameter: URLParameter? {
         switch path {
-        case .query(let query):
-            return .dictionary(parameters: ["query" : query])
+        case .query(let query, let page):
+            var queryDict = [String : String]()
+            queryDict["query"] = query
+            if let page = page {
+                queryDict["page"] = page
+            }
+            return .dictionary(parameters: queryDict)
         }
     }
 }
