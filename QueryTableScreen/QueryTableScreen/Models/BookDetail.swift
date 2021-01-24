@@ -10,8 +10,13 @@ import Foundation
 struct BookSummary: Codable, Identifiable {
     let id: String
     let title: String
+    let cover: BookCover
     let authors: [Person]
     let narrators: [Person]
+}
+
+struct BookCover: Codable {
+    let url: String
 }
 
 struct Person: Codable, Identifiable {
