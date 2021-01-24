@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Design
 import Anchorage
 import SDWebImage
 
@@ -61,23 +62,23 @@ class BookDetailCell: UITableViewCell {
         addSubview(authorLabel)
         addSubview(narratorLabel)
         
-        coverView.topAnchor == topAnchor + 12
-        coverView.leadingAnchor == leadingAnchor + 12
+        coverView.topAnchor == topAnchor + .regular
+        coverView.leadingAnchor == leadingAnchor + .large
         coverView.widthAnchor == Self.coverDimension
         coverView.heightAnchor == Self.coverDimension
         
-        titleLabel.topAnchor == topAnchor + 12
-        titleLabel.leadingAnchor == coverView.trailingAnchor + 12
-        titleLabel.trailingAnchor == trailingAnchor - 12
+        titleLabel.topAnchor == topAnchor + .regular
+        titleLabel.leadingAnchor == coverView.trailingAnchor + .large
+        titleLabel.trailingAnchor == trailingAnchor - .large
         
-        authorLabel.topAnchor == titleLabel.bottomAnchor + 12
-        authorLabel.leadingAnchor == coverView.trailingAnchor + 12
-        authorLabel.trailingAnchor == trailingAnchor - 12
+        authorLabel.topAnchor == titleLabel.bottomAnchor + .regular
+        authorLabel.leadingAnchor == coverView.trailingAnchor + .large
+        authorLabel.trailingAnchor == trailingAnchor - .large
         
-        narratorLabel.topAnchor == authorLabel.bottomAnchor + 12
-        narratorLabel.bottomAnchor == bottomAnchor - 12
-        narratorLabel.leadingAnchor == coverView.trailingAnchor + 12
-        narratorLabel.trailingAnchor == trailingAnchor - 12
+        narratorLabel.topAnchor == authorLabel.bottomAnchor + .small
+        narratorLabel.bottomAnchor == bottomAnchor - .regular
+        narratorLabel.leadingAnchor == coverView.trailingAnchor + .large
+        narratorLabel.trailingAnchor == trailingAnchor - .large
     }
     
     func set(book: BookSummary) {

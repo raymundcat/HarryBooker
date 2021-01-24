@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC03B11D25BE03660091A191 /* Margin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC03B11C25BE03660091A191 /* Margin.swift */; };
+		EC03B12A25BE05840091A191 /* Anchorage in Frameworks */ = {isa = PBXBuildFile; productRef = EC03B12925BE05840091A191 /* Anchorage */; };
+		EC03B13025BE06F90091A191 /* Margin+Anchorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC03B12F25BE06F90091A191 /* Margin+Anchorage.swift */; };
 		EC04FDB425BC69BE0006B6EC /* Design.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC04FDAA25BC69BD0006B6EC /* Design.framework */; };
 		EC04FDB925BC69BE0006B6EC /* DesignTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC04FDB825BC69BE0006B6EC /* DesignTests.swift */; };
 		EC04FDBB25BC69BE0006B6EC /* Design.h in Headers */ = {isa = PBXBuildFile; fileRef = EC04FDAD25BC69BD0006B6EC /* Design.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -20,30 +23,17 @@
 			remoteGlobalIDString = EC04FDA925BC69BD0006B6EC;
 			remoteInfo = Design;
 		};
-		ECD46E4E25BC848200568282 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ECD46E4925BC848200568282 /* QueryTableScreen.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EC475ADF25BC729E00CC58C1;
-			remoteInfo = QueryTableScreen;
-		};
-		ECD46E5025BC848200568282 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ECD46E4925BC848200568282 /* QueryTableScreen.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EC475AE825BC729E00CC58C1;
-			remoteInfo = QueryTableScreenTests;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC03B11C25BE03660091A191 /* Margin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Margin.swift; sourceTree = "<group>"; };
+		EC03B12F25BE06F90091A191 /* Margin+Anchorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Margin+Anchorage.swift"; sourceTree = "<group>"; };
 		EC04FDAA25BC69BD0006B6EC /* Design.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Design.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC04FDAD25BC69BD0006B6EC /* Design.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Design.h; sourceTree = "<group>"; };
 		EC04FDAE25BC69BD0006B6EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC04FDB325BC69BE0006B6EC /* DesignTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC04FDB825BC69BE0006B6EC /* DesignTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignTests.swift; sourceTree = "<group>"; };
 		EC04FDBA25BC69BE0006B6EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ECD46E4925BC848200568282 /* QueryTableScreen.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QueryTableScreen.xcodeproj; path = ../QueryTableScreen/QueryTableScreen.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC03B12A25BE05840091A191 /* Anchorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,10 +56,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC03B12225BE036E0091A191 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC04FDAD25BC69BD0006B6EC /* Design.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC03B12325BE037B0091A191 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EC03B11C25BE03660091A191 /* Margin.swift */,
+				EC03B12F25BE06F90091A191 /* Margin+Anchorage.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		EC04FDA025BC69BD0006B6EC = {
 			isa = PBXGroup;
 			children = (
-				ECD46E4925BC848200568282 /* QueryTableScreen.xcodeproj */,
 				EC04FDAC25BC69BD0006B6EC /* Design */,
 				EC04FDB725BC69BE0006B6EC /* DesignTests */,
 				EC04FDAB25BC69BD0006B6EC /* Products */,
@@ -87,7 +94,8 @@
 		EC04FDAC25BC69BD0006B6EC /* Design */ = {
 			isa = PBXGroup;
 			children = (
-				EC04FDAD25BC69BD0006B6EC /* Design.h */,
+				EC03B12325BE037B0091A191 /* Sources */,
+				EC03B12225BE036E0091A191 /* Supporting Files */,
 				EC04FDAE25BC69BD0006B6EC /* Info.plist */,
 			);
 			path = Design;
@@ -100,15 +108,6 @@
 				EC04FDBA25BC69BE0006B6EC /* Info.plist */,
 			);
 			path = DesignTests;
-			sourceTree = "<group>";
-		};
-		ECD46E4A25BC848200568282 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				ECD46E4F25BC848200568282 /* QueryTableScreen.framework */,
-				ECD46E5125BC848200568282 /* QueryTableScreenTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +138,9 @@
 			dependencies = (
 			);
 			name = Design;
+			packageProductDependencies = (
+				EC03B12925BE05840091A191 /* Anchorage */,
+			);
 			productName = Design;
 			productReference = EC04FDAA25BC69BD0006B6EC /* Design.framework */;
 			productType = "com.apple.product-type.framework";
@@ -172,6 +174,7 @@
 				TargetAttributes = {
 					EC04FDA925BC69BD0006B6EC = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 					EC04FDB225BC69BE0006B6EC = {
 						CreatedOnToolsVersion = 12.3;
@@ -187,14 +190,11 @@
 				Base,
 			);
 			mainGroup = EC04FDA025BC69BD0006B6EC;
+			packageReferences = (
+				EC03B12825BE05840091A191 /* XCRemoteSwiftPackageReference "Anchorage" */,
+			);
 			productRefGroup = EC04FDAB25BC69BD0006B6EC /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = ECD46E4A25BC848200568282 /* Products */;
-					ProjectRef = ECD46E4925BC848200568282 /* QueryTableScreen.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				EC04FDA925BC69BD0006B6EC /* Design */,
@@ -202,23 +202,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		ECD46E4F25BC848200568282 /* QueryTableScreen.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = QueryTableScreen.framework;
-			remoteRef = ECD46E4E25BC848200568282 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		ECD46E5125BC848200568282 /* QueryTableScreenTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = QueryTableScreenTests.xctest;
-			remoteRef = ECD46E5025BC848200568282 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EC04FDA825BC69BD0006B6EC /* Resources */ = {
@@ -242,6 +225,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC03B13025BE06F90091A191 /* Margin+Anchorage.swift in Sources */,
+				EC03B11D25BE03660091A191 /* Margin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +374,7 @@
 		EC04FDBF25BC69BE0006B6EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3XNDNC2DEH;
@@ -405,6 +391,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = raymund.cat.Design;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -413,6 +400,7 @@
 		EC04FDC025BC69BE0006B6EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3XNDNC2DEH;
@@ -437,6 +425,7 @@
 		EC04FDC225BC69BE0006B6EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3XNDNC2DEH;
 				INFOPLIST_FILE = DesignTests/Info.plist;
@@ -455,6 +444,7 @@
 		EC04FDC325BC69BE0006B6EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3XNDNC2DEH;
 				INFOPLIST_FILE = DesignTests/Info.plist;
@@ -501,6 +491,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC03B12825BE05840091A191 /* XCRemoteSwiftPackageReference "Anchorage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Rightpoint/Anchorage";
+			requirement = {
+				kind = exactVersion;
+				version = 4.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC03B12925BE05840091A191 /* Anchorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC03B12825BE05840091A191 /* XCRemoteSwiftPackageReference "Anchorage" */;
+			productName = Anchorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EC04FDA125BC69BD0006B6EC /* Project object */;
 }
