@@ -25,6 +25,7 @@ class BookDetailCell: UITableViewCell {
         label.text = "Book"
         label.numberOfLines = 1
         label.lineBreakMode = .byTruncatingTail
+        label.font = .title
         return label
     }()
     
@@ -33,6 +34,8 @@ class BookDetailCell: UITableViewCell {
         label.text = "Book"
         label.numberOfLines = 1
         label.lineBreakMode = .byTruncatingTail
+        label.textColor = .darkGray
+        label.font = .description
         return label
     }()
     
@@ -41,6 +44,8 @@ class BookDetailCell: UITableViewCell {
         label.text = "Book"
         label.numberOfLines = 1
         label.lineBreakMode = .byTruncatingTail
+        label.textColor = .darkGray
+        label.font = .description
         return label
     }()
     
@@ -75,7 +80,7 @@ class BookDetailCell: UITableViewCell {
         authorLabel.leadingAnchor == coverView.trailingAnchor + .large
         authorLabel.trailingAnchor == trailingAnchor - .large
         
-        narratorLabel.topAnchor == authorLabel.bottomAnchor + .small
+        narratorLabel.topAnchor == authorLabel.bottomAnchor
         narratorLabel.bottomAnchor == bottomAnchor - .regular
         narratorLabel.leadingAnchor == coverView.trailingAnchor + .large
         narratorLabel.trailingAnchor == trailingAnchor - .large

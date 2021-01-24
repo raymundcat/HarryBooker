@@ -10,6 +10,7 @@
 		EC03B11D25BE03660091A191 /* Margin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC03B11C25BE03660091A191 /* Margin.swift */; };
 		EC03B12A25BE05840091A191 /* Anchorage in Frameworks */ = {isa = PBXBuildFile; productRef = EC03B12925BE05840091A191 /* Anchorage */; };
 		EC03B13025BE06F90091A191 /* Margin+Anchorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC03B12F25BE06F90091A191 /* Margin+Anchorage.swift */; };
+		EC03B13725BE08970091A191 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC03B13625BE08970091A191 /* Fonts.swift */; };
 		EC04FDB425BC69BE0006B6EC /* Design.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC04FDAA25BC69BD0006B6EC /* Design.framework */; };
 		EC04FDB925BC69BE0006B6EC /* DesignTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC04FDB825BC69BE0006B6EC /* DesignTests.swift */; };
 		EC04FDBB25BC69BE0006B6EC /* Design.h in Headers */ = {isa = PBXBuildFile; fileRef = EC04FDAD25BC69BD0006B6EC /* Design.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		EC03B11C25BE03660091A191 /* Margin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Margin.swift; sourceTree = "<group>"; };
 		EC03B12F25BE06F90091A191 /* Margin+Anchorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Margin+Anchorage.swift"; sourceTree = "<group>"; };
+		EC03B13625BE08970091A191 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		EC04FDAA25BC69BD0006B6EC /* Design.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Design.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC04FDAD25BC69BD0006B6EC /* Design.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Design.h; sourceTree = "<group>"; };
 		EC04FDAE25BC69BD0006B6EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,13 +66,21 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		EC03B12325BE037B0091A191 /* Sources */ = {
+		EC03B12325BE037B0091A191 /* Margins */ = {
 			isa = PBXGroup;
 			children = (
 				EC03B11C25BE03660091A191 /* Margin.swift */,
 				EC03B12F25BE06F90091A191 /* Margin+Anchorage.swift */,
 			);
-			path = Sources;
+			path = Margins;
+			sourceTree = "<group>";
+		};
+		EC03B13325BE087F0091A191 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EC03B13625BE08970091A191 /* Fonts.swift */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		EC04FDA025BC69BD0006B6EC = {
@@ -94,7 +104,8 @@
 		EC04FDAC25BC69BD0006B6EC /* Design */ = {
 			isa = PBXGroup;
 			children = (
-				EC03B12325BE037B0091A191 /* Sources */,
+				EC03B13325BE087F0091A191 /* Fonts */,
+				EC03B12325BE037B0091A191 /* Margins */,
 				EC03B12225BE036E0091A191 /* Supporting Files */,
 				EC04FDAE25BC69BD0006B6EC /* Info.plist */,
 			);
@@ -226,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC03B13025BE06F90091A191 /* Margin+Anchorage.swift in Sources */,
+				EC03B13725BE08970091A191 /* Fonts.swift in Sources */,
 				EC03B11D25BE03660091A191 /* Margin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
