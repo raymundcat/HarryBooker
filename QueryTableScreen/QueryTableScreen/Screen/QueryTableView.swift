@@ -10,18 +10,49 @@ import Eventful
 import Architecture
 import Anchorage
 
-public enum QueryTableViewEvent: ViewEvent { }
+enum QueryTableSection: CaseIterable {
+    case query
+    case books
+}
+
+typealias DataSource = UITableViewDiffableDataSource<QueryTableSection, BookSummary>
+
+typealias Snapshot = NSDiffableDataSourceSnapshot<QueryTableSection, BookSummary>
+
+public enum QueryTableViewEvent: ViewEvent {
+    case userDidReachBottom
+}
 
 public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTablePresentableEvent> {
-    
-    private var books: [BookSummary] = []
     
     //MARK: Subviews
     
     lazy var tableView: UITableView = {
-        let tableView = UITableView()
-        return tableView
+        return UITableView()
     }()
+    
+    lazy var dataSource: DataSource = {
+        return DataSource(tableView: tableView) { (tableView, indexPath, book) -> UITableViewCell? in
+            let cell: BookDetailCell = tableView.dequeueReusableCell(for: indexPath)
+            return cell
+        }
+    }()
+    
+    //MARK: LifeCycle
+    
+    func updateItems(books: [BookSummary], animated: Bool = true) {
+        var snapshot = Snapshot()
+        snapshot.appendSections(QueryTableSection.allCases)
+        for section in snapshot.sectionIdentifiers {
+            switch section {
+            case .query:
+                break
+            case .books:
+                snapshot.appendItems(books, toSection: section)
+            }
+        }
+        dataSource.apply(snapshot, animatingDifferences: animated)
+    }
     
     public override func setup() {
         /// Self setup
@@ -35,19 +66,19 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
         tableView.trailingAnchor == trailingAnchor
     }
     
+    public override func viewController(didSend event: BaseEventViewControllerEvent) {
+        switch event {
+        case .viewDidLoad:
+            updateItems(books: [], animated: false)
+        default:
+            break
+        }
+    }
+    
     public override func presenter(didSend event: QueryTablePresentableEvent) {
-        
-    }
-}
-
-extension QueryTableView: UITableViewDelegate, UITableViewDataSource {
-    
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return books.count
-    }
-    
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: BookDetailCell = tableView.dequeueReusableCell(for: indexPath)
-        return cell
+        switch event {
+        case .didLoad(let books):
+            updateItems(books: books)
+        }
     }
 }

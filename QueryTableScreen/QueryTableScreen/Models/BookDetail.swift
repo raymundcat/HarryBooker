@@ -7,24 +7,36 @@
 
 import Foundation
 
-struct BookSummary: Codable, Identifiable {
-    let id: String
-    let title: String
-    let cover: BookCover
-    let authors: [Person]
-    let narrators: [Person]
+public struct BookSummary: Codable, Identifiable {
+    
+    public let id: String
+    public let title: String
+    public let cover: BookCover
+    public let authors: [Person]
+    public let narrators: [Person]
 }
 
-struct BookCover: Codable {
-    let url: String
+extension BookSummary: Hashable {
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    public static func == (lhs: BookSummary, rhs: BookSummary) -> Bool {
+        lhs.id == rhs.id
+    }
 }
 
-struct Person: Codable, Identifiable {
-    let id: String
-    let name: String
+public struct BookCover: Codable {
+    public let url: String
 }
 
-struct Query: Codable {
-    let nextPageToken: String
-    let items: [BookSummary]
+public struct Person: Codable, Identifiable {
+    public let id: String
+    public let name: String
+}
+
+public struct Query: Codable {
+    public let nextPageToken: String
+    public let items: [BookSummary]
 }

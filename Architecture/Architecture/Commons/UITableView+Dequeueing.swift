@@ -8,7 +8,7 @@
 import UIKit
 
 public extension UITableView {
-
+    
     func dequeueReusableCell<T: UITableViewCell>(for indexPath: IndexPath) -> T {
         let identifier = NSStringFromClass(T.self)
         if let reusableCell = dequeueReusableCell(withIdentifier: identifier),
@@ -37,3 +37,4 @@ public extension UITableView {
         }
     }
 }
+
