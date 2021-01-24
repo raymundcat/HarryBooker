@@ -87,6 +87,7 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
     
     //MARK: Actions
     
+    var updateDelayTimer: Timer?
     func updateItems(animated: Bool = true) {
         var snapshot = Snapshot()
         snapshot.appendSections(QueryTableSection.allCases)
@@ -107,9 +108,7 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
                 }
             }
         }
-        DispatchQueue.main.async {
-            self.dataSource.apply(snapshot, animatingDifferences: animated)
-        }
+        dataSource.apply(snapshot, animatingDifferences: animated)
     }
     
     var pullUpDelayTimer: Timer?

@@ -7,7 +7,6 @@
 
 import UIKit
 import Eventful
-import Anchorage
 
 open class BaseEventRootView<BaseEventViewEvent: ViewEvent, BaseEventPresentableEvent: PresentableEvent>: EventRootView<BaseEventViewEvent, BaseEventPresentableEvent>, BaseEventViewControllerEventListener, BaseEventCorePresentableEventListener {
     
