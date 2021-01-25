@@ -31,6 +31,7 @@
 		EC4BCCD125BE31C7003B23F7 /* Services in Frameworks */ = {isa = PBXBuildFile; productRef = EC4BCCD025BE31C7003B23F7 /* Services */; };
 		EC4BCCDE25BE3226003B23F7 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = EC4BCCDD25BE3226003B23F7 /* SDWebImage */; };
 		EC9F20CD25BE353C0093DAA3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9F20CC25BE353C0093DAA3 /* Colors.swift */; };
+		EC9F20D825BE466A0093DAA3 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9F20D725BE466A0093DAA3 /* HeaderCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		EC4BCCBE25BE317B003B23F7 /* QueryTablePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryTablePresenter.swift; sourceTree = "<group>"; };
 		EC4BCCBF25BE317B003B23F7 /* QueryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryTableViewController.swift; sourceTree = "<group>"; };
 		EC9F20CC25BE353C0093DAA3 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		EC9F20D725BE466A0093DAA3 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +256,7 @@
 		EC4BCCB725BE317B003B23F7 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				EC9F20D725BE466A0093DAA3 /* HeaderCell.swift */,
 				EC4BCCB825BE317B003B23F7 /* BookDetailCell.swift */,
 			);
 			path = Cells;
@@ -441,6 +444,7 @@
 				EC4BCCC325BE317B003B23F7 /* QueryTableView.swift in Sources */,
 				EC4BCCC025BE317B003B23F7 /* BookDetailCell.swift in Sources */,
 				EC4BCC5325BE2FFC003B23F7 /* BaseEventPresenter.swift in Sources */,
+				EC9F20D825BE466A0093DAA3 /* HeaderCell.swift in Sources */,
 				EC4BCC5225BE2FFC003B23F7 /* BaseEventView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

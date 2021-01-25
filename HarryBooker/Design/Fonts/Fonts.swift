@@ -9,6 +9,10 @@ import UIKit
 
 public extension UIFont {
     
+    class var header: UIFont {
+        return .systemFont(ofSize: 32, weight: .bold)
+    }
+    
     class var title: UIFont {
         return .systemFont(ofSize: 24, weight: .semibold)
     }

@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         /// landing ViewController
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = QueryTableViewController()
+        window.rootViewController = QueryTableViewController(query: "Harry")
         window.makeKeyAndVisible()
         self.window = window
     }

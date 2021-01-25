@@ -12,12 +12,17 @@ import Services
 public enum QueryTablePresenterEvent: PresenterEvent { }
 
 public enum QueryTablePresentableEvent: PresentableEvent {
+    case didStart(query: String)
     case didLoad(books: [BookSummary])
 }
 
 public class QueryTablePresenter: BaseEventPresenter<QueryTableViewEvent, QueryTablePresenterEvent, QueryTablePresentableEvent> {
     
-    private static let query: String = "harry"
+    private let query: String
+    
+    public init(query: String) {
+        self.query = query
+    }
     
     //MARK: Actions
     
@@ -30,7 +35,7 @@ public class QueryTablePresenter: BaseEventPresenter<QueryTableViewEvent, QueryT
         guard queryTask == nil else { return }
         let endPoint = QueryEndPoint(
             path: .query(
-                query: Self.query,
+                query: query,
                 page: currentPage))
         send(event: .shouldShowLoading(true))
         queryTask = endPoint.request { (result: EndPointResult<BookQueryResult>) in
@@ -71,6 +76,7 @@ public class QueryTablePresenter: BaseEventPresenter<QueryTableViewEvent, QueryT
         switch event {
         case .viewDidLoad:
             /// Send an initial update
+            send(event: .didStart(query: query))
             send(event: .didLoad(books: []))
             
             /// Start fetching the first set

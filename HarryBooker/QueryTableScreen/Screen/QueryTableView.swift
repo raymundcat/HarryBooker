@@ -10,10 +10,12 @@ import Eventful
 import Anchorage
 
 enum QueryTableSection: CaseIterable {
+    case header
     case books
 }
 
 enum QueryTableRow: Hashable {
+    case headerCell
     case book(BookSummary)
 }
 
@@ -26,6 +28,8 @@ public enum QueryTableViewEvent: ViewEvent {
 }
 
 public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTablePresentableEvent> {
+    
+    private var query: String?
     
     //MARK: Subviews
     
@@ -50,6 +54,12 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
             case .book(let book):
                 let cell: BookDetailCell = tableView.dequeueReusableCell(for: indexPath)
                 cell.set(book: book)
+                return cell
+            case .headerCell:
+                let cell: HeaderCell = tableView.dequeueReusableCell(for: indexPath)
+                if let query = self.query {
+                    cell.set(query: query)
+                }
                 return cell
             }
         }
@@ -94,6 +104,8 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
         snapshot.appendSections(QueryTableSection.allCases)
         for section in snapshot.sectionIdentifiers {
             switch section {
+            case .header:
+                snapshot.appendItems([.headerCell], toSection: .header)
             case .books:
                 let bookRows = books.map({ QueryTableRow.book($0) })
                 snapshot.appendItems(
@@ -119,6 +131,8 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
     
     public override func presenter(didSend event: QueryTablePresentableEvent) {
         switch event {
+        case .didStart(let query):
+            self.query = query
         case .didLoad(let books):
             updateItems(books: books)
         }
