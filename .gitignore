@@ -1,24 +1,26 @@
-.DS_Store
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+# Source: https://github.com/github/gitignore/blob/master/Global/Xcode.gitignore
 
-*.xcuserstate
+## User settings
 xcuserdata/
 
-### Playgrounds ###
-MinorityPlayground.playground/Contents.swift
+## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
+*.xcscmblueprint
+*.xccheckout
 
-### FastLane Build Outputs ###
+## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
+build/
+DerivedData/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
 
-build
-/fastlane/report.xml
-
-### Xcode ###
-build
-!*.xcworkspace/contents.xcworkspacedata
-project.pbxproj_BACKUP_94405.orig
-project.pbxproj_BACKUP_94596.orig
-project.pbxproj_BASE_94405.orig
-project.pbxproj_BASE_94596.orig
-project.pbxproj_LOCAL_94405.orig
-project.pbxproj_LOCAL_94596.orig
-project.pbxproj_REMOTE_94405.orig
-project.pbxproj_REMOTE_94596.orig
+## Gcc Patch
