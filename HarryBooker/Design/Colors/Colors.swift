@@ -9,15 +9,22 @@ import UIKit
 
 public extension UIColor {
     
-    class var background: UIColor? {
-        return UIColor(named: "Background")
+    enum DesignColor {
+        case background
+        case text
+        case subText
     }
     
-    class var text: UIColor? {
-        return UIColor(named: "Text")
-    }
-    
-    class var subText: UIColor? {
-        return UIColor(named: "SubText")
+    class func design(color: DesignColor) -> UIColor {
+        let designColor: UIColor?
+        switch color {
+        case .background:
+            designColor = UIColor(named: "Background")
+        case .text:
+            designColor = UIColor(named: "Text")
+        case .subText:
+            designColor = UIColor(named: "SubText")
+        }
+        return designColor ?? .black
     }
 }

@@ -9,15 +9,20 @@ import UIKit
 
 public extension UIFont {
     
-    class var header: UIFont {
-        return .systemFont(ofSize: 32, weight: .bold)
+    enum DesignFont {
+        case header
+        case title
+        case description
     }
     
-    class var title: UIFont {
-        return .systemFont(ofSize: 24, weight: .semibold)
-    }
-    
-    class var description: UIFont {
-        return .systemFont(ofSize: 16, weight: .light)
+    class func design(font: DesignFont) -> UIFont {
+        switch font {
+        case .header:
+            return .systemFont(ofSize: 32, weight: .bold)
+        case .title:
+            return .systemFont(ofSize: 24, weight: .semibold)
+        case .description:
+            return .systemFont(ofSize: 16, weight: .light)
+        }
     }
 }

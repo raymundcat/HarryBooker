@@ -23,8 +23,8 @@ class BookDetailCell: UITableViewCell {
         let label = UILabel()
         label.numberOfLines = 1
         label.lineBreakMode = .byTruncatingTail
-        label.font = .title
-        label.textColor = .text
+        label.font = .design(font: .title)
+        label.textColor = .design(color: .text)
         return label
     }()
     
@@ -33,8 +33,8 @@ class BookDetailCell: UITableViewCell {
         label.numberOfLines = 1
         label.lineBreakMode = .byTruncatingTail
         label.textColor = .darkGray
-        label.font = .description
-        label.textColor = .subText
+        label.font = .design(font: .description)
+        label.textColor = .design(color: .subText)
         return label
     }()
     
@@ -43,14 +43,14 @@ class BookDetailCell: UITableViewCell {
         label.numberOfLines = 1
         label.lineBreakMode = .byTruncatingTail
         label.textColor = .darkGray
-        label.font = .description
-        label.textColor = .subText
+        label.font = .design(font: .description)
+        label.textColor = .design(color: .subText)
         return label
     }()
     
-    lazy var separatorView: UIView = {
+    private lazy var separatorView: UIView = {
         let view = UIView()
-        view.backgroundColor = .subText
+        view.backgroundColor = .design(color: .subText)
         return view
     }()
     
@@ -65,7 +65,7 @@ class BookDetailCell: UITableViewCell {
     
     private func setUp() {
         selectionStyle = .none
-        backgroundColor = .background
+        backgroundColor = .design(color: .background)
         
         addSubview(coverView)
         addSubview(titleLabel)
@@ -97,7 +97,7 @@ class BookDetailCell: UITableViewCell {
         separatorView.heightAnchor == 0.5
     }
     
-    func set(book: BookSummary) {
+    public func set(book: BookSummary) {
         titleLabel.text = book.title
         authorLabel.text = "By: " + book.authors.map({ return $0.name }).joined(separator: ", ")
         narratorLabel.text = "With: " + book.narrators.map({ return $0.name }).joined(separator: ", ")

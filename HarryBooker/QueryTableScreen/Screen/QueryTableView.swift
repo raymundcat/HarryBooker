@@ -33,22 +33,22 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
     
     //MARK: Subviews
     
-    lazy var tableView: UITableView = {
+    private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.separatorStyle = .none
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.backgroundColor = .background
+        tableView.backgroundColor = .design(color: .background)
         return tableView
     }()
     
-    var loadingIndicatorBottomConstraint: NSLayoutConstraint?
-    lazy var loadingIndicator: UIActivityIndicatorView = {
+    private var loadingIndicatorBottomConstraint: NSLayoutConstraint?
+    private lazy var loadingIndicator: UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView(style: .medium)
         return indicator
     }()
     
-    lazy var dataSource: DataSource = {
+    private lazy var dataSource: DataSource = {
         let dataSource = DataSource(tableView: tableView) { (tableView, indexPath, row) -> UITableViewCell? in
             switch row {
             case .book(let book):
@@ -82,7 +82,7 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
     
     public override func setup() {
         /// Self setup
-        backgroundColor = .background
+        backgroundColor = .design(color: .background)
         
         /// Children
         addSubview(tableView)
@@ -99,7 +99,7 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
     
     //MARK: Actions
     
-    func updateItems(books: [BookSummary], animated: Bool = true) {
+    private func updateItems(books: [BookSummary], animated: Bool = true) {
         var snapshot = Snapshot()
         snapshot.appendSections(QueryTableSection.allCases)
         for section in snapshot.sectionIdentifiers {
@@ -121,7 +121,7 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
         }
     }
     
-    func requestPullUp() {
+    private func requestPullUp() {
         if !isLoadingIndicatorShown {
             send(event: .userDidPullUp)
         }

@@ -24,11 +24,13 @@ public class QueryTablePresenter: BaseEventPresenter<QueryTableViewEvent, QueryT
         self.query = query
     }
     
-    //MARK: Actions
+    //MARK: Stored Properties
     
     private var currentPage: String?
     
     private var books: [BookSummary] = []
+    
+    //MARK: Actions
     
     private var queryTask: URLSessionTask?
     private func fetchBooks() {
@@ -52,21 +54,25 @@ public class QueryTablePresenter: BaseEventPresenter<QueryTableViewEvent, QueryT
     }
     
     private func updateBooks(queryResult: BookQueryResult) {
-        self.currentPage = queryResult.nextPageToken
-        self.filter(newBooks: queryResult.items) { (newBooks) in
+        
+        /// Since our tableView has a very sensitive diffing
+        /// We need to double check that the books received
+        /// is not a duplicate of already shown
+        func filter(
+            newBooks: [BookSummary],
+            completion: @escaping ([BookSummary]) -> Void) {
+            DispatchQueue.global().async {
+                let filteredNewBooks = newBooks.filter({ !self.books.contains($0) })
+                DispatchQueue.main.async {
+                    completion(filteredNewBooks)
+                }
+            }
+        }
+        
+        currentPage = queryResult.nextPageToken
+        filter(newBooks: queryResult.items) { (newBooks) in
             self.books.append(contentsOf: newBooks)
             self.send(event: .didLoad(books: self.books))
-        }
-    }
-    
-    private func filter(
-        newBooks: [BookSummary],
-        completion: @escaping ([BookSummary]) -> Void) {
-        DispatchQueue.global().async {
-            let filteredNewBooks = newBooks.filter({ !self.books.contains($0) })
-            DispatchQueue.main.async {
-                completion(filteredNewBooks)
-            }
         }
     }
     

@@ -14,8 +14,8 @@ class HeaderCell: UITableViewCell {
         let label = UILabel()
         label.numberOfLines = 1
         label.lineBreakMode = .byTruncatingTail
-        label.font = .header
-        label.textColor = .text
+        label.font = .design(font: .header)
+        label.textColor = .design(color: .text)
         return label
     }()
     
@@ -30,7 +30,7 @@ class HeaderCell: UITableViewCell {
     
     private func setUp() {
         selectionStyle = .none
-        backgroundColor = .background
+        backgroundColor = .design(color: .background)
         
         addSubview(titleLabel)
         titleLabel.topAnchor == topAnchor + .extraLarge
