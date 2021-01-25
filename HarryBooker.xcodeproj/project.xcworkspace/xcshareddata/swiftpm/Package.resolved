@@ -2,12 +2,21 @@
   "object": {
     "pins": [
       {
+        "package": "Anchorage",
+        "repositoryURL": "https://github.com/Rightpoint/Anchorage",
+        "state": {
+          "branch": null,
+          "revision": "23a6dd0ccf9529d2750d8679a2e74a161cff2f16",
+          "version": "4.5.0"
+        }
+      },
+      {
         "package": "Eventful",
         "repositoryURL": "https://github.com/raymundcat/Eventful",
         "state": {
           "branch": null,
-          "revision": "facfa336d380ec75b55a5c79ccc37f4a819e7beb",
-          "version": "0.0.2"
+          "revision": "5abf078556658b3722c5596d7002439909047c72",
+          "version": "0.0.3"
         }
       },
       {
@@ -17,6 +26,33 @@
           "branch": null,
           "revision": "8826c0979f950acbee92738848de5e8defd59d17",
           "version": "2.1.5"
+        }
+      },
+      {
+        "package": "OHHTTPStubs",
+        "repositoryURL": "https://github.com/AliSoftware/OHHTTPStubs",
+        "state": {
+          "branch": null,
+          "revision": "12f19662426d0434d6c330c6974d53e2eb10ecd9",
+          "version": "9.1.0"
+        }
+      },
+      {
+        "package": "SDWebImage",
+        "repositoryURL": "https://github.com/SDWebImage/SDWebImage",
+        "state": {
+          "branch": null,
+          "revision": "4aaca57fb2f6dc5554a2228cf1d94289bd0a6c7d",
+          "version": "5.10.3"
+        }
+      },
+      {
+        "package": "Services",
+        "repositoryURL": "https://github.com/raymundcat/Services",
+        "state": {
+          "branch": null,
+          "revision": "369a7fcf7ab38e705c563dcb649aebea7097c9d0",
+          "version": "0.0.9"
         }
       }
     ]
