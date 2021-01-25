@@ -36,7 +36,7 @@ public struct Person: Codable, Identifiable {
     public let name: String
 }
 
-public struct Query: Codable {
+public struct BookQueryResult: Codable {
     public let nextPageToken: String
     public let items: [BookSummary]
 }

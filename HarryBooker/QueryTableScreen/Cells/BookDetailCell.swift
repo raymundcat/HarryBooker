@@ -99,8 +99,8 @@ class BookDetailCell: UITableViewCell {
     
     func set(book: BookSummary) {
         titleLabel.text = book.title
-        authorLabel.text = "By " + book.authors.map({ return $0.name }).joined(separator: ", ")
-        narratorLabel.text = "with " + book.narrators.map({ return $0.name }).joined(separator: ", ")
+        authorLabel.text = "By: " + book.authors.map({ return $0.name }).joined(separator: ", ")
+        narratorLabel.text = "With: " + book.narrators.map({ return $0.name }).joined(separator: ", ")
         coverView.sd_setImage(with: URL(string: book.cover.url))
     }
 }

@@ -23,6 +23,8 @@ public class QueryTablePresenter: BaseEventPresenter<QueryTableViewEvent, QueryT
     
     private var currentPage: String?
     
+    private var books: [BookSummary] = []
+    
     private var queryTask: URLSessionTask?
     private func fetchBooks() {
         guard queryTask == nil else { return }
@@ -31,11 +33,10 @@ public class QueryTablePresenter: BaseEventPresenter<QueryTableViewEvent, QueryT
                 query: Self.query,
                 page: currentPage))
         send(event: .shouldShowLoading(true))
-        queryTask = endPoint.request { (result: EndPointResult<Query>) in
+        queryTask = endPoint.request { (result: EndPointResult<BookQueryResult>) in
             switch result {
-            case .success(let summary):
-                self.currentPage = summary.nextPageToken
-                self.send(event: .didLoad(books: summary.items))
+            case .success(let queryResult):
+                self.updateBooks(queryResult: queryResult)
             case .failure:
                 break
             }
@@ -45,11 +46,34 @@ public class QueryTablePresenter: BaseEventPresenter<QueryTableViewEvent, QueryT
         }
     }
     
+    private func updateBooks(queryResult: BookQueryResult) {
+        self.currentPage = queryResult.nextPageToken
+        self.filter(newBooks: queryResult.items) { (newBooks) in
+            self.books.append(contentsOf: newBooks)
+            self.send(event: .didLoad(books: self.books))
+        }
+    }
+    
+    private func filter(
+        newBooks: [BookSummary],
+        completion: @escaping ([BookSummary]) -> Void) {
+        DispatchQueue.global().async {
+            let filteredNewBooks = newBooks.filter({ !self.books.contains($0) })
+            DispatchQueue.main.async {
+                completion(filteredNewBooks)
+            }
+        }
+    }
+    
     //MARK: Events
     
     public override func viewController(didSend event: BaseEventViewControllerEvent) {
         switch event {
         case .viewDidLoad:
+            /// Send an initial update
+            send(event: .didLoad(books: []))
+            
+            /// Start fetching the first set
             fetchBooks()
         default:
             break

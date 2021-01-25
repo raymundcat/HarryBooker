@@ -58,12 +58,6 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
     
     //MARK: States
     
-    private var books: [BookSummary] = [] {
-        didSet {
-            updateItems()
-        }
-    }
-    
     private var isLoadingIndicatorShown: Bool = false {
         didSet {
             if isLoadingIndicatorShown {
@@ -95,7 +89,7 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
     
     //MARK: Actions
     
-    func updateItems(animated: Bool = true) {
+    func updateItems(books: [BookSummary], animated: Bool = true) {
         var snapshot = Snapshot()
         snapshot.appendSections(QueryTableSection.allCases)
         for section in snapshot.sectionIdentifiers {
@@ -107,7 +101,12 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
                     toSection: section)
             }
         }
-        dataSource.apply(snapshot, animatingDifferences: animated)
+        tableView.showsVerticalScrollIndicator = false
+        dataSource.apply(
+            snapshot,
+            animatingDifferences: animated) {
+            self.tableView.showsVerticalScrollIndicator = true
+        }
     }
     
     func requestPullUp() {
@@ -118,19 +117,10 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
     
     //MARK: Events
     
-    public override func viewController(didSend event: BaseEventViewControllerEvent) {
-        switch event {
-        case .viewDidLoad:
-            updateItems(animated: false)
-        default:
-            break
-        }
-    }
-    
     public override func presenter(didSend event: QueryTablePresentableEvent) {
         switch event {
         case .didLoad(let books):
-            self.books.append(contentsOf: books)
+            updateItems(books: books)
         }
     }
     
@@ -156,7 +146,7 @@ extension QueryTableView: UITableViewDelegate, UIScrollViewDelegate {
         }
         
         /// The trigger for a  reload
-        if offset > contentHeight + 100 {
+        if offset > contentHeight + 120 {
             requestPullUp()
         }
     }
