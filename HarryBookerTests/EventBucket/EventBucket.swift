@@ -11,11 +11,11 @@ import Eventful
 
 open class PresentableBucket<PresentableEventType: PresentableEvent>: PresentableEventListener {
     
-    public var bucket = [PresentableEventType]()
+    public var events = [PresentableEventType]()
     
     public func presenter(didSend event: PresentableEvent) {
         if let event = event as? PresentableEventType {
-            bucket.append(event)
+            events.append(event)
         }
     }
 }
