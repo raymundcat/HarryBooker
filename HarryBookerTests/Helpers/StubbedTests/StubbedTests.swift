@@ -6,12 +6,12 @@
 //
 
 import XCTest
+import OHHTTPStubs
+import OHHTTPStubsSwift
 
 open class StubbedTests: XCTestCase {
     
-    public var stubs = QueryStubs()
-    
     open override func tearDown() {
-        stubs.reset()
+        HTTPStubs.removeAllStubs()
     }
 }

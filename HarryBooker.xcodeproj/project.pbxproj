@@ -32,9 +32,9 @@
 		EC6025E325C00FD000500748 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = EC6025E225C00FD000500748 /* PromiseKit */; };
 		EC95B8C525C030330038000E /* StubbedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95B8C425C030330038000E /* StubbedTests.swift */; };
 		EC95B90725C031C70038000E /* QueryTablePullToRefreshTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95B90625C031C70038000E /* QueryTablePullToRefreshTests.swift */; };
+		EC95B91325C041C30038000E /* URL+URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95B91225C041C30038000E /* URL+URLComponents.swift */; };
 		EC9F20CD25BE353C0093DAA3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9F20CC25BE353C0093DAA3 /* Colors.swift */; };
 		EC9F20D825BE466A0093DAA3 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9F20D725BE466A0093DAA3 /* HeaderCell.swift */; };
-		ECBBA0D325BF938700EB7D38 /* QueryStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBBA0D225BF938700EB7D38 /* QueryStubs.swift */; };
 		ECBBA0D925BF939100EB7D38 /* Query-Page-0.json in Resources */ = {isa = PBXBuildFile; fileRef = ECBBA0D725BF939000EB7D38 /* Query-Page-0.json */; };
 		ECBBA0DA25BF939100EB7D38 /* Query-Page-2.json in Resources */ = {isa = PBXBuildFile; fileRef = ECBBA0D825BF939100EB7D38 /* Query-Page-2.json */; };
 		ECBBA0DF25BF939B00EB7D38 /* EventBucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBBA0DE25BF939B00EB7D38 /* EventBucket.swift */; };
@@ -88,9 +88,9 @@
 		EC4BCCBF25BE317B003B23F7 /* QueryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryTableViewController.swift; sourceTree = "<group>"; };
 		EC95B8C425C030330038000E /* StubbedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubbedTests.swift; sourceTree = "<group>"; };
 		EC95B90625C031C70038000E /* QueryTablePullToRefreshTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryTablePullToRefreshTests.swift; sourceTree = "<group>"; };
+		EC95B91225C041C30038000E /* URL+URLComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+URLComponents.swift"; sourceTree = "<group>"; };
 		EC9F20CC25BE353C0093DAA3 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		EC9F20D725BE466A0093DAA3 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
-		ECBBA0D225BF938700EB7D38 /* QueryStubs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryStubs.swift; sourceTree = "<group>"; };
 		ECBBA0D725BF939000EB7D38 /* Query-Page-0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Query-Page-0.json"; sourceTree = "<group>"; };
 		ECBBA0D825BF939100EB7D38 /* Query-Page-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Query-Page-2.json"; sourceTree = "<group>"; };
 		ECBBA0DE25BF939B00EB7D38 /* EventBucket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventBucket.swift; sourceTree = "<group>"; };
@@ -318,20 +318,20 @@
 			path = StubbedTests;
 			sourceTree = "<group>";
 		};
+		EC95B91125C041B30038000E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EC95B91225C041C30038000E /* URL+URLComponents.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		EC9F20CB25BE352B0093DAA3 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
 				EC9F20CC25BE353C0093DAA3 /* Colors.swift */,
 			);
 			path = Colors;
-			sourceTree = "<group>";
-		};
-		ECBBA05825BF89FE00EB7D38 /* QueryStubs */ = {
-			isa = PBXGroup;
-			children = (
-				ECBBA0D225BF938700EB7D38 /* QueryStubs.swift */,
-			);
-			path = QueryStubs;
 			sourceTree = "<group>";
 		};
 		ECBBA05925BF8A0B00EB7D38 /* QueryTableTests */ = {
@@ -354,9 +354,9 @@
 		ECBD3A8B25BFAAE7004EC908 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				EC95B91125C041B30038000E /* Extensions */,
 				EC95B8C925C030390038000E /* StubbedTests */,
 				EC6025E825C021F600500748 /* Mock JSONs */,
-				ECBBA05825BF89FE00EB7D38 /* QueryStubs */,
 				ECBBA07E25BF8DD700EB7D38 /* EventBucket */,
 			);
 			path = Helpers;
@@ -539,7 +539,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECBBA0D325BF938700EB7D38 /* QueryStubs.swift in Sources */,
+				EC95B91325C041C30038000E /* URL+URLComponents.swift in Sources */,
 				EC95B8C525C030330038000E /* StubbedTests.swift in Sources */,
 				EC95B90725C031C70038000E /* QueryTablePullToRefreshTests.swift in Sources */,
 				ECBBA0EA25BF943200EB7D38 /* QueryTablePresenterTests.swift in Sources */,
