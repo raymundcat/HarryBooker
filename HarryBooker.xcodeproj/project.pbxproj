@@ -133,6 +133,9 @@
 		EC04FD8D25BBAA710006B6EC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EC4BCC4625BE2FFC003B23F7 /* Architecture */,
+				EC4BCC6525BE3057003B23F7 /* Design */,
+				EC4BCC3D25BE2FD9003B23F7 /* EndPoints */,
 				EC09055025BB9360000BF255 /* AppDelegate.swift */,
 				EC09055225BB9360000BF255 /* SceneDelegate.swift */,
 				EC09055925BB9361000BF255 /* Assets.xcassets */,
@@ -166,9 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				EC4BCCB625BE317B003B23F7 /* QueryTableScreen */,
-				EC4BCC4625BE2FFC003B23F7 /* Architecture */,
-				EC4BCC6525BE3057003B23F7 /* Design */,
-				EC4BCC3D25BE2FD9003B23F7 /* EndPoints */,
 				EC04FD8D25BBAA710006B6EC /* Supporting Files */,
 				EC09055E25BB9361000BF255 /* Info.plist */,
 			);
@@ -216,7 +216,7 @@
 				EC4BCC4C25BE2FFC003B23F7 /* Base */,
 			);
 			name = Architecture;
-			path = HarryBooker/Architecture;
+			path = "HarryBooker/Supporting Files/Architecture";
 			sourceTree = SOURCE_ROOT;
 		};
 		EC4BCC4725BE2FFC003B23F7 /* Commons */ = {
