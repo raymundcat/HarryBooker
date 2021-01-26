@@ -5,7 +5,6 @@
 //  Created by Raymund Catahay on 2021-01-26.
 //
 
-import Foundation
 import XCTest
 import CasePaths
 import PromiseKit
@@ -78,6 +77,3 @@ class QueryTableEmptyTests: StubbedTests {
         waitForExpectations(timeout: 3)
     }
 }
-
-
-
