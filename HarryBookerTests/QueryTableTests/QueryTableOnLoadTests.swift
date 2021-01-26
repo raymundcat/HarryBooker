@@ -47,10 +47,10 @@ class QueryTableOnLoadTests: StubbedTests {
         }.done { _ in
             
             /// Grab the events
-            let didLoadEvent = bucket.events.compactMap(/QueryTablePresentableEvent.didLoad).last
+            let didLoadBooksEvent = bucket.events.compactMap(/QueryTablePresentableEvent.didLoadBooks).last
             
             /// Grab the titles for comparison
-            let titles = didLoadEvent?.map({ $0.title })
+            let titles = didLoadBooksEvent?.map({ $0.title })
             let expectedTitles = [
                 "BOOKTITLE1",
                 "BOOKTITLE2"]

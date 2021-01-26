@@ -66,10 +66,10 @@ class QueryTableEmptyTests: StubbedTests {
         }.done { _ in
             
             /// Grab the books event
-            let didLoadEvent = bucket.events.compactMap(/QueryTablePresentableEvent.didLoad).last
+            let didLoadBooksEvent = bucket.events.compactMap(/QueryTablePresentableEvent.didLoadBooks).last
             
             /// Assert thet we got no books on load
-            assert(didLoadEvent?.count == 0)
+            assert(didLoadBooksEvent?.count == 0)
             
             expectation.fulfill()
         }

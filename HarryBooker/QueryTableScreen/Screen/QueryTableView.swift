@@ -19,10 +19,6 @@ enum QueryTableRow: Hashable {
     case book(BookSummary)
 }
 
-typealias DataSource = UITableViewDiffableDataSource<QueryTableSection, QueryTableRow>
-
-typealias Snapshot = NSDiffableDataSourceSnapshot<QueryTableSection, QueryTableRow>
-
 public enum QueryTableViewEvent: ViewEvent {
     case userDidPullUp
 }
@@ -41,6 +37,8 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
         tableView.backgroundColor = .design(color: .background)
         return tableView
     }()
+    
+    typealias DataSource = UITableViewDiffableDataSource<QueryTableSection, QueryTableRow>
     
     private lazy var dataSource: DataSource = {
         let dataSource = DataSource(tableView: tableView) { (tableView, indexPath, row) -> UITableViewCell? in
@@ -83,6 +81,8 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
     
     //MARK: Actions
     
+    typealias Snapshot = NSDiffableDataSourceSnapshot<QueryTableSection, QueryTableRow>
+    
     private func updateItems(books: [BookSummary], animated: Bool = true) {
         var snapshot = Snapshot()
         snapshot.appendSections(QueryTableSection.allCases)
@@ -109,9 +109,9 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
     
     public override func presenter(didSend event: QueryTablePresentableEvent) {
         switch event {
-        case .didStart(let query):
+        case .didStartQuery(let query):
             self.query = query
-        case .didLoad(let books):
+        case .didLoadBooks(let books):
             updateItems(books: books)
         }
     }

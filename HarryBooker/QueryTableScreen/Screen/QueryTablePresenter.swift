@@ -13,8 +13,8 @@ import PromiseKit
 public enum QueryTablePresenterEvent: PresenterEvent { }
 
 public enum QueryTablePresentableEvent: PresentableEvent {
-    case didStart(query: String)
-    case didLoad(books: [BookSummary])
+    case didStartQuery(query: String)
+    case didLoadBooks(books: [BookSummary])
 }
 
 public class QueryTablePresenter: BaseEventPresenter<QueryTableViewEvent, QueryTablePresenterEvent, QueryTablePresentableEvent> {
@@ -81,7 +81,7 @@ public class QueryTablePresenter: BaseEventPresenter<QueryTableViewEvent, QueryT
         currentPage = queryResult.nextPageToken
         filter(newBooks: queryResult.items) { (newBooks) in
             self.books.append(contentsOf: newBooks)
-            self.send(event: .didLoad(books: self.books))
+            self.send(event: .didLoadBooks(books: self.books))
         }
     }
     
@@ -91,7 +91,7 @@ public class QueryTablePresenter: BaseEventPresenter<QueryTableViewEvent, QueryT
         switch event {
         case .viewDidLoad:
             /// Send an initial update
-            send(event: .didStart(query: query))
+            send(event: .didStartQuery(query: query))
             
             /// Start fetching the first set
             fetchBooks()
