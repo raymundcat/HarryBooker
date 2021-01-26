@@ -15,10 +15,6 @@ import PromiseKit
 
 class QueryTablePresenterTests: XCTestCase {
     
-    override class func tearDown() {
-        print("torn")
-    }
-    
     func testFirstOnLoadValue() {
         
         let stubs = QueryStubs()
