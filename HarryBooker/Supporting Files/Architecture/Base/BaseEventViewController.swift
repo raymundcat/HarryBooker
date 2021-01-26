@@ -17,12 +17,6 @@ public enum BaseEventViewControllerEvent: Event {
     case viewDidAppear(animated: Bool)
     case viewWillDisappear(animated: Bool)
     case viewDidDisappear(animated: Bool)
-
-    // Keyboard Events
-    case keyboardWillShow(frame: CGRect)
-    case keyboardDidShow(frame: CGRect)
-    case keyboardWillHide
-    case keyboardDidHide
 }
 
 public protocol BaseEventViewControllerEventListener: class {
@@ -92,68 +86,5 @@ open class BaseEventViewController<BaseEventEvent: Event, BaseEventViewEvent: Vi
     public override func viewDidDisappear(_ animated: Bool) {
         send(event: .viewDidDisappear(animated: animated))
         super.viewDidDisappear(animated)
-    }
-
-    @objc func keyboardWillShow(with frame: CGRect) {
-        send(event: .keyboardWillShow(frame: frame))
-    }
-
-    @objc func keyboardDidShow(with frame: CGRect) {
-        send(event: .keyboardDidShow(frame: frame))
-    }
-
-    @objc func keyboardWillHide() {
-        send(event: .keyboardWillHide)
-    }
-
-    @objc func keyboardDidHide() {
-        send(event: .keyboardDidHide)
-    }
-    
-    //MARK: Keyboard Events
-
-    func observeKeyboardEvents() {
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(keyboardNotificationWillShow),
-            name: UIResponder.keyboardWillShowNotification,
-            object: nil
-        )
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(keyboardNotificationDidShow),
-            name: UIResponder.keyboardDidShowNotification,
-            object: nil
-        )
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(keyboardNotificationWillHide),
-            name: UIResponder.keyboardWillHideNotification,
-            object: nil
-        )
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(keyboardNotificationWillHide),
-            name: UIResponder.keyboardDidHideNotification,
-            object: nil
-        )
-    }
-
-    @objc func keyboardNotificationWillShow(_ notification: Notification) {
-        guard let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
-        keyboardWillShow(with: keyboardFrame.cgRectValue)
-    }
-
-    @objc func keyboardNotificationDidShow(_ notification: Notification) {
-        guard let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
-        keyboardDidShow(with: keyboardFrame.cgRectValue)
-    }
-
-    @objc func keyboardNotificationWillHide(_ notification: Notification) {
-        keyboardWillHide()
-    }
-
-    @objc func keyboardNotificationDidHide(_ notification: Notification) {
-        keyboardDidHide()
     }
 }
