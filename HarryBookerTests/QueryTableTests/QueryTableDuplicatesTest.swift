@@ -64,19 +64,20 @@ class QueryTableDuplicatesTests: StubbedTests {
         }.then {
             after(seconds: 1.0)
         }.done { _ in
-            guard let didLoadEvent = bucket.events.compactMap(/QueryTablePresentableEvent.didLoad).last else {
-                expectation.fulfill()
-                return
-            }
             
-            let titles = didLoadEvent.map({ $0.title })
+            /// Grab the books events
+            let didLoadEvent = bucket.events.compactMap(/QueryTablePresentableEvent.didLoad).last
+            
+            /// Grab the titles of the books
+            let titles = didLoadEvent?.map({ $0.title })
+            
             let expectedTitles = [
                 "BOOKTITLE1",
                 "BOOKTITLE2",
                 "BOOKTITLE4"]
 
             /// Assert the expected book titles
-            assert(titles.sorted() == expectedTitles.sorted())
+            assert(titles?.sorted() == expectedTitles.sorted())
             
             expectation.fulfill()
         }
