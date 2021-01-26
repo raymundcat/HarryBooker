@@ -173,9 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				ECBBA05925BF8A0B00EB7D38 /* QueryTable Tests */,
-				ECBBA07E25BF8DD700EB7D38 /* EventBucket */,
-				ECBBA06A25BF8C1B00EB7D38 /* JSON Mocks */,
-				ECBBA05825BF89FE00EB7D38 /* Stubs */,
+				ECBD3A8B25BFAAE7004EC908 /* Helpers */,
 				EC09056925BB9361000BF255 /* Info.plist */,
 			);
 			path = HarryBookerTests;
@@ -305,12 +303,12 @@
 			path = Colors;
 			sourceTree = "<group>";
 		};
-		ECBBA05825BF89FE00EB7D38 /* Stubs */ = {
+		ECBBA05825BF89FE00EB7D38 /* QueryStubs */ = {
 			isa = PBXGroup;
 			children = (
 				ECBBA0D225BF938700EB7D38 /* QueryStubs.swift */,
 			);
-			path = Stubs;
+			path = QueryStubs;
 			sourceTree = "<group>";
 		};
 		ECBBA05925BF8A0B00EB7D38 /* QueryTable Tests */ = {
@@ -336,6 +334,16 @@
 				ECBBA0DE25BF939B00EB7D38 /* EventBucket.swift */,
 			);
 			path = EventBucket;
+			sourceTree = "<group>";
+		};
+		ECBD3A8B25BFAAE7004EC908 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				ECBBA06A25BF8C1B00EB7D38 /* JSON Mocks */,
+				ECBBA05825BF89FE00EB7D38 /* QueryStubs */,
+				ECBBA07E25BF8DD700EB7D38 /* EventBucket */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

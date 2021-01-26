@@ -7,7 +7,6 @@
 
 import Foundation
 import Eventful
-@testable import HarryBooker
 
 open class PresentableBucket<PresentableEventType: PresentableEvent>: PresentableEventListener {
     
