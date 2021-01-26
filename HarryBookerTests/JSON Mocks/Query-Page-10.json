@@ -1,0 +1,1238 @@
+{
+    "query": "harry",
+    "filter": "books",
+    "nextPageToken": "20",
+    "totalCount": 1320,
+    "items": [
+        {
+            "id": "918451",
+            "sthpIds": [
+                {
+                    "primary": true,
+                    "sthpBookId": 1667697,
+                    "sthpAudioBookId": null,
+                    "sthpEbookId": 1667698
+                }
+            ],
+            "title": "The Adventures of Harry Stevenson",
+            "originalTitle": null,
+            "type": "single",
+            "description": "Join this small guinea pig on his very BIG adventures in a brand-new illustrated fiction series from author and illustrator Ali Pye\n\n'A sweet, funny book that really made me want to eat dandelions' – Holly Webb\n\n'Sweetly funny and beautifully illustrated' – The i newspaper\n\nMeet Harry Stevenson. He doesn’t live in a castle, or a witch’s cottage, or anywhere exciting like that. His home is in a flat with seven-year-old Billy and his mum and dad. And at first glance, Harry doesn’t seem any different from your average guinea pig. He has ginger fur and sparkly black eyes and likes nothing more than snacking on a piece of broccoli.\n\nBut don’t be fooled! Harry may just want to sleep and eat (and then eat some more) but somehow he always manages to get swept up in adventures: whether it’s surfing the Pacific on a picnic plate or accidentally attaching himself to a helium balloon.\n\nPRAISE FOR THE ADVENTURES OF HARRY STEVENSON:\n\n 'Delightful stories with humorous exploits galore' – Parents in Touch\n\n 'Perfect for bedtime reading' – Books for Topics\n\n 'Filled with fun, giggles [...] and lots of action [...] A swinging start to a super new series!' – Lancashire Evening Post\n\n'Harry Stevenson is a funny, plump guinea pig, and I wish I could be him' - Astrid, age 7",
+            "seriesInfo": null,
+            "authors": [
+                {
+                    "id": "120934",
+                    "name": "Ali Pye"
+                }
+            ],
+            "narrators": [],
+            "translators": [],
+            "rating": 4.0,
+            "bayesianAverageRating": 3.71,
+            "reviewCount": 1,
+            "parts": [
+                {
+                    "id": "918451",
+                    "title": null,
+                    "description": null,
+                    "storytelCategoryIds": [
+                        "1"
+                    ],
+                    "majorGenreCodes": [
+                        "YFB"
+                    ],
+                    "minorGenreCodes": [
+                        "5AG"
+                    ],
+                    "formats": [
+                        {
+                            "id": "918123",
+                            "isbn": "9781471170249",
+                            "type": "ebook",
+                            "releaseDate": "2019-06-13T00:00:00Z",
+                            "enterServiceDate": "2020-06-01T07:33:26Z",
+                            "abridged": false,
+                            "searchable": true,
+                            "edition": "",
+                            "bookSource": null,
+                            "isReleased": true,
+                            "length": 84922,
+                            "cover": {
+                                "url": "https://www.storytel.com/images/9781471170249/640x640/cover.jpg",
+                                "width": 467,
+                                "height": 640
+                            },
+                            "audioAssets": [],
+                            "ebookAssets": [
+                                {
+                                    "id": "1189118",
+                                    "encoding": "epub",
+                                    "fileId": "21503227",
+                                    "characterCount": 84922,
+                                    "wordCount": 15430
+                                },
+                                {
+                                    "id": "1189117",
+                                    "encoding": "epub",
+                                    "fileId": "21503164",
+                                    "characterCount": 84922,
+                                    "wordCount": 15430
+                                }
+                            ],
+                            "chapterCount": 0,
+                            "cdnLink": null,
+                            "cdnType": null
+                        }
+                    ],
+                    "cover": {
+                        "url": "https://www.storytel.com/images/9781471170249/640x640/cover.jpg",
+                        "width": 467,
+                        "height": 640
+                    },
+                    "episodeNumber": 1,
+                    "sttMapAssets": [],
+                    "formatAvailability": "ebook"
+                }
+            ],
+            "language": {
+                "id": "en",
+                "name": "English"
+            },
+            "publishers": [
+                {
+                    "publisherDetails": {
+                        "imprintId": "2352",
+                        "publisherId": "725"
+                    },
+                    "id": "2352",
+                    "name": "Simon & Schuster Children's UK",
+                    "slug": "simon-schuster-children-s-uk",
+                    "type": "ebook"
+                }
+            ],
+            "cover": {
+                "url": "https://www.storytel.com/images/9781471170249/640x640/cover.jpg",
+                "width": 467,
+                "height": 640
+            },
+            "tags": [],
+            "seriesId": "43484",
+            "seriesName": "Adventures of Harry Stevenson",
+            "orderInSeries": 1,
+            "seasonNumber": null,
+            "resultType": "book",
+            "shareUrl": "https://www.storytel.com/books/1667697?appRedirect=true"
+        },
+        {
+            "id": "891891",
+            "sthpIds": [
+                {
+                    "primary": true,
+                    "sthpBookId": 1649006,
+                    "sthpAudioBookId": null,
+                    "sthpEbookId": 1649007
+                }
+            ],
+            "title": "Harry Potter and the Goblet of Fire",
+            "originalTitle": null,
+            "type": "single",
+            "description": "'There will be three tasks, spaced throughout the school year, and they will test the champions in many different ways ... their magical prowess - their daring - their powers of deduction - and, of course, their ability to cope with danger.'\n\nThe Triwizard Tournament is to be held at Hogwarts. Only wizards who are over seventeen are allowed to enter - but that doesn't stop Harry dreaming that he will win the competition. Then at Hallowe'en, when the Goblet of Fire makes its selection, Harry is amazed to find his name is one of those that the magical cup picks out. He will face death-defying tasks, dragons and Dark wizards, but with the help of his best friends, Ron and Hermione, he might just make it through - alive!",
+            "seriesInfo": null,
+            "authors": [
+                {
+                    "id": "1998",
+                    "name": "J.K. Rowling"
+                }
+            ],
+            "narrators": [],
+            "translators": [],
+            "rating": 4.81,
+            "bayesianAverageRating": 4.31,
+            "reviewCount": 48,
+            "parts": [
+                {
+                    "id": "891891",
+                    "title": null,
+                    "description": null,
+                    "storytelCategoryIds": [
+                        "1"
+                    ],
+                    "majorGenreCodes": [
+                        "FJ"
+                    ],
+                    "minorGenreCodes": [
+                        "YFC",
+                        "YFS",
+                        "FM",
+                        "YFH",
+                        "5AJ"
+                    ],
+                    "formats": [
+                        {
+                            "id": "891570",
+                            "isbn": "9781781105672",
+                            "type": "ebook",
+                            "releaseDate": "2015-12-08T00:00:00Z",
+                            "enterServiceDate": "2020-05-25T12:25:29Z",
+                            "abridged": false,
+                            "searchable": true,
+                            "edition": "",
+                            "bookSource": null,
+                            "isReleased": true,
+                            "length": 1132796,
+                            "cover": {
+                                "url": "https://www.storytel.com/images/9781781105672/640x640/cover.jpg",
+                                "width": 426,
+                                "height": 640
+                            },
+                            "audioAssets": [],
+                            "ebookAssets": [
+                                {
+                                    "id": "1323907",
+                                    "encoding": "epub",
+                                    "fileId": "24941068",
+                                    "characterCount": 1132796,
+                                    "wordCount": 200787
+                                },
+                                {
+                                    "id": "1323906",
+                                    "encoding": "epub",
+                                    "fileId": "24941057",
+                                    "characterCount": 1132796,
+                                    "wordCount": 200787
+                                }
+                            ],
+                            "chapterCount": 0,
+                            "cdnLink": null,
+                            "cdnType": null
+                        }
+                    ],
+                    "cover": {
+                        "url": "https://www.storytel.com/images/9781781105672/640x640/cover.jpg",
+                        "width": 426,
+                        "height": 640
+                    },
+                    "episodeNumber": 4,
+                    "sttMapAssets": [],
+                    "formatAvailability": "ebook"
+                }
+            ],
+            "language": {
+                "id": "en",
+                "name": "English"
+            },
+            "publishers": [
+                {
+                    "publisherDetails": {
+                        "imprintId": "",
+                        "publisherId": "742"
+                    },
+                    "id": "742",
+                    "name": "Pottermore",
+                    "slug": "pottermore",
+                    "type": "ebook"
+                }
+            ],
+            "cover": {
+                "url": "https://www.storytel.com/images/9781781105672/640x640/cover.jpg",
+                "width": 426,
+                "height": 640
+            },
+            "tags": [
+                "1538"
+            ],
+            "seriesId": "53646",
+            "seriesName": "Harry Potter Ebooks",
+            "orderInSeries": 4,
+            "seasonNumber": null,
+            "resultType": "book",
+            "shareUrl": "https://www.storytel.com/books/1649006?appRedirect=true"
+        },
+        {
+            "id": "919975",
+            "sthpIds": [
+                {
+                    "primary": true,
+                    "sthpBookId": 1648912,
+                    "sthpAudioBookId": null,
+                    "sthpEbookId": 1648913
+                }
+            ],
+            "title": "Harry Potter and the Philosopher's Stone",
+            "originalTitle": null,
+            "type": "single",
+            "description": "Turning the envelope over, his hand trembling, Harry saw a purple wax seal bearing a coat of arms; a lion, an eagle, a badger and a snake surrounding a large letter 'H'.\n\nHarry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harry's eleventh birthday, a great beetle-eyed giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin!",
+            "seriesInfo": null,
+            "authors": [
+                {
+                    "id": "1998",
+                    "name": "J.K. Rowling"
+                }
+            ],
+            "narrators": [],
+            "translators": [],
+            "rating": 4.66,
+            "bayesianAverageRating": 4.4,
+            "reviewCount": 108,
+            "parts": [
+                {
+                    "id": "919975",
+                    "title": null,
+                    "description": null,
+                    "storytelCategoryIds": [
+                        "1"
+                    ],
+                    "majorGenreCodes": [
+                        "FJ"
+                    ],
+                    "minorGenreCodes": [
+                        "YFC",
+                        "YFS",
+                        "FM",
+                        "YFH",
+                        "5AJ"
+                    ],
+                    "formats": [
+                        {
+                            "id": "919647",
+                            "isbn": "9781781100219",
+                            "type": "ebook",
+                            "releaseDate": "2015-12-08T00:00:00Z",
+                            "enterServiceDate": "2020-05-25T12:20:32Z",
+                            "abridged": false,
+                            "searchable": true,
+                            "edition": "",
+                            "bookSource": null,
+                            "isReleased": true,
+                            "length": 453097,
+                            "cover": {
+                                "url": "https://www.storytel.com/images/9781781100219/640x640/cover.jpg",
+                                "width": 426,
+                                "height": 640
+                            },
+                            "audioAssets": [],
+                            "ebookAssets": [
+                                {
+                                    "id": "1323905",
+                                    "encoding": "epub",
+                                    "fileId": "24941067",
+                                    "characterCount": 453097,
+                                    "wordCount": 81632
+                                },
+                                {
+                                    "id": "1323904",
+                                    "encoding": "epub",
+                                    "fileId": "24941059",
+                                    "characterCount": 453097,
+                                    "wordCount": 81632
+                                }
+                            ],
+                            "chapterCount": 0,
+                            "cdnLink": null,
+                            "cdnType": null
+                        }
+                    ],
+                    "cover": {
+                        "url": "https://www.storytel.com/images/9781781100219/640x640/cover.jpg",
+                        "width": 426,
+                        "height": 640
+                    },
+                    "episodeNumber": 1,
+                    "sttMapAssets": [],
+                    "formatAvailability": "ebook"
+                }
+            ],
+            "language": {
+                "id": "en",
+                "name": "English"
+            },
+            "publishers": [
+                {
+                    "publisherDetails": {
+                        "imprintId": "",
+                        "publisherId": "742"
+                    },
+                    "id": "742",
+                    "name": "Pottermore",
+                    "slug": "pottermore",
+                    "type": "ebook"
+                }
+            ],
+            "cover": {
+                "url": "https://www.storytel.com/images/9781781100219/640x640/cover.jpg",
+                "width": 426,
+                "height": 640
+            },
+            "tags": [
+                "9254"
+            ],
+            "seriesId": "53646",
+            "seriesName": "Harry Potter Ebooks",
+            "orderInSeries": 1,
+            "seasonNumber": null,
+            "resultType": "book",
+            "shareUrl": "https://www.storytel.com/books/1648912?appRedirect=true"
+        },
+        {
+            "id": "919980",
+            "sthpIds": [
+                {
+                    "primary": true,
+                    "sthpBookId": 1648872,
+                    "sthpAudioBookId": null,
+                    "sthpEbookId": 1648874
+                }
+            ],
+            "title": "Harry Potter and the Deathly Hallows",
+            "originalTitle": null,
+            "type": "single",
+            "description": "'Give me Harry Potter,' said Voldemort's voice, 'and none shall be harmed. Give me Harry Potter, and I shall leave the school untouched. Give me Harry Potter, and you will be rewarded.'\n\nAs he climbs into the sidecar of Hagrid's motorbike and takes to the skies, leaving Privet Drive for the last time, Harry Potter knows that Lord Voldemort and the Death Eaters are not far behind. The protective charm that has kept Harry safe until now is broken, but he cannot keep hiding. The Dark Lord is breathing fear into everything Harry loves and to stop him Harry will have to find and destroy the remaining Horcruxes. The final battle must begin - Harry must stand and face his enemy...",
+            "seriesInfo": null,
+            "authors": [
+                {
+                    "id": "1998",
+                    "name": "J.K. Rowling"
+                }
+            ],
+            "narrators": [],
+            "translators": [],
+            "rating": 4.77,
+            "bayesianAverageRating": 4.28,
+            "reviewCount": 48,
+            "parts": [
+                {
+                    "id": "919980",
+                    "title": null,
+                    "description": null,
+                    "storytelCategoryIds": [
+                        "1"
+                    ],
+                    "majorGenreCodes": [
+                        "FJ"
+                    ],
+                    "minorGenreCodes": [
+                        "YFC",
+                        "YFS",
+                        "FM",
+                        "YFH",
+                        "5AJ"
+                    ],
+                    "formats": [
+                        {
+                            "id": "919652",
+                            "isbn": "9781781100264",
+                            "type": "ebook",
+                            "releaseDate": "2015-12-08T00:00:00Z",
+                            "enterServiceDate": "2020-05-25T12:19:14Z",
+                            "abridged": false,
+                            "searchable": true,
+                            "edition": "",
+                            "bookSource": null,
+                            "isReleased": true,
+                            "length": 1138955,
+                            "cover": {
+                                "url": "https://www.storytel.com/images/9781781100264/640x640/cover.jpg",
+                                "width": 426,
+                                "height": 640
+                            },
+                            "audioAssets": [],
+                            "ebookAssets": [
+                                {
+                                    "id": "1323900",
+                                    "encoding": "epub",
+                                    "fileId": "24941064",
+                                    "characterCount": 1138955,
+                                    "wordCount": 201330
+                                },
+                                {
+                                    "id": "1323898",
+                                    "encoding": "epub",
+                                    "fileId": "24941055",
+                                    "characterCount": 1138955,
+                                    "wordCount": 201330
+                                }
+                            ],
+                            "chapterCount": 0,
+                            "cdnLink": null,
+                            "cdnType": null
+                        }
+                    ],
+                    "cover": {
+                        "url": "https://www.storytel.com/images/9781781100264/640x640/cover.jpg",
+                        "width": 426,
+                        "height": 640
+                    },
+                    "episodeNumber": 7,
+                    "sttMapAssets": [],
+                    "formatAvailability": "ebook"
+                }
+            ],
+            "language": {
+                "id": "en",
+                "name": "English"
+            },
+            "publishers": [
+                {
+                    "publisherDetails": {
+                        "imprintId": "",
+                        "publisherId": "742"
+                    },
+                    "id": "742",
+                    "name": "Pottermore",
+                    "slug": "pottermore",
+                    "type": "ebook"
+                }
+            ],
+            "cover": {
+                "url": "https://www.storytel.com/images/9781781100264/640x640/cover.jpg",
+                "width": 426,
+                "height": 640
+            },
+            "tags": [],
+            "seriesId": "53646",
+            "seriesName": "Harry Potter Ebooks",
+            "orderInSeries": 7,
+            "seasonNumber": null,
+            "resultType": "book",
+            "shareUrl": "https://www.storytel.com/books/1648872?appRedirect=true"
+        },
+        {
+            "id": "919990",
+            "sthpIds": [
+                {
+                    "primary": true,
+                    "sthpBookId": 1648636,
+                    "sthpAudioBookId": null,
+                    "sthpEbookId": 1648637
+                }
+            ],
+            "title": "Harry Potter and the Order of the Phoenix",
+            "originalTitle": null,
+            "type": "single",
+            "description": "'You are sharing the Dark Lord's thoughts and emotions. The Headmaster thinks it inadvisable for this to continue. He wishes me to teach you how to close your mind to the Dark Lord.'\n\nDark times have come to Hogwarts. After the Dementors' attack on his cousin Dudley, Harry Potter knows that Voldemort will stop at nothing to find him. There are many who deny the Dark Lord's return, but Harry is not alone: a secret order gathers at Grimmauld Place to fight against the Dark forces. Harry must allow Professor Snape to teach him how to protect himself from Voldemort's savage assaults on his mind. But they are growing stronger by the day and Harry is running out of time...",
+            "seriesInfo": null,
+            "authors": [
+                {
+                    "id": "1998",
+                    "name": "J.K. Rowling"
+                }
+            ],
+            "narrators": [],
+            "translators": [],
+            "rating": 4.73,
+            "bayesianAverageRating": 4.27,
+            "reviewCount": 49,
+            "parts": [
+                {
+                    "id": "919990",
+                    "title": null,
+                    "description": null,
+                    "storytelCategoryIds": [
+                        "1"
+                    ],
+                    "majorGenreCodes": [
+                        "FJ"
+                    ],
+                    "minorGenreCodes": [
+                        "YFC",
+                        "YFS",
+                        "FM",
+                        "YFH",
+                        "5AJ"
+                    ],
+                    "formats": [
+                        {
+                            "id": "919662",
+                            "isbn": "9781781100240",
+                            "type": "ebook",
+                            "releaseDate": "2015-12-08T00:00:00Z",
+                            "enterServiceDate": "2020-05-25T12:09:32Z",
+                            "abridged": false,
+                            "searchable": true,
+                            "edition": "",
+                            "bookSource": null,
+                            "isReleased": true,
+                            "length": 1513388,
+                            "cover": {
+                                "url": "https://www.storytel.com/images/9781781100240/640x640/cover.jpg",
+                                "width": 426,
+                                "height": 640
+                            },
+                            "audioAssets": [],
+                            "ebookAssets": [
+                                {
+                                    "id": "1323903",
+                                    "encoding": "epub",
+                                    "fileId": "24941066",
+                                    "characterCount": 1513388,
+                                    "wordCount": 266639
+                                },
+                                {
+                                    "id": "1323902",
+                                    "encoding": "epub",
+                                    "fileId": "24941056",
+                                    "characterCount": 1513388,
+                                    "wordCount": 266639
+                                }
+                            ],
+                            "chapterCount": 0,
+                            "cdnLink": null,
+                            "cdnType": null
+                        }
+                    ],
+                    "cover": {
+                        "url": "https://www.storytel.com/images/9781781100240/640x640/cover.jpg",
+                        "width": 426,
+                        "height": 640
+                    },
+                    "episodeNumber": 5,
+                    "sttMapAssets": [],
+                    "formatAvailability": "ebook"
+                }
+            ],
+            "language": {
+                "id": "en",
+                "name": "English"
+            },
+            "publishers": [
+                {
+                    "publisherDetails": {
+                        "imprintId": "",
+                        "publisherId": "742"
+                    },
+                    "id": "742",
+                    "name": "Pottermore",
+                    "slug": "pottermore",
+                    "type": "ebook"
+                }
+            ],
+            "cover": {
+                "url": "https://www.storytel.com/images/9781781100240/640x640/cover.jpg",
+                "width": 426,
+                "height": 640
+            },
+            "tags": [],
+            "seriesId": "53646",
+            "seriesName": "Harry Potter Ebooks",
+            "orderInSeries": 5,
+            "seasonNumber": null,
+            "resultType": "book",
+            "shareUrl": "https://www.storytel.com/books/1648636?appRedirect=true"
+        },
+        {
+            "id": "920007",
+            "sthpIds": [
+                {
+                    "primary": true,
+                    "sthpBookId": 1648626,
+                    "sthpAudioBookId": null,
+                    "sthpEbookId": 1648627
+                }
+            ],
+            "title": "Harry Potter and the Chamber of Secrets",
+            "originalTitle": null,
+            "type": "single",
+            "description": "'There is a plot, Harry Potter. A plot to make most terrible things happen at Hogwarts School of Witchcraft and Wizardry this year.'\n\nHarry Potter's summer has included the worst birthday ever, doomy warnings from a house-elf called Dobby, and rescue from the Dursleys by his friend Ron Weasley in a magical flying car! Back at Hogwarts School of Witchcraft and Wizardry for his second year, Harry hears strange whispers echo through empty corridors - and then the attacks start. Students are found as though turned to stone... Dobby's sinister predictions seem to be coming true.",
+            "seriesInfo": null,
+            "authors": [
+                {
+                    "id": "1998",
+                    "name": "J.K. Rowling"
+                }
+            ],
+            "narrators": [],
+            "translators": [],
+            "rating": 4.77,
+            "bayesianAverageRating": 4.36,
+            "reviewCount": 64,
+            "parts": [
+                {
+                    "id": "920007",
+                    "title": null,
+                    "description": null,
+                    "storytelCategoryIds": [
+                        "1"
+                    ],
+                    "majorGenreCodes": [
+                        "FJ"
+                    ],
+                    "minorGenreCodes": [
+                        "YFC",
+                        "YFS",
+                        "FM",
+                        "YFH",
+                        "5AJ"
+                    ],
+                    "formats": [
+                        {
+                            "id": "919679",
+                            "isbn": "9781781100226",
+                            "type": "ebook",
+                            "releaseDate": "2015-12-08T00:00:00Z",
+                            "enterServiceDate": "2020-05-25T12:07:14Z",
+                            "abridged": false,
+                            "searchable": true,
+                            "edition": "",
+                            "bookSource": null,
+                            "isReleased": true,
+                            "length": 511466,
+                            "cover": {
+                                "url": "https://www.storytel.com/images/9781781100226/640x640/cover.jpg",
+                                "width": 426,
+                                "height": 640
+                            },
+                            "audioAssets": [],
+                            "ebookAssets": [
+                                {
+                                    "id": "1323911",
+                                    "encoding": "epub",
+                                    "fileId": "24941070",
+                                    "characterCount": 511466,
+                                    "wordCount": 90406
+                                },
+                                {
+                                    "id": "1323910",
+                                    "encoding": "epub",
+                                    "fileId": "24941052",
+                                    "characterCount": 511466,
+                                    "wordCount": 90406
+                                }
+                            ],
+                            "chapterCount": 0,
+                            "cdnLink": null,
+                            "cdnType": null
+                        }
+                    ],
+                    "cover": {
+                        "url": "https://www.storytel.com/images/9781781100226/640x640/cover.jpg",
+                        "width": 426,
+                        "height": 640
+                    },
+                    "episodeNumber": 2,
+                    "sttMapAssets": [],
+                    "formatAvailability": "ebook"
+                }
+            ],
+            "language": {
+                "id": "en",
+                "name": "English"
+            },
+            "publishers": [
+                {
+                    "publisherDetails": {
+                        "imprintId": "",
+                        "publisherId": "742"
+                    },
+                    "id": "742",
+                    "name": "Pottermore",
+                    "slug": "pottermore",
+                    "type": "ebook"
+                }
+            ],
+            "cover": {
+                "url": "https://www.storytel.com/images/9781781100226/640x640/cover.jpg",
+                "width": 426,
+                "height": 640
+            },
+            "tags": [],
+            "seriesId": "53646",
+            "seriesName": "Harry Potter Ebooks",
+            "orderInSeries": 2,
+            "seasonNumber": null,
+            "resultType": "book",
+            "shareUrl": "https://www.storytel.com/books/1648626?appRedirect=true"
+        },
+        {
+            "id": "920011",
+            "sthpIds": [
+                {
+                    "primary": true,
+                    "sthpBookId": 1648634,
+                    "sthpAudioBookId": null,
+                    "sthpEbookId": 1648635
+                }
+            ],
+            "title": "Harry Potter and the Prisoner of Azkaban",
+            "originalTitle": null,
+            "type": "single",
+            "description": "'Welcome to the Knight Bus, emergency transport for the stranded witch or wizard. Just stick out your wand hand, step on board and we can take you anywhere you want to go.'\n\nWhen the Knight Bus crashes through the darkness and screeches to a halt in front of him, it's the start of another far from ordinary year at Hogwarts for Harry Potter. Sirius Black, escaped mass-murderer and follower of Lord Voldemort, is on the run - and they say he is coming after Harry. In his first ever Divination class, Professor Trelawney sees an omen of death in Harry's tea leaves... But perhaps most terrifying of all are the Dementors patrolling the school grounds, with their soul-sucking kiss...",
+            "seriesInfo": null,
+            "authors": [
+                {
+                    "id": "1998",
+                    "name": "J.K. Rowling"
+                }
+            ],
+            "narrators": [],
+            "translators": [],
+            "rating": 4.7,
+            "bayesianAverageRating": 4.31,
+            "reviewCount": 61,
+            "parts": [
+                {
+                    "id": "920011",
+                    "title": null,
+                    "description": null,
+                    "storytelCategoryIds": [
+                        "1"
+                    ],
+                    "majorGenreCodes": [
+                        "FJ"
+                    ],
+                    "minorGenreCodes": [
+                        "YFC",
+                        "YFS",
+                        "FM",
+                        "YFH",
+                        "5AJ"
+                    ],
+                    "formats": [
+                        {
+                            "id": "919683",
+                            "isbn": "9781781100233",
+                            "type": "ebook",
+                            "releaseDate": "2015-12-08T00:00:00Z",
+                            "enterServiceDate": "2020-05-25T12:08:57Z",
+                            "abridged": false,
+                            "searchable": true,
+                            "edition": "",
+                            "bookSource": null,
+                            "isReleased": true,
+                            "length": 646995,
+                            "cover": {
+                                "url": "https://www.storytel.com/images/9781781100233/640x640/cover.jpg",
+                                "width": 426,
+                                "height": 640
+                            },
+                            "audioAssets": [],
+                            "ebookAssets": [
+                                {
+                                    "id": "1323901",
+                                    "encoding": "epub",
+                                    "fileId": "24941065",
+                                    "characterCount": 646995,
+                                    "wordCount": 114023
+                                },
+                                {
+                                    "id": "1323899",
+                                    "encoding": "epub",
+                                    "fileId": "24941054",
+                                    "characterCount": 646995,
+                                    "wordCount": 114023
+                                }
+                            ],
+                            "chapterCount": 0,
+                            "cdnLink": null,
+                            "cdnType": null
+                        }
+                    ],
+                    "cover": {
+                        "url": "https://www.storytel.com/images/9781781100233/640x640/cover.jpg",
+                        "width": 426,
+                        "height": 640
+                    },
+                    "episodeNumber": 3,
+                    "sttMapAssets": [],
+                    "formatAvailability": "ebook"
+                }
+            ],
+            "language": {
+                "id": "en",
+                "name": "English"
+            },
+            "publishers": [
+                {
+                    "publisherDetails": {
+                        "imprintId": "",
+                        "publisherId": "742"
+                    },
+                    "id": "742",
+                    "name": "Pottermore",
+                    "slug": "pottermore",
+                    "type": "ebook"
+                }
+            ],
+            "cover": {
+                "url": "https://www.storytel.com/images/9781781100233/640x640/cover.jpg",
+                "width": 426,
+                "height": 640
+            },
+            "tags": [],
+            "seriesId": "53646",
+            "seriesName": "Harry Potter Ebooks",
+            "orderInSeries": 3,
+            "seasonNumber": null,
+            "resultType": "book",
+            "shareUrl": "https://www.storytel.com/books/1648634?appRedirect=true"
+        },
+        {
+            "id": "919968",
+            "sthpIds": [
+                {
+                    "primary": true,
+                    "sthpBookId": 1648926,
+                    "sthpAudioBookId": null,
+                    "sthpEbookId": 1648928
+                }
+            ],
+            "title": "Harry Potter and the Half-Blood Prince",
+            "originalTitle": null,
+            "type": "single",
+            "description": "There it was, hanging in the sky above the school: the blazing green skull with a serpent tongue, the mark Death Eaters left behind whenever they had entered a building... wherever they had murdered...\n\nWhen Dumbledore arrives at Privet Drive one summer night to collect Harry Potter, his wand hand is blackened and shrivelled, but he does not reveal why. Secrets and suspicion are spreading through the wizarding world, and Hogwarts itself is not safe. Harry is convinced that Malfoy bears the Dark Mark: there is a Death Eater amongst them. Harry will need powerful magic and true friends as he explores Voldemort's darkest secrets, and Dumbledore prepares him to face his destiny...",
+            "seriesInfo": null,
+            "authors": [
+                {
+                    "id": "1998",
+                    "name": "J.K. Rowling"
+                }
+            ],
+            "narrators": [],
+            "translators": [],
+            "rating": 4.5,
+            "bayesianAverageRating": 4.13,
+            "reviewCount": 46,
+            "parts": [
+                {
+                    "id": "919968",
+                    "title": null,
+                    "description": null,
+                    "storytelCategoryIds": [
+                        "1"
+                    ],
+                    "majorGenreCodes": [
+                        "FJ"
+                    ],
+                    "minorGenreCodes": [
+                        "YFC",
+                        "YFS",
+                        "FM",
+                        "YFH",
+                        "5AJ"
+                    ],
+                    "formats": [
+                        {
+                            "id": "919640",
+                            "isbn": "9781781100257",
+                            "type": "ebook",
+                            "releaseDate": "2015-12-08T00:00:00Z",
+                            "enterServiceDate": "2020-05-25T12:22:03Z",
+                            "abridged": false,
+                            "searchable": true,
+                            "edition": "",
+                            "bookSource": null,
+                            "isReleased": true,
+                            "length": 998173,
+                            "cover": {
+                                "url": "https://www.storytel.com/images/9781781100257/640x640/cover.jpg",
+                                "width": 426,
+                                "height": 640
+                            },
+                            "audioAssets": [],
+                            "ebookAssets": [
+                                {
+                                    "id": "1323909",
+                                    "encoding": "epub",
+                                    "fileId": "24941069",
+                                    "characterCount": 998173,
+                                    "wordCount": 175542
+                                },
+                                {
+                                    "id": "1323908",
+                                    "encoding": "epub",
+                                    "fileId": "24941053",
+                                    "characterCount": 998173,
+                                    "wordCount": 175542
+                                }
+                            ],
+                            "chapterCount": 0,
+                            "cdnLink": null,
+                            "cdnType": null
+                        }
+                    ],
+                    "cover": {
+                        "url": "https://www.storytel.com/images/9781781100257/640x640/cover.jpg",
+                        "width": 426,
+                        "height": 640
+                    },
+                    "episodeNumber": 6,
+                    "sttMapAssets": [],
+                    "formatAvailability": "ebook"
+                }
+            ],
+            "language": {
+                "id": "en",
+                "name": "English"
+            },
+            "publishers": [
+                {
+                    "publisherDetails": {
+                        "imprintId": "",
+                        "publisherId": "742"
+                    },
+                    "id": "742",
+                    "name": "Pottermore",
+                    "slug": "pottermore",
+                    "type": "ebook"
+                }
+            ],
+            "cover": {
+                "url": "https://www.storytel.com/images/9781781100257/640x640/cover.jpg",
+                "width": 426,
+                "height": 640
+            },
+            "tags": [],
+            "seriesId": "53646",
+            "seriesName": "Harry Potter Ebooks",
+            "orderInSeries": 6,
+            "seasonNumber": null,
+            "resultType": "book",
+            "shareUrl": "https://www.storytel.com/books/1648926?appRedirect=true"
+        },
+        {
+            "id": "1047924",
+            "sthpIds": [
+                {
+                    "primary": true,
+                    "sthpBookId": 2052678,
+                    "sthpAudioBookId": null,
+                    "sthpEbookId": 2052679
+                }
+            ],
+            "title": "Harry Potter og dauðadjásnin",
+            "originalTitle": null,
+            "type": "single",
+            "description": "„Færið mér Harry Potter,\" sagði rödd Voldemorts, „og enginn mun hljóta skaða. Færið mér Harry Potter og ég mun láta skólann óáreittan. Færið mér Harry Potter og ykkur mun verða launað ríkulega.\"\n\nÞegar hann fer upp í hliðarvagninn á mótorhjóli Hagrids, yfirgefur Runnaflöt í síðasta sinn og svífur upp til himna veit Harry Potter að Voldemort og drápararnir eru ekki langt undan. Verndargaldurinn, sem hefur haldið Harry öruggum, er nú rofinn, en hann getur ekki haldið áfram að vera í felum. Myrkrahöfðinginn vekur ugg í brjósti allra sem Harry elskar en Harry verður að finna og eyðileggja helkrossana, sem eftir standa, til að stoppa hann. Lokaorrustan verður að hefjast - Harry verður að standa frammi fyrir óvini sínum ...",
+            "seriesInfo": null,
+            "authors": [
+                {
+                    "id": "1998",
+                    "name": "J.K. Rowling"
+                }
+            ],
+            "narrators": [],
+            "translators": [
+                {
+                    "id": "113216",
+                    "name": "Helga Haraldsdóttir"
+                }
+            ],
+            "rating": 0.0,
+            "bayesianAverageRating": 0.0,
+            "reviewCount": 0,
+            "parts": [
+                {
+                    "id": "1047924",
+                    "title": null,
+                    "description": null,
+                    "storytelCategoryIds": [
+                        "1"
+                    ],
+                    "majorGenreCodes": [
+                        "FJ"
+                    ],
+                    "minorGenreCodes": [
+                        "YFC",
+                        "YFS",
+                        "FM",
+                        "YFH",
+                        "5AJ"
+                    ],
+                    "formats": [
+                        {
+                            "id": "1047158",
+                            "isbn": "9781789390292",
+                            "type": "ebook",
+                            "releaseDate": "2021-02-04T00:00:00Z",
+                            "enterServiceDate": "2020-11-02T10:51:27Z",
+                            "abridged": false,
+                            "searchable": true,
+                            "edition": "",
+                            "bookSource": null,
+                            "isReleased": false,
+                            "length": 0,
+                            "cover": {
+                                "url": "https://www.storytel.com/images/9781789390292/640x640/cover.jpg",
+                                "width": 426,
+                                "height": 640
+                            },
+                            "audioAssets": [],
+                            "ebookAssets": [],
+                            "chapterCount": 0,
+                            "cdnLink": null,
+                            "cdnType": null
+                        }
+                    ],
+                    "cover": {
+                        "url": "https://www.storytel.com/images/9781789390292/640x640/cover.jpg",
+                        "width": 426,
+                        "height": 640
+                    },
+                    "episodeNumber": 7,
+                    "sttMapAssets": [],
+                    "formatAvailability": "ebook"
+                }
+            ],
+            "language": {
+                "id": "is",
+                "name": "Icelandic"
+            },
+            "publishers": [
+                {
+                    "publisherDetails": {
+                        "imprintId": "",
+                        "publisherId": "742"
+                    },
+                    "id": "742",
+                    "name": "Pottermore",
+                    "slug": "pottermore",
+                    "type": "ebook"
+                }
+            ],
+            "cover": {
+                "url": "https://www.storytel.com/images/9781789390292/640x640/cover.jpg",
+                "width": 426,
+                "height": 640
+            },
+            "tags": [],
+            "seriesId": "53748",
+            "seriesName": "Harry Potter",
+            "orderInSeries": 7,
+            "seasonNumber": null,
+            "resultType": "book",
+            "shareUrl": "https://www.storytel.com/books/2052678?appRedirect=true"
+        },
+        {
+            "id": "1047925",
+            "sthpIds": [
+                {
+                    "primary": true,
+                    "sthpBookId": 2052674,
+                    "sthpAudioBookId": null,
+                    "sthpEbookId": 2052675
+                }
+            ],
+            "title": "Harry Potter og Fönixreglan",
+            "originalTitle": null,
+            "type": "single",
+            "description": "„„Þú deilir hugsunum og tilfinningum með hinum myrka herra. Skólastjórinn telur óráðlegt að þetta haldi áfram. Hann vill að ég kenni þér að loka huga þínum fyrir myrka herranum.\"\"\n\nHogwart stendur frammi fyrir myrkum tímum. Eftir árás vitsuganna á Dudley, frænda hans, veit Harry Potter að Voldemort mun ekki láta neitt stoppa sig við að finna hann. Það eru margir sem þræta fyrir það að hinn myrki herra snúi aftur en Harry er ekki einn: leyniregla safnast saman í Hroðagerði til að berjast gegn myrku öflunum. Harry verður að leyfa prófessor Snape að kenna sér að verjast ofsafengnum árásum Voldemorts á hug sinn. Þær aukast með hverjum deginum og Harry er að renna út á tíma ...",
+            "seriesInfo": null,
+            "authors": [
+                {
+                    "id": "1998",
+                    "name": "J.K. Rowling"
+                }
+            ],
+            "narrators": [],
+            "translators": [
+                {
+                    "id": "113216",
+                    "name": "Helga Haraldsdóttir"
+                },
+                {
+                    "id": "323094",
+                    "name": "Jón Hallur Stefánsson"
+                }
+            ],
+            "rating": 3.0,
+            "bayesianAverageRating": 3.64,
+            "reviewCount": 4,
+            "parts": [
+                {
+                    "id": "1047925",
+                    "title": null,
+                    "description": null,
+                    "storytelCategoryIds": [
+                        "1"
+                    ],
+                    "majorGenreCodes": [
+                        "FJ"
+                    ],
+                    "minorGenreCodes": [
+                        "YFC",
+                        "YFS",
+                        "FM",
+                        "YFH",
+                        "5AJ"
+                    ],
+                    "formats": [
+                        {
+                            "id": "1047159",
+                            "isbn": "9781789390063",
+                            "type": "ebook",
+                            "releaseDate": "2021-01-07T00:00:00Z",
+                            "enterServiceDate": "2020-11-02T10:50:48Z",
+                            "abridged": false,
+                            "searchable": true,
+                            "edition": "",
+                            "bookSource": null,
+                            "isReleased": true,
+                            "length": 1592046,
+                            "cover": {
+                                "url": "https://www.storytel.com/images/9781789390063/640x640/cover.jpg",
+                                "width": 426,
+                                "height": 640
+                            },
+                            "audioAssets": [],
+                            "ebookAssets": [
+                                {
+                                    "id": "1387360",
+                                    "encoding": "epub",
+                                    "fileId": "26426093",
+                                    "characterCount": 1592046,
+                                    "wordCount": 273742
+                                },
+                                {
+                                    "id": "1387359",
+                                    "encoding": "epub",
+                                    "fileId": "26426077",
+                                    "characterCount": 1592046,
+                                    "wordCount": 273742
+                                }
+                            ],
+                            "chapterCount": 0,
+                            "cdnLink": null,
+                            "cdnType": null
+                        }
+                    ],
+                    "cover": {
+                        "url": "https://www.storytel.com/images/9781789390063/640x640/cover.jpg",
+                        "width": 426,
+                        "height": 640
+                    },
+                    "episodeNumber": 5,
+                    "sttMapAssets": [],
+                    "formatAvailability": "ebook"
+                }
+            ],
+            "language": {
+                "id": "is",
+                "name": "Icelandic"
+            },
+            "publishers": [
+                {
+                    "publisherDetails": {
+                        "imprintId": "",
+                        "publisherId": "742"
+                    },
+                    "id": "742",
+                    "name": "Pottermore",
+                    "slug": "pottermore",
+                    "type": "ebook"
+                }
+            ],
+            "cover": {
+                "url": "https://www.storytel.com/images/9781789390063/640x640/cover.jpg",
+                "width": 426,
+                "height": 640
+            },
+            "tags": [],
+            "seriesId": "53748",
+            "seriesName": "Harry Potter",
+            "orderInSeries": 5,
+            "seasonNumber": null,
+            "resultType": "book",
+            "shareUrl": "https://www.storytel.com/books/2052674?appRedirect=true"
+        }
+    ],
+    "filterOptions": null
+}
