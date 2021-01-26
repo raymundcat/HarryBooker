@@ -80,7 +80,8 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
         tableView.leadingAnchor == leadingAnchor
         tableView.trailingAnchor == trailingAnchor
         
-        loadingIndicator.centerAnchors == centerAnchors
+        loadingIndicator.centerXAnchor == centerXAnchor
+        loadingIndicator.bottomAnchor == safeAreaLayoutGuide.bottomAnchor - .regular
     }
     
     //MARK: Actions
