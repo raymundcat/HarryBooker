@@ -8,8 +8,6 @@
 import Foundation
 import XCTest
 import CasePaths
-import OHHTTPStubs
-import OHHTTPStubsSwift
 import PromiseKit
 @testable import HarryBooker
 
