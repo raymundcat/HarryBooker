@@ -44,9 +44,6 @@ open class BaseEventViewController<BaseEventEvent: Event, BaseEventViewEvent: Vi
             // Attach View Controller Events
             viewControllerEventListeners.addDelegate(rootView)
             viewControllerEventListeners.addDelegate(rootPresenter)
-            
-            // Attach Core PResentable Events
-            rootPresenter.corePresentableEventListeners.addDelegate(rootView)
         }
     }
     

@@ -9,7 +9,7 @@ import UIKit
 import Anchorage
 import Eventful
 
-open class BaseEventRootView<BaseEventViewEvent: ViewEvent, BaseEventPresentableEvent: PresentableEvent>: EventRootView<BaseEventViewEvent, BaseEventPresentableEvent>, BaseEventViewControllerEventListener, BaseEventCorePresentableEventListener {
+open class BaseEventRootView<BaseEventViewEvent: ViewEvent, BaseEventPresentableEvent: PresentableEvent>: EventRootView<BaseEventViewEvent, BaseEventPresentableEvent>, BaseEventViewControllerEventListener {
     
     //MARK: Subviews
     
@@ -68,8 +68,10 @@ open class BaseEventRootView<BaseEventViewEvent: ViewEvent, BaseEventPresentable
     //MARK: Events Catching
     
     open override func presenter(didSend event: PresentableEvent) {
-        if let presenterEvent = event as? BaseEventPresentableEvent {
-            self.presenter(didSend: presenterEvent)
+        if let event = event as? BaseEventPresentableEvent {
+            presenter(didSend: event)
+        } else if let event = event as? BaseEventCorePresentableEvent {
+            presenter(didSend: event)
         }
     }
 

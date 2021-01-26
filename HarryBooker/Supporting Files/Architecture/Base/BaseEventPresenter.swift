@@ -15,19 +15,12 @@ public enum BaseEventCorePresentableEvent: PresentableEvent {
     case showAlert(title: String?, message: String)
 }
 
-public protocol BaseEventCorePresentableEventListener: class {
-    
-    func presenter(didSend event: BaseEventCorePresentableEvent)
-}
-
 open class BaseEventPresenter<BaseEventViewEvent: ViewEvent, BaseEventPresenterEvent: PresenterEvent, BaseEventPresentableEvent: PresentableEvent>: EventPresenter<BaseEventViewEvent, BaseEventPresenterEvent, BaseEventPresentableEvent>, BaseEventViewControllerEventListener {
     
     //MARK: Events Sending
     
-    public var corePresentableEventListeners = MulticastDelegate<BaseEventCorePresentableEventListener>()
-    
     open func send(event: BaseEventCorePresentableEvent) {
-        corePresentableEventListeners.invokeDelegates { (delegate) in
+        presentables.invokeDelegates { (delegate) in
             delegate.presenter(didSend: event)
         }
     }

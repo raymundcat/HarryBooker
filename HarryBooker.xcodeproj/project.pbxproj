@@ -15,6 +15,7 @@
 		EC3A73A725C061E600940CB4 /* Query-Page-0-Empty.json in Resources */ = {isa = PBXBuildFile; fileRef = EC3A73A625C061E600940CB4 /* Query-Page-0-Empty.json */; };
 		EC3A73AC25C061F800940CB4 /* Query-Page-2-Empty.json in Resources */ = {isa = PBXBuildFile; fileRef = EC3A73AB25C061F800940CB4 /* Query-Page-2-Empty.json */; };
 		EC3A73B725C0626300940CB4 /* QueryTableEmptyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3A73B625C0626300940CB4 /* QueryTableEmptyTests.swift */; };
+		EC3A73E225C0859F00940CB4 /* QueryTableErrorHandlingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3A73E125C0859F00940CB4 /* QueryTableErrorHandlingTest.swift */; };
 		EC4BCC4025BE2FD9003B23F7 /* QueryEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCC3E25BE2FD9003B23F7 /* QueryEndPoint.swift */; };
 		EC4BCC5025BE2FFC003B23F7 /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCC4825BE2FFC003B23F7 /* UITableView+Dequeueing.swift */; };
 		EC4BCC5225BE2FFC003B23F7 /* BaseEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCC4D25BE2FFC003B23F7 /* BaseEventView.swift */; };
@@ -81,6 +82,7 @@
 		EC3A73A625C061E600940CB4 /* Query-Page-0-Empty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Query-Page-0-Empty.json"; sourceTree = "<group>"; };
 		EC3A73AB25C061F800940CB4 /* Query-Page-2-Empty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Query-Page-2-Empty.json"; sourceTree = "<group>"; };
 		EC3A73B625C0626300940CB4 /* QueryTableEmptyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryTableEmptyTests.swift; sourceTree = "<group>"; };
+		EC3A73E125C0859F00940CB4 /* QueryTableErrorHandlingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryTableErrorHandlingTest.swift; sourceTree = "<group>"; };
 		EC4BCC3E25BE2FD9003B23F7 /* QueryEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryEndPoint.swift; sourceTree = "<group>"; };
 		EC4BCC4825BE2FFC003B23F7 /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
 		EC4BCC4D25BE2FFC003B23F7 /* BaseEventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseEventView.swift; sourceTree = "<group>"; };
@@ -354,6 +356,7 @@
 				EC95B90625C031C70038000E /* QueryTablePullToRefreshTests.swift */,
 				EC95B92D25C044830038000E /* QueryTableDuplicatesTest.swift */,
 				EC3A73B625C0626300940CB4 /* QueryTableEmptyTests.swift */,
+				EC3A73E125C0859F00940CB4 /* QueryTableErrorHandlingTest.swift */,
 			);
 			path = QueryTableTests;
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 				EC95B91325C041C30038000E /* URL+URLComponents.swift in Sources */,
 				EC95B8C525C030330038000E /* StubbedTests.swift in Sources */,
 				EC3A73B725C0626300940CB4 /* QueryTableEmptyTests.swift in Sources */,
+				EC3A73E225C0859F00940CB4 /* QueryTableErrorHandlingTest.swift in Sources */,
 				EC95B90725C031C70038000E /* QueryTablePullToRefreshTests.swift in Sources */,
 				EC95B92E25C044830038000E /* QueryTableDuplicatesTest.swift in Sources */,
 				ECBBA0EA25BF943200EB7D38 /* QueryTableOnLoadTests.swift in Sources */,
