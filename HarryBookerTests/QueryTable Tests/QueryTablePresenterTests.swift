@@ -10,6 +10,7 @@ import XCTest
 import CasePaths
 import OHHTTPStubs
 import OHHTTPStubsSwift
+import PromiseKit
 @testable import HarryBooker
 
 class QueryTablePresenterTests: XCTestCase {
@@ -30,7 +31,9 @@ class QueryTablePresenterTests: XCTestCase {
         /// Set the expectations
         let expectation = self.expectation(description: "Expecting for books")
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+        firstly {
+            after(seconds: 1.0)
+        }.done { _ in
             guard let didLoadEvent = bucket.events.compactMap(/QueryTablePresentableEvent.didLoad).last else {
                 expectation.fulfill()
                 return
@@ -58,6 +61,58 @@ class QueryTablePresenterTests: XCTestCase {
             expectation.fulfill()
         }
         
+        waitForExpectations(timeout: 5)
+    }
+    
+    func testFirstPullToRefreshLoadValue() {        let query = "Harry"
+        stubs.stubQuery(query: query, page: nil)
+        
+        let presenter = QueryTablePresenter(query: query)
+        let bucket = PresentableBucket<QueryTablePresentableEvent>()
+        presenter.presentables.addDelegate(bucket)
+        
+        /// Wake up the presenter
+        presenter.viewController(didSend: .viewDidLoad)
+        
+        /// Set the expectations
+        let expectation = self.expectation(description: "Expecting for books")
+        
+        firstly {
+            after(seconds: 1.0)
+        }.then { _ in
+            return Guarantee<()> { resolver in
+                presenter.view(didSend: .userDidPullUp)
+                resolver(())
+            }
+        }.then {
+            after(seconds: 1.0)
+        }.done { _ in
+            guard let didLoadEvent = bucket.events.compactMap(/QueryTablePresentableEvent.didLoad).last else {
+                expectation.fulfill()
+                return
+            }
+            
+            /// Assert thet we got 10 books on load
+            assert(didLoadEvent.count == 20)
+            
+//            let titles = didLoadEvent.map({ $0.title })
+//            let expectedTitles = [
+//                "Scary Harry: Fledermaus frei Haus",
+//                "Harry Potter e a Pedra Filosofal",
+//                "Harry Potter e a Câmara Secreta",
+//                "Harry Potter and the Chamber of Secrets",
+//                "Harry Potter and the Deathly Hallows",
+//                "Harry Potter and the Goblet of Fire",
+//                "Harry Potter and the Order of the Phoenix",
+//                "Harry Potter and the Philosopher\'s Stone",
+//                "Harry Potter and the Prisoner of Azkaban",
+//                "Harry Potter and the Half-Blood Prince"]
+//
+//            /// Assert the expected book titles
+//            assert(titles.sorted() == expectedTitles.sorted())
+            
+            expectation.fulfill()
+        }
         waitForExpectations(timeout: 5)
     }
 }

@@ -29,6 +29,7 @@
 		EC4BCCCE25BE31B7003B23F7 /* Eventful in Frameworks */ = {isa = PBXBuildFile; productRef = EC4BCCCD25BE31B7003B23F7 /* Eventful */; };
 		EC4BCCD125BE31C7003B23F7 /* Services in Frameworks */ = {isa = PBXBuildFile; productRef = EC4BCCD025BE31C7003B23F7 /* Services */; };
 		EC4BCCDE25BE3226003B23F7 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = EC4BCCDD25BE3226003B23F7 /* SDWebImage */; };
+		EC6025E325C00FD000500748 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = EC6025E225C00FD000500748 /* PromiseKit */; };
 		EC9F20CD25BE353C0093DAA3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9F20CC25BE353C0093DAA3 /* Colors.swift */; };
 		EC9F20D825BE466A0093DAA3 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9F20D725BE466A0093DAA3 /* HeaderCell.swift */; };
 		ECBBA0D325BF938700EB7D38 /* QueryStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBBA0D225BF938700EB7D38 /* QueryStubs.swift */; };
@@ -97,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC6025E325C00FD000500748 /* PromiseKit in Frameworks */,
 				EC4BCCD125BE31C7003B23F7 /* Services in Frameworks */,
 				EC4BCCCB25BE31A0003B23F7 /* Anchorage in Frameworks */,
 				EC4BCCDE25BE3226003B23F7 /* SDWebImage in Frameworks */,
@@ -367,6 +369,7 @@
 				EC4BCCCD25BE31B7003B23F7 /* Eventful */,
 				EC4BCCD025BE31C7003B23F7 /* Services */,
 				EC4BCCDD25BE3226003B23F7 /* SDWebImage */,
+				EC6025E225C00FD000500748 /* PromiseKit */,
 			);
 			productName = HarryBooker;
 			productReference = EC09054D25BB9360000BF255 /* HarryBooker.app */;
@@ -452,6 +455,7 @@
 				EC4BCCDC25BE3226003B23F7 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				ECBBA10025BF980100EB7D38 /* XCRemoteSwiftPackageReference "swift-case-paths" */,
 				ECBBA10925BF982300EB7D38 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */,
+				EC6025E125C00FD000500748 /* XCRemoteSwiftPackageReference "PromiseKit" */,
 			);
 			productRefGroup = EC09054E25BB9360000BF255 /* Products */;
 			projectDirPath = "";
@@ -881,6 +885,14 @@
 				version = 5.10.3;
 			};
 		};
+		EC6025E125C00FD000500748 /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit";
+			requirement = {
+				kind = exactVersion;
+				version = 6.13.3;
+			};
+		};
 		ECBBA10025BF980100EB7D38 /* XCRemoteSwiftPackageReference "swift-case-paths" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-case-paths.git";
@@ -919,6 +931,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EC4BCCDC25BE3226003B23F7 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		EC6025E225C00FD000500748 /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC6025E125C00FD000500748 /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
 		};
 		ECBBA10125BF980100EB7D38 /* CasePaths */ = {
 			isa = XCSwiftPackageProductDependency;
