@@ -18,6 +18,7 @@ class QueryTablePresenterTests: XCTestCase {
     let stubs = QueryStubs()
     
     func testFirstOnLoadValue() {
+        
         let query = "Harry"
         stubs.stubQuery(query: query, page: nil)
         
@@ -64,7 +65,9 @@ class QueryTablePresenterTests: XCTestCase {
         waitForExpectations(timeout: 5)
     }
     
-    func testFirstPullToRefreshLoadValue() {        let query = "Harry"
+    func testFirstPullToRefreshLoadValue() {
+        
+        let query = "Harry"
         stubs.stubQuery(query: query, page: nil)
         
         let presenter = QueryTablePresenter(query: query)
