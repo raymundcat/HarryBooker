@@ -63,7 +63,6 @@ class QueryTableOnLoadTests: StubbedTests {
             assert(titles.sorted() == expectedTitles.sorted())
             
             expectation.fulfill()
-            HTTPStubs.removeAllStubs()
         }
         
         waitForExpectations(timeout: 2)
