@@ -66,13 +66,13 @@ class QueryTableLoadingIndicatorTests: StubbedTests {
         }.done { _ in
             
             /// Start listening for events
-            let loadingevents = bucket.events.compactMap(/BaseEventCorePresentableEvent.shouldShowLoading)
+            let loadingIndicatorEvents = bucket.events.compactMap(/BaseEventCorePresentableEvent.shouldShowLoading)
             
             /// Assert that a loaidng indicator was shown
-            assert(loadingevents.contains(true))
+            assert(loadingIndicatorEvents.contains(true))
             
             /// Assert that is was removed
-            assert(loadingevents.last == false)
+            assert(loadingIndicatorEvents.last == false)
             
             expectation.fulfill()
         }
