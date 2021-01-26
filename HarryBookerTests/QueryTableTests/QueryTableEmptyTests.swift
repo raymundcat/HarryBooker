@@ -1,5 +1,5 @@
 //
-//  QueryTableDuplicatesTest.swift
+//  QueryTableEmptyTests.swift
 //  HarryBookerTests
 //
 //  Created by Raymund Catahay on 2021-01-26.
@@ -13,14 +13,14 @@ import OHHTTPStubs
 import OHHTTPStubsSwift
 @testable import HarryBooker
 
-class QueryTableDuplicatesTests: StubbedTests {
+class QueryTableEmptyTests: StubbedTests {
     
     override class func setUp() {
         stub { (request) -> Bool in
             return request.url?.host == "api.storytel.net" &&
                 request.url?.valueOf("query") == "Harry"
         } response: { (request) -> HTTPStubsResponse in
-            guard let path = OHPathForFile("Query-Page-0.json", self) else {
+            guard let path = OHPathForFile("Query-Page-0-Empty.json", self) else {
                 preconditionFailure("Could not find expected file in test bundle")
             }
             return HTTPStubsResponse(
@@ -33,7 +33,7 @@ class QueryTableDuplicatesTests: StubbedTests {
                 request.url?.valueOf("query") == "Harry" &&
                 request.url?.valueOf("page") == "2"
         } response: { (request) -> HTTPStubsResponse in
-            guard let path = OHPathForFile("Query-Page-2-With-Duplicate.json", self) else {
+            guard let path = OHPathForFile("Query-Page-2-Empty.json", self) else {
                 preconditionFailure("Could not find expected file in test bundle")
             }
             return HTTPStubsResponse(
@@ -70,23 +70,14 @@ class QueryTableDuplicatesTests: StubbedTests {
                 return
             }
             
-            /// Assert thet we only got 3 books on load
-            /// 2 from first load and 1 more from pull
-            assert(didLoadEvent.count == 3)
-            
-            let titles = didLoadEvent.map({ $0.title })
-            let expectedTitles = [
-                "BOOKTITLE1",
-                "BOOKTITLE2",
-                "BOOKTITLE4"]
-
-            /// Assert the expected book titles
-            assert(titles.sorted() == expectedTitles.sorted())
+            /// Assert thet we got no books on load
+            assert(didLoadEvent.count == 0)
             
             expectation.fulfill()
         }
         waitForExpectations(timeout: 5)
     }
 }
+
 
 

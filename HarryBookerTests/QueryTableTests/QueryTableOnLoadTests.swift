@@ -13,7 +13,7 @@ import OHHTTPStubs
 import OHHTTPStubsSwift
 @testable import HarryBooker
 
-class QueryTablePresenterTests: StubbedTests {
+class QueryTableOnLoadTests: StubbedTests {
     
     override class func setUp() {
         stub { (request) -> Bool in
@@ -51,7 +51,7 @@ class QueryTablePresenterTests: StubbedTests {
                 return
             }
             
-            /// Assert thet we got 10 books on load
+            /// Assert thet we got 2 books on load
             assert(didLoadEvent.count == 2)
             
             let titles = didLoadEvent.map({ $0.title })

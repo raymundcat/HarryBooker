@@ -12,6 +12,9 @@
 		EC09055A25BB9361000BF255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC09055925BB9361000BF255 /* Assets.xcassets */; };
 		EC09055D25BB9361000BF255 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC09055B25BB9361000BF255 /* LaunchScreen.storyboard */; };
 		EC09057325BB9361000BF255 /* HarryBookerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC09057225BB9361000BF255 /* HarryBookerUITests.swift */; };
+		EC3A73A725C061E600940CB4 /* Query-Page-0-Empty.json in Resources */ = {isa = PBXBuildFile; fileRef = EC3A73A625C061E600940CB4 /* Query-Page-0-Empty.json */; };
+		EC3A73AC25C061F800940CB4 /* Query-Page-2-Empty.json in Resources */ = {isa = PBXBuildFile; fileRef = EC3A73AB25C061F800940CB4 /* Query-Page-2-Empty.json */; };
+		EC3A73B725C0626300940CB4 /* QueryTableEmptyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3A73B625C0626300940CB4 /* QueryTableEmptyTests.swift */; };
 		EC4BCC4025BE2FD9003B23F7 /* QueryEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCC3E25BE2FD9003B23F7 /* QueryEndPoint.swift */; };
 		EC4BCC5025BE2FFC003B23F7 /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCC4825BE2FFC003B23F7 /* UITableView+Dequeueing.swift */; };
 		EC4BCC5225BE2FFC003B23F7 /* BaseEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCC4D25BE2FFC003B23F7 /* BaseEventView.swift */; };
@@ -40,7 +43,7 @@
 		ECBBA0D925BF939100EB7D38 /* Query-Page-0.json in Resources */ = {isa = PBXBuildFile; fileRef = ECBBA0D725BF939000EB7D38 /* Query-Page-0.json */; };
 		ECBBA0DA25BF939100EB7D38 /* Query-Page-2.json in Resources */ = {isa = PBXBuildFile; fileRef = ECBBA0D825BF939100EB7D38 /* Query-Page-2.json */; };
 		ECBBA0DF25BF939B00EB7D38 /* EventBucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBBA0DE25BF939B00EB7D38 /* EventBucket.swift */; };
-		ECBBA0EA25BF943200EB7D38 /* QueryTablePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBBA0E925BF943200EB7D38 /* QueryTablePresenterTests.swift */; };
+		ECBBA0EA25BF943200EB7D38 /* QueryTableOnLoadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBBA0E925BF943200EB7D38 /* QueryTableOnLoadTests.swift */; };
 		ECBBA10225BF980100EB7D38 /* CasePaths in Frameworks */ = {isa = PBXBuildFile; productRef = ECBBA10125BF980100EB7D38 /* CasePaths */; };
 		ECBBA10B25BF982300EB7D38 /* OHHTTPStubs in Frameworks */ = {isa = PBXBuildFile; productRef = ECBBA10A25BF982300EB7D38 /* OHHTTPStubs */; };
 		ECBBA10D25BF982300EB7D38 /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECBBA10C25BF982300EB7D38 /* OHHTTPStubsSwift */; };
@@ -75,6 +78,9 @@
 		EC09056E25BB9361000BF255 /* HarryBookerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarryBookerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC09057225BB9361000BF255 /* HarryBookerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryBookerUITests.swift; sourceTree = "<group>"; };
 		EC09057425BB9361000BF255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC3A73A625C061E600940CB4 /* Query-Page-0-Empty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Query-Page-0-Empty.json"; sourceTree = "<group>"; };
+		EC3A73AB25C061F800940CB4 /* Query-Page-2-Empty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Query-Page-2-Empty.json"; sourceTree = "<group>"; };
+		EC3A73B625C0626300940CB4 /* QueryTableEmptyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryTableEmptyTests.swift; sourceTree = "<group>"; };
 		EC4BCC3E25BE2FD9003B23F7 /* QueryEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryEndPoint.swift; sourceTree = "<group>"; };
 		EC4BCC4825BE2FFC003B23F7 /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
 		EC4BCC4D25BE2FFC003B23F7 /* BaseEventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseEventView.swift; sourceTree = "<group>"; };
@@ -98,7 +104,7 @@
 		ECBBA0D725BF939000EB7D38 /* Query-Page-0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Query-Page-0.json"; sourceTree = "<group>"; };
 		ECBBA0D825BF939100EB7D38 /* Query-Page-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Query-Page-2.json"; sourceTree = "<group>"; };
 		ECBBA0DE25BF939B00EB7D38 /* EventBucket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventBucket.swift; sourceTree = "<group>"; };
-		ECBBA0E925BF943200EB7D38 /* QueryTablePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryTablePresenterTests.swift; sourceTree = "<group>"; };
+		ECBBA0E925BF943200EB7D38 /* QueryTableOnLoadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryTableOnLoadTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +317,8 @@
 				ECBBA0D725BF939000EB7D38 /* Query-Page-0.json */,
 				ECBBA0D825BF939100EB7D38 /* Query-Page-2.json */,
 				EC95B92525C0443D0038000E /* Query-Page-2-With-Duplicate.json */,
+				EC3A73A625C061E600940CB4 /* Query-Page-0-Empty.json */,
+				EC3A73AB25C061F800940CB4 /* Query-Page-2-Empty.json */,
 			);
 			path = "Mock JSONs";
 			sourceTree = "<group>";
@@ -342,9 +350,10 @@
 		ECBBA05925BF8A0B00EB7D38 /* QueryTableTests */ = {
 			isa = PBXGroup;
 			children = (
-				ECBBA0E925BF943200EB7D38 /* QueryTablePresenterTests.swift */,
+				ECBBA0E925BF943200EB7D38 /* QueryTableOnLoadTests.swift */,
 				EC95B90625C031C70038000E /* QueryTablePullToRefreshTests.swift */,
 				EC95B92D25C044830038000E /* QueryTableDuplicatesTest.swift */,
+				EC3A73B625C0626300940CB4 /* QueryTableEmptyTests.swift */,
 			);
 			path = QueryTableTests;
 			sourceTree = "<group>";
@@ -504,7 +513,9 @@
 			files = (
 				ECBBA0DA25BF939100EB7D38 /* Query-Page-2.json in Resources */,
 				ECBBA0D925BF939100EB7D38 /* Query-Page-0.json in Resources */,
+				EC3A73A725C061E600940CB4 /* Query-Page-0-Empty.json in Resources */,
 				EC95B92625C0443D0038000E /* Query-Page-2-With-Duplicate.json in Resources */,
+				EC3A73AC25C061F800940CB4 /* Query-Page-2-Empty.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,9 +559,10 @@
 			files = (
 				EC95B91325C041C30038000E /* URL+URLComponents.swift in Sources */,
 				EC95B8C525C030330038000E /* StubbedTests.swift in Sources */,
+				EC3A73B725C0626300940CB4 /* QueryTableEmptyTests.swift in Sources */,
 				EC95B90725C031C70038000E /* QueryTablePullToRefreshTests.swift in Sources */,
 				EC95B92E25C044830038000E /* QueryTableDuplicatesTest.swift in Sources */,
-				ECBBA0EA25BF943200EB7D38 /* QueryTablePresenterTests.swift in Sources */,
+				ECBBA0EA25BF943200EB7D38 /* QueryTableOnLoadTests.swift in Sources */,
 				ECBBA0DF25BF939B00EB7D38 /* EventBucket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
