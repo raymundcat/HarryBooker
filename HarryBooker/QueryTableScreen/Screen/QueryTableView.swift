@@ -42,7 +42,6 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
         return tableView
     }()
     
-    private var loadingIndicatorBottomConstraint: NSLayoutConstraint?
     private lazy var loadingIndicator: UIActivityIndicatorView = {
         let indicator = UIActivityIndicatorView(style: .medium)
         return indicator
@@ -66,18 +65,6 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
         return dataSource
     }()
     
-    //MARK: States
-    
-    private var isLoadingIndicatorShown: Bool = false {
-        didSet {
-            if isLoadingIndicatorShown {
-                loadingIndicator.startAnimating()
-            } else {
-                loadingIndicator.stopAnimating()
-            }
-        }
-    }
-    
     //MARK: LifeCycle
     
     public override func setup() {
@@ -93,8 +80,7 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
         tableView.leadingAnchor == leadingAnchor
         tableView.trailingAnchor == trailingAnchor
         
-        loadingIndicatorBottomConstraint = loadingIndicator.bottomAnchor == bottomAnchor
-        loadingIndicator.centerXAnchor ==  centerXAnchor
+        loadingIndicator.centerAnchors == centerAnchors
     }
     
     //MARK: Actions
@@ -121,10 +107,18 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
         }
     }
     
-    private func requestPullUp() {
-        if !isLoadingIndicatorShown {
-            send(event: .userDidPullUp)
+    private func updateLoadingIndicator(isShown: Bool) {
+        
+        /// Show or hide activity indicators
+        if isShown {
+            loadingIndicator.startAnimating()
+        } else {
+            loadingIndicator.stopAnimating()
         }
+        
+        /// Let's hold off further user interactions
+        /// while the presenter is busy
+        isUserInteractionEnabled = !isShown
     }
     
     //MARK: Events
@@ -141,7 +135,7 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
     public override func presenter(didSend event: BaseEventCorePresentableEvent) {
         switch event {
         case .shouldShowLoading(let shoudShow):
-            isLoadingIndicatorShown = shoudShow
+            updateLoadingIndicator(isShown: shoudShow)
         default:
             break
         }
@@ -154,14 +148,9 @@ extension QueryTableView: UITableViewDelegate, UIScrollViewDelegate {
         let offset = scrollView.contentOffset.y + scrollView.bounds.height
         let contentHeight = scrollView.contentSize.height
         
-        /// Adjusting the activity indicator with the scrollview
-        if offset > contentHeight {
-            loadingIndicatorBottomConstraint?.constant = -(offset - contentHeight) + Margin.regular.rawValue
-        }
-        
         /// The trigger for a  reload
         if offset > contentHeight + 120 {
-            requestPullUp()
+            send(event: .userDidPullUp)
         }
     }
 }
