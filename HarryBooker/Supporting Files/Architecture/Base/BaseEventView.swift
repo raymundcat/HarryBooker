@@ -6,14 +6,23 @@
 //
 
 import UIKit
+import Anchorage
 import Eventful
 
 open class BaseEventRootView<BaseEventViewEvent: ViewEvent, BaseEventPresentableEvent: PresentableEvent>: EventRootView<BaseEventViewEvent, BaseEventPresentableEvent>, BaseEventViewControllerEventListener, BaseEventCorePresentableEventListener {
+    
+    //MARK: Subviews
+    
+    public lazy var loadingIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(style: .medium)
+        return indicator
+    }()
     
     //MARK: Life Cycle
     
     public override init(frame: CGRect) {
         super.init(frame: .zero)
+        setupLoadingIndicator()
         setup()
     }
     
@@ -22,6 +31,11 @@ open class BaseEventRootView<BaseEventViewEvent: ViewEvent, BaseEventPresentable
     }
     
     open func setup() { }
+    
+    open func setupLoadingIndicator() {
+        addSubview(loadingIndicator)
+        loadingIndicator.centerAnchors == centerAnchors
+    }
     
     //MARK: Events Catching
     
@@ -37,5 +51,22 @@ open class BaseEventRootView<BaseEventViewEvent: ViewEvent, BaseEventPresentable
     
     open func viewController(didSend event: BaseEventViewControllerEvent) { }
     
-    open func presenter(didSend event: BaseEventCorePresentableEvent) { }
+    open func presenter(didSend event: BaseEventCorePresentableEvent) {
+        switch event {
+        case .shouldShowLoading(let shouldShow):
+            
+            /// Temporarily halt user interactions
+            isUserInteractionEnabled = !shouldShow
+            
+            /// Start or stop indicators
+            if shouldShow {
+                bringSubviewToFront(loadingIndicator)
+                loadingIndicator.startAnimating()
+            } else {
+                loadingIndicator.stopAnimating()
+            }
+        case .showAlert(let title, let message):
+            break
+        }
+    }
 }

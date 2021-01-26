@@ -42,11 +42,6 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
         return tableView
     }()
     
-    private lazy var loadingIndicator: UIActivityIndicatorView = {
-        let indicator = UIActivityIndicatorView(style: .medium)
-        return indicator
-    }()
-    
     private lazy var dataSource: DataSource = {
         let dataSource = DataSource(tableView: tableView) { (tableView, indexPath, row) -> UITableViewCell? in
             switch row {
@@ -73,13 +68,15 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
         
         /// Children
         addSubview(tableView)
-        addSubview(loadingIndicator)
         
         tableView.topAnchor == safeAreaLayoutGuide.topAnchor
         tableView.bottomAnchor == safeAreaLayoutGuide.bottomAnchor
         tableView.leadingAnchor == leadingAnchor
         tableView.trailingAnchor == trailingAnchor
-        
+    }
+    
+    public override func setupLoadingIndicator() {
+        addSubview(loadingIndicator)
         loadingIndicator.centerXAnchor == centerXAnchor
         loadingIndicator.bottomAnchor == safeAreaLayoutGuide.bottomAnchor - .regular
     }
@@ -108,20 +105,6 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
         }
     }
     
-    private func updateLoadingIndicator(isShown: Bool) {
-        
-        /// Show or hide activity indicators
-        if isShown {
-            loadingIndicator.startAnimating()
-        } else {
-            loadingIndicator.stopAnimating()
-        }
-        
-        /// Let's hold off further user interactions
-        /// while the presenter is busy
-        isUserInteractionEnabled = !isShown
-    }
-    
     //MARK: Events
     
     public override func presenter(didSend event: QueryTablePresentableEvent) {
@@ -130,15 +113,6 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
             self.query = query
         case .didLoad(let books):
             updateItems(books: books)
-        }
-    }
-    
-    public override func presenter(didSend event: BaseEventCorePresentableEvent) {
-        switch event {
-        case .shouldShowLoading(let shoudShow):
-            updateLoadingIndicator(isShown: shoudShow)
-        default:
-            break
         }
     }
 }
