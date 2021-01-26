@@ -85,7 +85,7 @@ class QueryTableDuplicatesTests: StubbedTests {
             
             expectation.fulfill()
         }
-        waitForExpectations(timeout: 5)
+        waitForExpectations(timeout: 3)
     }
 }
 

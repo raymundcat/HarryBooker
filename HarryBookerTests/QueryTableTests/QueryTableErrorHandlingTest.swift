@@ -42,7 +42,7 @@ class QueryTableErrorHandlingTest: StubbedTests {
         let expectation = self.expectation(description: "Expecting for books")
         
         firstly {
-            after(seconds: 2.0)
+            after(seconds: 1.0)
         }.done { _ in
             
             /// Catch an elert event
@@ -54,7 +54,7 @@ class QueryTableErrorHandlingTest: StubbedTests {
             expectation.fulfill()
         }
         
-        waitForExpectations(timeout: 5)
+        waitForExpectations(timeout: 2)
     }
 }
 
