@@ -92,7 +92,6 @@ public class QueryTablePresenter: BaseEventPresenter<QueryTableViewEvent, QueryT
         case .viewDidLoad:
             /// Send an initial update
             send(event: .didStart(query: query))
-            send(event: .didLoad(books: []))
             
             /// Start fetching the first set
             fetchBooks()
