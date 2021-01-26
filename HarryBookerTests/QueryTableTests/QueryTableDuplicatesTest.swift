@@ -70,10 +70,6 @@ class QueryTableDuplicatesTests: StubbedTests {
                 return
             }
             
-            /// Assert thet we only got 3 books on load
-            /// 2 from first load and 1 more from pull
-            assert(didLoadEvent.count == 3)
-            
             let titles = didLoadEvent.map({ $0.title })
             let expectedTitles = [
                 "BOOKTITLE1",

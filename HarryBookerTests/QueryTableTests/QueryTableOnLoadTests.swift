@@ -51,9 +51,6 @@ class QueryTableOnLoadTests: StubbedTests {
                 return
             }
             
-            /// Assert thet we got 2 books on load
-            assert(didLoadEvent.count == 2)
-            
             let titles = didLoadEvent.map({ $0.title })
             let expectedTitles = [
                 "BOOKTITLE1",

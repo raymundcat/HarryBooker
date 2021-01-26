@@ -70,10 +70,6 @@ class QueryTablePullToRefreshTests: StubbedTests {
                 return
             }
             
-            /// Assert thet we got 4 books on load
-            /// 2 from the first load and 2 more after pull
-            assert(didLoadEvent.count == 4)
-            
             let titles = didLoadEvent.map({ $0.title })
             let expectedTitles = [
                 "BOOKTITLE1",
