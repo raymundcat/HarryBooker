@@ -1,0 +1,44 @@
+{
+    "query": "harry",
+    "nextPageToken": "2",
+    "items": [
+        {
+            "id": "BOOKID1",
+            "title": "BOOKTITLE1",
+            "cover": {
+                "url": "BOOKIMAGE1.jpg"
+            },
+            "authors": [
+                {
+                    "id": "AUTHORID1",
+                    "name": "AUTHORNAME1"
+                }
+            ],
+            "narrators": [
+                {
+                    "id": "AUTHORID2",
+                    "name": "AUTHORNAME2"
+                }
+            ]
+        },
+        {
+            "id": "BOOKID2",
+            "title": "BOOKTITLE2",
+            "cover": {
+                "url": "BOOKIMAGE2.jpg"
+            },
+            "authors": [
+                {
+                    "id": "AUTHORID1",
+                    "name": "AUTHORNAME1"
+                }
+            ],
+            "narrators": [
+                {
+                    "id": "AUTHORID2",
+                    "name": "AUTHORNAME2"
+                }
+            ]
+        }
+    ]
+}

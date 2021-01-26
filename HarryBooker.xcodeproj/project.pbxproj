@@ -34,7 +34,7 @@
 		EC9F20D825BE466A0093DAA3 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9F20D725BE466A0093DAA3 /* HeaderCell.swift */; };
 		ECBBA0D325BF938700EB7D38 /* QueryStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBBA0D225BF938700EB7D38 /* QueryStubs.swift */; };
 		ECBBA0D925BF939100EB7D38 /* Query-Page-0.json in Resources */ = {isa = PBXBuildFile; fileRef = ECBBA0D725BF939000EB7D38 /* Query-Page-0.json */; };
-		ECBBA0DA25BF939100EB7D38 /* Query-Page-10.json in Resources */ = {isa = PBXBuildFile; fileRef = ECBBA0D825BF939100EB7D38 /* Query-Page-10.json */; };
+		ECBBA0DA25BF939100EB7D38 /* Query-Page-2.json in Resources */ = {isa = PBXBuildFile; fileRef = ECBBA0D825BF939100EB7D38 /* Query-Page-2.json */; };
 		ECBBA0DF25BF939B00EB7D38 /* EventBucket.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBBA0DE25BF939B00EB7D38 /* EventBucket.swift */; };
 		ECBBA0EA25BF943200EB7D38 /* QueryTablePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBBA0E925BF943200EB7D38 /* QueryTablePresenterTests.swift */; };
 		ECBBA10225BF980100EB7D38 /* CasePaths in Frameworks */ = {isa = PBXBuildFile; productRef = ECBBA10125BF980100EB7D38 /* CasePaths */; };
@@ -88,7 +88,7 @@
 		EC9F20D725BE466A0093DAA3 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		ECBBA0D225BF938700EB7D38 /* QueryStubs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryStubs.swift; sourceTree = "<group>"; };
 		ECBBA0D725BF939000EB7D38 /* Query-Page-0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Query-Page-0.json"; sourceTree = "<group>"; };
-		ECBBA0D825BF939100EB7D38 /* Query-Page-10.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Query-Page-10.json"; sourceTree = "<group>"; };
+		ECBBA0D825BF939100EB7D38 /* Query-Page-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Query-Page-2.json"; sourceTree = "<group>"; };
 		ECBBA0DE25BF939B00EB7D38 /* EventBucket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventBucket.swift; sourceTree = "<group>"; };
 		ECBBA0E925BF943200EB7D38 /* QueryTablePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryTablePresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -297,6 +297,15 @@
 			path = Screen;
 			sourceTree = "<group>";
 		};
+		EC6025E825C021F600500748 /* Mock JSONs */ = {
+			isa = PBXGroup;
+			children = (
+				ECBBA0D725BF939000EB7D38 /* Query-Page-0.json */,
+				ECBBA0D825BF939100EB7D38 /* Query-Page-2.json */,
+			);
+			path = "Mock JSONs";
+			sourceTree = "<group>";
+		};
 		EC9F20CB25BE352B0093DAA3 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,15 +330,6 @@
 			path = "QueryTable Tests";
 			sourceTree = "<group>";
 		};
-		ECBBA06A25BF8C1B00EB7D38 /* JSON Mocks */ = {
-			isa = PBXGroup;
-			children = (
-				ECBBA0D725BF939000EB7D38 /* Query-Page-0.json */,
-				ECBBA0D825BF939100EB7D38 /* Query-Page-10.json */,
-			);
-			path = "JSON Mocks";
-			sourceTree = "<group>";
-		};
 		ECBBA07E25BF8DD700EB7D38 /* EventBucket */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,7 +341,7 @@
 		ECBD3A8B25BFAAE7004EC908 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				ECBBA06A25BF8C1B00EB7D38 /* JSON Mocks */,
+				EC6025E825C021F600500748 /* Mock JSONs */,
 				ECBBA05825BF89FE00EB7D38 /* QueryStubs */,
 				ECBBA07E25BF8DD700EB7D38 /* EventBucket */,
 			);
@@ -482,7 +482,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECBBA0DA25BF939100EB7D38 /* Query-Page-10.json in Resources */,
+				ECBBA0DA25BF939100EB7D38 /* Query-Page-2.json in Resources */,
 				ECBBA0D925BF939100EB7D38 /* Query-Page-0.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

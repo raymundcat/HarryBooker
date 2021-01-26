@@ -11,6 +11,10 @@ import OHHTTPStubsSwift
 
 public class QueryStubs {
     
+    func reset() {
+        HTTPStubs.removeAllStubs()
+    }
+    
     public func stubQuery(query: String, page: String?) {
         stub { (request) -> Bool in
             if let page = page {
@@ -31,7 +35,7 @@ public class QueryStubs {
             return HTTPStubsResponse(
                 fileAtPath: path,
                 statusCode: 200,
-                headers: ["Content-Type": "application/json"])
+                headers: nil)
         }
     }
 }
