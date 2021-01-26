@@ -8,6 +8,7 @@
 import Foundation
 import Eventful
 import Services
+import PromiseKit
 
 public enum QueryTablePresenterEvent: PresenterEvent { }
 
@@ -61,10 +62,16 @@ public class QueryTablePresenter: BaseEventPresenter<QueryTableViewEvent, QueryT
         func filter(
             newBooks: [BookSummary],
             completion: @escaping ([BookSummary]) -> Void) {
-            DispatchQueue.global().async {
-                let filteredNewBooks = newBooks.filter({ !self.books.contains($0) })
+            firstly {
+                Guarantee<[BookSummary]> { guarantee in
+                    DispatchQueue.global().async {
+                        let filteredNewBooks = newBooks.filter({ !self.books.contains($0) })
+                        guarantee(filteredNewBooks)
+                    }
+                }
+            }.done { (newBooks) in
                 DispatchQueue.main.async {
-                    completion(filteredNewBooks)
+                    completion(newBooks)
                 }
             }
         }
