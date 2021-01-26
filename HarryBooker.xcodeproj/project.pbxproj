@@ -30,6 +30,8 @@
 		EC4BCCD125BE31C7003B23F7 /* Services in Frameworks */ = {isa = PBXBuildFile; productRef = EC4BCCD025BE31C7003B23F7 /* Services */; };
 		EC4BCCDE25BE3226003B23F7 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = EC4BCCDD25BE3226003B23F7 /* SDWebImage */; };
 		EC6025E325C00FD000500748 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = EC6025E225C00FD000500748 /* PromiseKit */; };
+		EC95B8C525C030330038000E /* StubbedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95B8C425C030330038000E /* StubbedTests.swift */; };
+		EC95B90725C031C70038000E /* QueryTablePullToRefreshTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95B90625C031C70038000E /* QueryTablePullToRefreshTests.swift */; };
 		EC9F20CD25BE353C0093DAA3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9F20CC25BE353C0093DAA3 /* Colors.swift */; };
 		EC9F20D825BE466A0093DAA3 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9F20D725BE466A0093DAA3 /* HeaderCell.swift */; };
 		ECBBA0D325BF938700EB7D38 /* QueryStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBBA0D225BF938700EB7D38 /* QueryStubs.swift */; };
@@ -84,6 +86,8 @@
 		EC4BCCBD25BE317B003B23F7 /* QueryTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryTableView.swift; sourceTree = "<group>"; };
 		EC4BCCBE25BE317B003B23F7 /* QueryTablePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryTablePresenter.swift; sourceTree = "<group>"; };
 		EC4BCCBF25BE317B003B23F7 /* QueryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryTableViewController.swift; sourceTree = "<group>"; };
+		EC95B8C425C030330038000E /* StubbedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubbedTests.swift; sourceTree = "<group>"; };
+		EC95B90625C031C70038000E /* QueryTablePullToRefreshTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryTablePullToRefreshTests.swift; sourceTree = "<group>"; };
 		EC9F20CC25BE353C0093DAA3 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		EC9F20D725BE466A0093DAA3 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		ECBBA0D225BF938700EB7D38 /* QueryStubs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryStubs.swift; sourceTree = "<group>"; };
@@ -174,7 +178,7 @@
 		EC09056625BB9361000BF255 /* HarryBookerTests */ = {
 			isa = PBXGroup;
 			children = (
-				ECBBA05925BF8A0B00EB7D38 /* QueryTable Tests */,
+				ECBBA05925BF8A0B00EB7D38 /* QueryTableTests */,
 				ECBD3A8B25BFAAE7004EC908 /* Helpers */,
 				EC09056925BB9361000BF255 /* Info.plist */,
 			);
@@ -306,6 +310,14 @@
 			path = "Mock JSONs";
 			sourceTree = "<group>";
 		};
+		EC95B8C925C030390038000E /* StubbedTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC95B8C425C030330038000E /* StubbedTests.swift */,
+			);
+			path = StubbedTests;
+			sourceTree = "<group>";
+		};
 		EC9F20CB25BE352B0093DAA3 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,12 +334,13 @@
 			path = QueryStubs;
 			sourceTree = "<group>";
 		};
-		ECBBA05925BF8A0B00EB7D38 /* QueryTable Tests */ = {
+		ECBBA05925BF8A0B00EB7D38 /* QueryTableTests */ = {
 			isa = PBXGroup;
 			children = (
 				ECBBA0E925BF943200EB7D38 /* QueryTablePresenterTests.swift */,
+				EC95B90625C031C70038000E /* QueryTablePullToRefreshTests.swift */,
 			);
-			path = "QueryTable Tests";
+			path = QueryTableTests;
 			sourceTree = "<group>";
 		};
 		ECBBA07E25BF8DD700EB7D38 /* EventBucket */ = {
@@ -341,6 +354,7 @@
 		ECBD3A8B25BFAAE7004EC908 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				EC95B8C925C030390038000E /* StubbedTests */,
 				EC6025E825C021F600500748 /* Mock JSONs */,
 				ECBBA05825BF89FE00EB7D38 /* QueryStubs */,
 				ECBBA07E25BF8DD700EB7D38 /* EventBucket */,
@@ -526,6 +540,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECBBA0D325BF938700EB7D38 /* QueryStubs.swift in Sources */,
+				EC95B8C525C030330038000E /* StubbedTests.swift in Sources */,
+				EC95B90725C031C70038000E /* QueryTablePullToRefreshTests.swift in Sources */,
 				ECBBA0EA25BF943200EB7D38 /* QueryTablePresenterTests.swift in Sources */,
 				ECBBA0DF25BF939B00EB7D38 /* EventBucket.swift in Sources */,
 			);
