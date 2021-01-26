@@ -9,25 +9,19 @@ import UIKit
 import Eventful
 import Anchorage
 
-enum QueryTableSection: CaseIterable {
-    case header
-    case books
-}
-
-enum QueryTableRow: Hashable {
-    case headerCell
-    case book(BookSummary)
-}
-
 public enum QueryTableViewEvent: ViewEvent {
     case userDidPullUp
 }
 
-public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTablePresentableEvent> {
+public class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTablePresentableEvent> {
+    
+    //MARK: Properties
     
     private var query: String?
     
     //MARK: Subviews
+    
+    private lazy var dataSource: DataSource = prepareDataSource()
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -36,26 +30,6 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
         tableView.rowHeight = UITableView.automaticDimension
         tableView.backgroundColor = .design(color: .background)
         return tableView
-    }()
-    
-    typealias DataSource = UITableViewDiffableDataSource<QueryTableSection, QueryTableRow>
-    
-    private lazy var dataSource: DataSource = {
-        let dataSource = DataSource(tableView: tableView) { (tableView, indexPath, row) -> UITableViewCell? in
-            switch row {
-            case .book(let book):
-                let cell: BookDetailCell = tableView.dequeueReusableCell(for: indexPath)
-                cell.set(book: book)
-                return cell
-            case .headerCell:
-                let cell: HeaderCell = tableView.dequeueReusableCell(for: indexPath)
-                if let query = self.query {
-                    cell.set(query: query)
-                }
-                return cell
-            }
-        }
-        return dataSource
     }()
     
     //MARK: LifeCycle
@@ -79,19 +53,63 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
         loadingIndicator.bottomAnchor == safeAreaLayoutGuide.bottomAnchor - .regular
     }
     
-    //MARK: Actions
+    //MARK: Events
     
-    typealias Snapshot = NSDiffableDataSourceSnapshot<QueryTableSection, QueryTableRow>
+    public override func presenter(didSend event: QueryTablePresentableEvent) {
+        switch event {
+        case .didStartQuery(let query):
+            self.query = query
+        case .didLoadBooks(let books):
+            updateItems(books: books)
+        }
+    }
+}
+
+// MARK: UITableView DataSource
+
+extension QueryTableView {
+    
+    enum TableSection: CaseIterable {
+        case header
+        case books
+    }
+
+    enum TableRow: Hashable {
+        case headerCell
+        case book(BookSummary)
+    }
+    
+    typealias DataSource = UITableViewDiffableDataSource<TableSection, TableRow>
+    
+    private func prepareDataSource() -> DataSource {
+        let dataSource = DataSource(tableView: tableView) { (tableView, indexPath, row) -> UITableViewCell? in
+            switch row {
+            case .book(let book):
+                let cell: BookDetailCell = tableView.dequeueReusableCell(for: indexPath)
+                cell.set(book: book)
+                return cell
+            case .headerCell:
+                let cell: HeaderCell = tableView.dequeueReusableCell(for: indexPath)
+                if let query = self.query {
+                    cell.set(query: query)
+                }
+                return cell
+            }
+        }
+        return dataSource
+    }
+    
+    typealias Snapshot = NSDiffableDataSourceSnapshot<TableSection, TableRow>
     
     private func updateItems(books: [BookSummary], animated: Bool = true) {
         var snapshot = Snapshot()
-        snapshot.appendSections(QueryTableSection.allCases)
+        snapshot.appendSections(TableSection.allCases)
         for section in snapshot.sectionIdentifiers {
             switch section {
             case .header:
                 snapshot.appendItems([.headerCell], toSection: .header)
             case .books:
-                let bookRows = books.map({ QueryTableRow.book($0) })
+                let bookRows = books.map({ TableRow.book($0) })
                 snapshot.appendItems(
                     bookRows.filter({ !snapshot.itemIdentifiers.contains($0) }),
                     toSection: section)
@@ -102,17 +120,6 @@ public  class QueryTableView: BaseEventRootView<QueryTableViewEvent, QueryTableP
             snapshot,
             animatingDifferences: animated) {
             self.tableView.showsVerticalScrollIndicator = true
-        }
-    }
-    
-    //MARK: Events
-    
-    public override func presenter(didSend event: QueryTablePresentableEvent) {
-        switch event {
-        case .didStartQuery(let query):
-            self.query = query
-        case .didLoadBooks(let books):
-            updateItems(books: books)
         }
     }
 }
