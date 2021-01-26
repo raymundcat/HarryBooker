@@ -33,6 +33,8 @@
 		EC95B8C525C030330038000E /* StubbedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95B8C425C030330038000E /* StubbedTests.swift */; };
 		EC95B90725C031C70038000E /* QueryTablePullToRefreshTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95B90625C031C70038000E /* QueryTablePullToRefreshTests.swift */; };
 		EC95B91325C041C30038000E /* URL+URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95B91225C041C30038000E /* URL+URLComponents.swift */; };
+		EC95B92625C0443D0038000E /* Query-Page-2-With-Duplicate.json in Resources */ = {isa = PBXBuildFile; fileRef = EC95B92525C0443D0038000E /* Query-Page-2-With-Duplicate.json */; };
+		EC95B92E25C044830038000E /* QueryTableDuplicatesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95B92D25C044830038000E /* QueryTableDuplicatesTest.swift */; };
 		EC9F20CD25BE353C0093DAA3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9F20CC25BE353C0093DAA3 /* Colors.swift */; };
 		EC9F20D825BE466A0093DAA3 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9F20D725BE466A0093DAA3 /* HeaderCell.swift */; };
 		ECBBA0D925BF939100EB7D38 /* Query-Page-0.json in Resources */ = {isa = PBXBuildFile; fileRef = ECBBA0D725BF939000EB7D38 /* Query-Page-0.json */; };
@@ -89,6 +91,8 @@
 		EC95B8C425C030330038000E /* StubbedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubbedTests.swift; sourceTree = "<group>"; };
 		EC95B90625C031C70038000E /* QueryTablePullToRefreshTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryTablePullToRefreshTests.swift; sourceTree = "<group>"; };
 		EC95B91225C041C30038000E /* URL+URLComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+URLComponents.swift"; sourceTree = "<group>"; };
+		EC95B92525C0443D0038000E /* Query-Page-2-With-Duplicate.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Query-Page-2-With-Duplicate.json"; sourceTree = "<group>"; };
+		EC95B92D25C044830038000E /* QueryTableDuplicatesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryTableDuplicatesTest.swift; sourceTree = "<group>"; };
 		EC9F20CC25BE353C0093DAA3 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		EC9F20D725BE466A0093DAA3 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		ECBBA0D725BF939000EB7D38 /* Query-Page-0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Query-Page-0.json"; sourceTree = "<group>"; };
@@ -306,6 +310,7 @@
 			children = (
 				ECBBA0D725BF939000EB7D38 /* Query-Page-0.json */,
 				ECBBA0D825BF939100EB7D38 /* Query-Page-2.json */,
+				EC95B92525C0443D0038000E /* Query-Page-2-With-Duplicate.json */,
 			);
 			path = "Mock JSONs";
 			sourceTree = "<group>";
@@ -339,6 +344,7 @@
 			children = (
 				ECBBA0E925BF943200EB7D38 /* QueryTablePresenterTests.swift */,
 				EC95B90625C031C70038000E /* QueryTablePullToRefreshTests.swift */,
+				EC95B92D25C044830038000E /* QueryTableDuplicatesTest.swift */,
 			);
 			path = QueryTableTests;
 			sourceTree = "<group>";
@@ -498,6 +504,7 @@
 			files = (
 				ECBBA0DA25BF939100EB7D38 /* Query-Page-2.json in Resources */,
 				ECBBA0D925BF939100EB7D38 /* Query-Page-0.json in Resources */,
+				EC95B92625C0443D0038000E /* Query-Page-2-With-Duplicate.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +549,7 @@
 				EC95B91325C041C30038000E /* URL+URLComponents.swift in Sources */,
 				EC95B8C525C030330038000E /* StubbedTests.swift in Sources */,
 				EC95B90725C031C70038000E /* QueryTablePullToRefreshTests.swift in Sources */,
+				EC95B92E25C044830038000E /* QueryTableDuplicatesTest.swift in Sources */,
 				ECBBA0EA25BF943200EB7D38 /* QueryTablePresenterTests.swift in Sources */,
 				ECBBA0DF25BF939B00EB7D38 /* EventBucket.swift in Sources */,
 			);
