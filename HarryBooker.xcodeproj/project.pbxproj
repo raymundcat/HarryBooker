@@ -17,6 +17,7 @@
 		EC3A73B725C0626300940CB4 /* QueryTableEmptyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3A73B625C0626300940CB4 /* QueryTableEmptyTests.swift */; };
 		EC3A73E225C0859F00940CB4 /* QueryTableErrorHandlingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3A73E125C0859F00940CB4 /* QueryTableErrorHandlingTest.swift */; };
 		EC3A73E725C0966600940CB4 /* QueryTableLoadingIndicatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3A73E625C0966600940CB4 /* QueryTableLoadingIndicatorTests.swift */; };
+		EC3A73ED25C0A4BD00940CB4 /* EndPoints in Frameworks */ = {isa = PBXBuildFile; productRef = EC3A73EC25C0A4BD00940CB4 /* EndPoints */; };
 		EC4BCC4025BE2FD9003B23F7 /* QueryEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCC3E25BE2FD9003B23F7 /* QueryEndPoint.swift */; };
 		EC4BCC5025BE2FFC003B23F7 /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCC4825BE2FFC003B23F7 /* UITableView+Dequeueing.swift */; };
 		EC4BCC5225BE2FFC003B23F7 /* BaseEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCC4D25BE2FFC003B23F7 /* BaseEventView.swift */; };
@@ -32,7 +33,6 @@
 		EC4BCCC525BE317B003B23F7 /* QueryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4BCCBF25BE317B003B23F7 /* QueryTableViewController.swift */; };
 		EC4BCCCB25BE31A0003B23F7 /* Anchorage in Frameworks */ = {isa = PBXBuildFile; productRef = EC4BCCCA25BE31A0003B23F7 /* Anchorage */; };
 		EC4BCCCE25BE31B7003B23F7 /* Eventful in Frameworks */ = {isa = PBXBuildFile; productRef = EC4BCCCD25BE31B7003B23F7 /* Eventful */; };
-		EC4BCCD125BE31C7003B23F7 /* Services in Frameworks */ = {isa = PBXBuildFile; productRef = EC4BCCD025BE31C7003B23F7 /* Services */; };
 		EC4BCCDE25BE3226003B23F7 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = EC4BCCDD25BE3226003B23F7 /* SDWebImage */; };
 		EC6025E325C00FD000500748 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = EC6025E225C00FD000500748 /* PromiseKit */; };
 		EC95B8C525C030330038000E /* StubbedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95B8C425C030330038000E /* StubbedTests.swift */; };
@@ -117,8 +117,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC6025E325C00FD000500748 /* PromiseKit in Frameworks */,
-				EC4BCCD125BE31C7003B23F7 /* Services in Frameworks */,
 				EC4BCCCB25BE31A0003B23F7 /* Anchorage in Frameworks */,
+				EC3A73ED25C0A4BD00940CB4 /* EndPoints in Frameworks */,
 				EC4BCCDE25BE3226003B23F7 /* SDWebImage in Frameworks */,
 				EC4BCCCE25BE31B7003B23F7 /* Eventful in Frameworks */,
 			);
@@ -402,9 +402,9 @@
 			packageProductDependencies = (
 				EC4BCCCA25BE31A0003B23F7 /* Anchorage */,
 				EC4BCCCD25BE31B7003B23F7 /* Eventful */,
-				EC4BCCD025BE31C7003B23F7 /* Services */,
 				EC4BCCDD25BE3226003B23F7 /* SDWebImage */,
 				EC6025E225C00FD000500748 /* PromiseKit */,
+				EC3A73EC25C0A4BD00940CB4 /* EndPoints */,
 			);
 			productName = HarryBooker;
 			productReference = EC09054D25BB9360000BF255 /* HarryBooker.app */;
@@ -486,11 +486,11 @@
 			packageReferences = (
 				EC4BCCC925BE31A0003B23F7 /* XCRemoteSwiftPackageReference "Anchorage" */,
 				EC4BCCCC25BE31B7003B23F7 /* XCRemoteSwiftPackageReference "Eventful" */,
-				EC4BCCCF25BE31C7003B23F7 /* XCRemoteSwiftPackageReference "Services" */,
 				EC4BCCDC25BE3226003B23F7 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				ECBBA10025BF980100EB7D38 /* XCRemoteSwiftPackageReference "swift-case-paths" */,
 				ECBBA10925BF982300EB7D38 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */,
 				EC6025E125C00FD000500748 /* XCRemoteSwiftPackageReference "PromiseKit" */,
+				EC3A73EB25C0A4BD00940CB4 /* XCRemoteSwiftPackageReference "EndPoints" */,
 			);
 			productRefGroup = EC09054E25BB9360000BF255 /* Products */;
 			projectDirPath = "";
@@ -897,6 +897,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		EC3A73EB25C0A4BD00940CB4 /* XCRemoteSwiftPackageReference "EndPoints" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raymundcat/EndPoints";
+			requirement = {
+				kind = exactVersion;
+				version = 0.0.1;
+			};
+		};
 		EC4BCCC925BE31A0003B23F7 /* XCRemoteSwiftPackageReference "Anchorage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Rightpoint/Anchorage";
@@ -911,14 +919,6 @@
 			requirement = {
 				kind = exactVersion;
 				version = 0.0.3;
-			};
-		};
-		EC4BCCCF25BE31C7003B23F7 /* XCRemoteSwiftPackageReference "Services" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/raymundcat/Services";
-			requirement = {
-				kind = exactVersion;
-				version = 0.0.9;
 			};
 		};
 		EC4BCCDC25BE3226003B23F7 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
@@ -956,6 +956,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		EC3A73EC25C0A4BD00940CB4 /* EndPoints */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC3A73EB25C0A4BD00940CB4 /* XCRemoteSwiftPackageReference "EndPoints" */;
+			productName = EndPoints;
+		};
 		EC4BCCCA25BE31A0003B23F7 /* Anchorage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EC4BCCC925BE31A0003B23F7 /* XCRemoteSwiftPackageReference "Anchorage" */;
@@ -965,11 +970,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EC4BCCCC25BE31B7003B23F7 /* XCRemoteSwiftPackageReference "Eventful" */;
 			productName = Eventful;
-		};
-		EC4BCCD025BE31C7003B23F7 /* Services */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EC4BCCCF25BE31C7003B23F7 /* XCRemoteSwiftPackageReference "Services" */;
-			productName = Services;
 		};
 		EC4BCCDD25BE3226003B23F7 /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;

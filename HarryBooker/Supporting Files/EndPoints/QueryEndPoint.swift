@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Services
+import EndPoints
 
 public enum QueryPath: Path {
     case query(query: String, page: String?)

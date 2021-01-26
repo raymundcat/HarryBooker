@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "EndPoints",
+        "repositoryURL": "https://github.com/raymundcat/EndPoints",
+        "state": {
+          "branch": null,
+          "revision": "66a5ed620c87e03ebc0006d05470fd1d0e7545d4",
+          "version": "0.0.1"
+        }
+      },
+      {
         "package": "Eventful",
         "repositoryURL": "https://github.com/raymundcat/Eventful",
         "state": {
@@ -53,15 +62,6 @@
           "branch": null,
           "revision": "4aaca57fb2f6dc5554a2228cf1d94289bd0a6c7d",
           "version": "5.10.3"
-        }
-      },
-      {
-        "package": "Services",
-        "repositoryURL": "https://github.com/raymundcat/Services",
-        "state": {
-          "branch": null,
-          "revision": "369a7fcf7ab38e705c563dcb649aebea7097c9d0",
-          "version": "0.0.9"
         }
       },
       {

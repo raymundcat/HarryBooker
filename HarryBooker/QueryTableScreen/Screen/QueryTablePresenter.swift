@@ -7,7 +7,7 @@
 
 import Foundation
 import Eventful
-import Services
+import EndPoints
 import PromiseKit
 
 public enum QueryTablePresenterEvent: PresenterEvent { }
