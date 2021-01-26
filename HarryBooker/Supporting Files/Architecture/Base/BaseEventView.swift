@@ -37,6 +37,34 @@ open class BaseEventRootView<BaseEventViewEvent: ViewEvent, BaseEventPresentable
         loadingIndicator.centerAnchors == centerAnchors
     }
     
+    //MARK: Baked in Actions
+    
+    open func showIndicator(shouldShow: Bool) {
+        /// Temporarily halt user interactions
+        isUserInteractionEnabled = !shouldShow
+        
+        /// Start or stop indicators
+        if shouldShow {
+            bringSubviewToFront(loadingIndicator)
+            loadingIndicator.startAnimating()
+        } else {
+            loadingIndicator.stopAnimating()
+        }
+    }
+    
+    open func showAlert(title: String?, message: String?) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+        
+        /// Quickly attempt to acces our parent viewcontroller
+        if let parent = next as? UIViewController {
+            parent.present(alert, animated: true, completion: nil)
+        }
+    }
+    
     //MARK: Events Catching
     
     open override func presenter(didSend event: PresentableEvent) {
@@ -54,19 +82,9 @@ open class BaseEventRootView<BaseEventViewEvent: ViewEvent, BaseEventPresentable
     open func presenter(didSend event: BaseEventCorePresentableEvent) {
         switch event {
         case .shouldShowLoading(let shouldShow):
-            
-            /// Temporarily halt user interactions
-            isUserInteractionEnabled = !shouldShow
-            
-            /// Start or stop indicators
-            if shouldShow {
-                bringSubviewToFront(loadingIndicator)
-                loadingIndicator.startAnimating()
-            } else {
-                loadingIndicator.stopAnimating()
-            }
+            showIndicator(shouldShow: shouldShow)
         case .showAlert(let title, let message):
-            break
+            showAlert(title: title, message: message)
         }
     }
 }

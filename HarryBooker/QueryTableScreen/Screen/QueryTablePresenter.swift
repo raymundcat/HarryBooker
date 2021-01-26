@@ -46,7 +46,9 @@ public class QueryTablePresenter: BaseEventPresenter<QueryTableViewEvent, QueryT
             case .success(let queryResult):
                 self.updateBooks(queryResult: queryResult)
             case .failure:
-                break
+                let title = "Sorry"
+                let message = "There seems to be a problem loading your books. Please try again."
+                self.send(event: .showAlert(title: title, message: message))
             }
             self.queryTask?.cancel()
             self.queryTask = nil
